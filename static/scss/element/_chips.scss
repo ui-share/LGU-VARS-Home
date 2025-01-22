@@ -1,0 +1,422 @@
+@import '../base/mixin';
+.chips-group {
+	@include flexBox();
+	flex-wrap: wrap;
+	align-items: flex-start;
+	justify-content: flex-start;
+	gap: 8px;
+}
+.chips-bank-wrap {
+	&:has(.list-chipsbank:only-child,.list-chipsbank:nth-child(1):nth-last-child(2)) {
+		justify-content:center;
+	}
+	@include flexRow;
+	flex-wrap:wrap;
+	justify-items: flex-start;
+	align-items:flex-start;
+	gap:8px;
+	li {
+		width:calc((100% - 16px) / 3);
+		text-align:center;
+	}
+}
+
+// bank-col 세로형 은행명 박스 48px
+.chips-bank-col {
+	display:inline-block;
+	max-width:100px;
+	height:100px;
+	padding-top:10px;padding-bottom:4px;
+	border-radius: 4px;
+	&:active {
+		box-shadow: inset 0 0 0 300px rgba(0, 0, 0, 0.12);
+		width:100%;
+	}
+	.img-box {
+		display:block;
+		margin:0 auto 5px;
+		width:48px;height:48px;
+	}
+	.txt {
+		@include flexColum;
+		justify-content:center;
+		@include fw-5(14px);
+		line-height:16px;
+		text-align:center;
+		min-height:34px;
+		max-height:34px;
+		overflow:hidden;
+	}
+}
+
+.chips {
+	display: inline-flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	border: 1px solid var(--dt-gray12);
+	background-color: var(--dt-white);
+	border-radius: 18px;
+	padding: 7px 12px;
+	.txt {
+		font-size: 12px;
+		font-weight: 600;
+		text-align: left;
+		color: var(--dt-gray12);
+	}
+	.icon {
+		width: 16px;
+		min-width: 16px;
+		height: 16px;
+	}
+	.arrow {
+		display: inline-block;
+		width: 24px;
+		height: 24px;
+		background-image: url(../images/icon/ic-chips-arrow-black.png);
+		background-size: 24px 24px;
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+	// chips: select - date (날짜)
+	&.chips-date {
+		height: 36px;
+		border: none;
+		background-color: var(--dt-gray18);
+		padding: 6px 6px 6px 16px; 
+		.txt {
+			@include fz(18px);
+			white-space: nowrap;
+		}
+		&:active {
+			box-shadow: inset 0 0 0 300px rgba(0, 0, 0, 0.12);
+		}
+		&.is-disabled {
+			box-shadow: inset 0 0 0 300px rgba(255, 255, 255, 0.6);
+			.txt, .arrow {
+				opacity: 0.6;
+			}
+		}
+	}
+
+	// chips: select - all (접힘/펼침)
+	&.chips-all {
+		min-height: 35px;
+		background-color: var(--dt-white);
+		border: 1px solid var(--dt-gray08);
+		padding: 4px 8px 4px 12px;
+		.txt {
+			@include fz(14px);
+		}
+		.arrow {
+			background-image: url(../images/icon/ic-chips-arrow-gray.svg);
+		}
+		&:active, &.is-selected {
+			.arrow {
+				transform: rotate(-180deg);
+			}
+		}
+		&.is-disabled {
+			box-shadow: inset 0 0 0 300px rgba(255, 255, 255, 0.6);
+			.txt {
+				opacity: 0.6;
+			}
+			.arrow {
+				transform: rotate(-180deg);
+				opacity: 0.6;
+			}
+		}
+	}
+
+	// chips: 홈 - menu (텍스트 칩)
+	&.chips-menu {
+		min-height: 35px;
+		border: 1px solid rgba(24, 26, 27, 0.04);
+		background-color: var(--dt-gray03);
+		padding: 8px 12px;
+		gap: 4px; 
+		.txt {
+			@include fw-5(14px);
+			color: var();
+			white-space: nowrap;
+		}
+		// &:active {
+		// 	border-color: transparent;
+		// 	background-color: var(--dt-gray13);
+		// 	box-shadow: inset 0 0 0 300px rgba(255, 255, 255, 0.12);
+		// 	.txt {
+		// 		color: var(--dt-white);
+		// 	}
+		// }
+		&.is-selected {
+			background-color: var(--dt-gray13);
+			.txt {
+				font-weight: 600;
+				color: var(--dt-white); 
+			}
+		}
+		&.chips-more {
+			padding: 8px;
+			.arrow {
+				width: 16px;
+				height: 16px;
+				background-image: url(../images/icon/ic-chips-arrow-sm.png);
+				background-size: 16px 16px;
+			}
+			&.is-selected {
+				background-color: var(--dt-gray03);
+				.arrow {
+					transform: rotate(-180deg);
+				}
+			}
+		}
+	}
+
+	// chips: 상세 - bank (은행명 박스)
+	&.chips-bank {
+		max-width: 311px;
+		min-height: 33px;
+		flex-wrap: nowrap;
+		align-items: flex-start;
+		border-color: transparent;
+		border-radius: 4px; 
+		background-color: var(--dt-gray05);
+		gap: 4px;
+		.icon {
+			width: 16px;
+			height: 16px;
+		}
+		.txt {
+			@include fz(14px);
+			color: var(--dt-gray16);
+		}
+		&:active {
+			box-shadow: inset 0 0 0 300px rgba(0, 0, 0, 0.12);
+		}
+		&.is-selected {
+			background-color: var(--dt-gray07);
+		}
+	}
+
+	//chips: neutral
+	&.neutral { 
+		padding:10px 12px;
+		@include fw-6(12px);
+		color:var(--dt-gray12);
+		border:1px solid var(--dt-gray09);
+		border-radius:4px;
+	}
+
+	// chips: 상세 - refresh (새로고침 박스)
+	&.chips-refresh {
+		min-height: 36px;
+		border: 1px solid var(--dt-gray08);
+		background-color: var(--dt-white);
+		padding: 4px 10px 4px 16px;
+		gap: 10px;
+		.time {
+			@include fz(12px);
+			color: var(--dt-gray11);
+		}
+		.line {
+			width: 1px;
+			height: 10px;
+			background-color: var(--dt-gray09);
+		}
+		.text-box {
+			display: inline-flex;
+			align-items: center;
+			flex-wrap: nowrap;
+			.txt {
+				@include fz(12px);
+				color: var(--dt-gray11);
+				white-space: nowrap;
+			}
+			.icon {
+				width: 18px;
+				height: 18px;
+				background-image: url(../images/icon/ic-chips-refresh.png);
+				background-size: 18px 18px;
+				background-repeat: no-repeat;
+				background-position: center center;
+			}
+		}
+		&:active {
+			box-shadow: inset 0 0 0 300px rgba(0, 0, 0, 0.12);
+		}
+	}
+
+	// chips: 상세 - other (tag)
+	&.chips-tag {
+		min-height: 28px;
+		border-color: var(--dt-gray08);
+		background-color: var(--dt-white);
+		padding: 7px 12px;
+		.txt {
+			@include fw-5(12px);
+			color: var(--dt-gray13);
+		}
+		&.primary {
+			border-color: var(--dt-primary);
+			.txt {
+				color: var(--dt-primary);
+			}
+		}
+		
+		// chips-tag-sm
+		&.tag-sm {
+			border: none;
+			background-color: var(--dt-gray08);
+		}
+
+		// chips-tag-lg
+		&.tag-lg {
+			.txt {
+				@include fz(14px);
+			}
+			&.primary-bg {
+				border-color: var(--dt-primary);
+				background-color: rgba(227, 0, 132, 0.12);
+				.txt {
+					color: var(--dt-primary);
+				}
+			}
+		}
+	}
+}
+
+// flag
+.flag {
+	display: inline-flex;
+	flex-wrap: wrap;
+	align-items: center;
+	width: fit-content;
+	background-color: var(--dt-gray10);
+	padding: 4px 6px;
+	border-radius: 4px;
+	border: 1px solid var(--dt-gray10);
+	.txt {
+		color: var(--dt-white);
+		text-align: center;
+		font-size: 11px;
+		font-weight: 500;
+	}
+	&.primary {
+		border-color: var(--dt-primary);
+		background-color: var(--dt-primary);
+	}
+	&.success {
+		border-color: transparent;
+		background-color: rgba(0, 170, 2, 0.1);
+		.txt {
+			color: var(--dt-success);
+		}
+	}
+	&.error {
+		border-color: transparent;
+		background-color: rgba(226, 42, 33, 0.1);
+		.txt {
+			color: var(--dt-error);
+		}
+	}
+	&.flag-line {
+		background-color: transparent;
+		.txt {
+			color: var(--dt-gray10);
+		}
+		&.primary {
+			border-color: var(--dt-primary);
+			.txt {
+				color: var(--dt-primary);
+			}
+		}
+	}
+	&.flag-recent {
+		border: 1px solid var(--dt-gray17);
+		background-color: var(--dt-gray17);
+		.txt {
+			@include fw-5(12px);
+			color: var(--dt-gray12);
+		}
+	}
+	&.flag-etc {
+		min-height: 26px;
+		border: 1px solid var(--dt-gray02);
+		background-color: var(--dt-gray02);
+		padding: 4px 8px;
+		.txt {
+			@include fw-5(12px);
+			color: var(--dt-gray11);
+		}
+	}
+}
+
+
+// badge
+.badge {
+	display: inline-flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid var(--dt-gray10);
+	background-color: var(--dt-gray10);
+	gap: 4px;
+	.txt {
+		font-size: 12px;
+		font-weight: 600;
+		color: var(--dt-white);
+	}
+	.icon {
+		width: 18px;
+		min-width: 18px;
+		height: 18px;
+	}
+	&.badge-round {
+		min-width: 26px;
+		max-width:max-content;
+		min-height: 26px;
+		border-radius: 27.78vw;
+		border: 1px solid var(--dt-gray08);
+		background-color: var(--dt-gray08);
+		.txt {
+			padding:0 8px;
+			line-height: 12px;
+			color: var(--dt-gray13);
+		}
+	}
+	&.badge-tip {
+		min-height: 22px;
+		border-radius: 36px;
+		border-color: var(--dt-white);
+		background-color: rgba(255, 255, 255, 0.1);
+		padding: 4px 8px;
+		.txt {
+			color: var(--dt-white);
+		}
+	}
+	&.badge-time {
+		min-width: 104px;
+		min-height: 36px;
+		border-color: transparent;
+		border-radius: 40px;
+		background: rgba(236, 0, 140, 0.05);
+		padding: 4px 12px;
+		.txt {
+			color: var(--dt-primary);
+		}
+		.icon {
+			background-image: url(../images/icon/ic-badge-clock.png);
+			background-size: 18px 18px;
+			background-repeat: no-repeat;
+			background-position: center center;
+		}
+		&.error {
+			background-color: rgba(226, 42, 33, 0.05);
+			.txt {
+				color: var(--dt-error);
+			}
+			.icon {
+				background-image: url(../images/icon/ic-badge-clock-error.png);
+			}
+		}
+	}
+}

@@ -1,0 +1,133 @@
+.section__cont {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+.section__cont.counsel {
+  gap: unset;
+}
+.section__cont .cont__wrap.cont__wrap-message {
+  padding-top: 20px;
+}
+
+.section__divider:has(+ .counsel) {
+  margin-top: 48px;
+}
+
+.page-wrapper:has(.cont__wrap-service.rmDetail) {
+  background-color: var(--dt-gray05);
+}
+
+.section__cont:has(.cont__wrap-service.rmDetail) {
+  gap: 0;
+}
+
+.cont__wrap-service.rmDetail {
+  padding: 20px 20px 40px;
+  background-color: var(--dt-gray05);
+}
+.cont__wrap-service.rmDetail .con__tit-box {
+  flex-direction: column;
+  margin-bottom: 20px;
+  gap: 12px;
+}
+.cont__wrap-service.rmDetail .con__tit-box .text-box {
+  text-align: left;
+  gap: 6px;
+}
+.cont__wrap-service.rmDetail .con__tit-box .text-box .tit {
+  font-size: 22px;
+  font-weight: 700;
+}
+.cont__wrap-service.rmDetail .con__tit-box .text-box .txt {
+  height: 42px;
+  line-height: 1.5;
+}
+.cont__wrap-service.rmDetail .card.rmInform {
+  box-shadow: none;
+  border-radius: 16px;
+  padding: 28px 20px;
+}
+.cont__wrap-service.rmDetail .card.rmInform .card-body {
+  gap: 20px;
+}
+.cont__wrap-service.rmDetail .card.rmInform .item {
+  flex-direction: column;
+  gap: 6px;
+}
+.cont__wrap-service.rmDetail .card.rmInform .item .btn-group .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 4px;
+  gap: 4px;
+}
+.cont__wrap-service.rmDetail .card.rmInform .tit {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--dt-gray14);
+}
+.cont__wrap-service.rmDetail .card.rmInform .announceMent {
+  margin-bottom: 28px;
+  gap: 12px;
+}
+.cont__wrap-service.rmDetail .card.rmInform .announceMent .card .card-body {
+  gap: 8px;
+}
+.cont__wrap-service.rmDetail .card.rmInform .announcePhone {
+  margin-bottom: 20px;
+  gap: 12px;
+}
+.cont__wrap-service.rmDetail .card.rmInform .announcePhone .tit span {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--dt-gray14);
+}
+.cont__wrap-service.rmDetail .card.rmInform .announcePhone .phoneList {
+  grid-template-columns: repeat(1, 1fr);
+  gap: 12px;
+}
+.cont__wrap-service.rmDetail .card.rmInform .announcePhone .phoneList > .card {
+  padding: 14px 20px;
+}
+.cont__wrap-service.rmDetail .card.rmInform .announcePhone .phoneList > .card .card-body {
+  gap: 8px;
+}
+.cont__wrap-service.rmDetail .card.rmInform .announcePhone .phoneList > .card .card-body .tit {
+  font-size: 16px;
+  color: var(--dt-gray16);
+}
+.cont__wrap-service.rmDetail .card.rmInform .announcePhone .phoneList > .card .card-footer .close {
+  width: 24px;
+  height: 24px;
+  background-image: url(../images/icon/ic-card_close_small_line.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.rmAnnounce .popup-body {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+.rmAnnounce .popup-body .cont__wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0;
+}
+.rmAnnounce .popup-body .cont__wrap .con__tit-box {
+  margin-bottom: 0;
+}
+.rmAnnounce .popup-body .cont__wrap:first-child {
+  padding-top: 12px;
+}
+
+.rmLandingAnnounce .popup-tit .txt span {
+  font-size: 20px;
+  font-weight: 700;
+}
+.rmLandingAnnounce .popup-body {
+  padding-top: 16px;
+}
