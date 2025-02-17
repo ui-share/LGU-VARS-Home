@@ -20,7 +20,7 @@
 .cont__wrap {
 	&.cont__wrap-banner {
 		padding: 10px 20px 0;
-		.swiper-container {
+		.swiper {
 			animation: fadeInDown 1s;
 		}
 		.swiper-slide {
@@ -73,6 +73,11 @@
 		.txt-head {
 			@include fw-5(14px);
 			color: var(--dt-gray11);
+		}
+	}
+	.card-group {
+		.card {
+			min-height: 136px;
 		}
 	}
 }

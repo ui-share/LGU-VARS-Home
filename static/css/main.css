@@ -16,7 +16,7 @@
 .cont__wrap.cont__wrap-banner {
   padding: 10px 20px 0;
 }
-.cont__wrap.cont__wrap-banner .swiper-container {
+.cont__wrap.cont__wrap-banner .swiper {
   animation: fadeInDown 1s;
 }
 .cont__wrap.cont__wrap-banner .swiper-slide {
@@ -69,6 +69,9 @@
   font-size: 14px;
   font-weight: 500;
   color: var(--dt-gray11);
+}
+.menu .card-group .card {
+  min-height: 136px;
 }
 
 .is-scrolled .section__cont:has(.cont__wrap-category) {

@@ -1,19 +1,21 @@
 @charset "UTF-8";
-.page-wrapper {
-  height: 100%;
-}
-.page-wrapper .container {
-  height: 100%;
-}
 .page-wrapper .container .section__cont {
-  height: 100%;
-  justify-content: space-between;
+  padding: 72px 0 155px;
 }
-.page-wrapper .container .section__cont.scan .cont__wrap-service {
+.page-wrapper .container .section__cont.finish {
+  padding-top: 92px;
+}
+
+.section__cont.scan {
+  position: relative;
+  padding-top: 56px;
+  padding-bottom: 0;
+}
+.section__cont.scan .cont__wrap-service {
   padding: 0;
 }
-.page-wrapper .container .section__cont.scan .cont__wrap.cont__wrap-btBtn .btn-group {
-  position: fixed;
+.section__cont.scan .cont__wrap.cont__wrap-btBtn .btn-group {
+  position: absolute;
   bottom: 0;
   left: 0;
   width: calc(100% - 40px);
@@ -22,10 +24,10 @@
   border-radius: 4px;
   overflow: hidden;
 }
-.page-wrapper .container .section__cont.scan .cont__wrap.cont__wrap-btBtn .btn-group::before {
+.section__cont.scan .cont__wrap.cont__wrap-btBtn .btn-group::before {
   display: none;
 }
-.page-wrapper .container .section__cont.scan .scan-area:empty:after {
+.section__cont.scan .scan-area:empty:after {
   content: "카드스캔API영역입니다";
   display: block;
   width: 100%;
@@ -35,15 +37,25 @@
   border: 1px solid red;
   padding-top: 40vh;
 }
-
-.cont__wrap.cont__wrap-service {
-  height: 100%;
-  overflow-y: auto;
-  padding: 40px 20px 40px;
+.section__cont.scan .cont__wrap-btBtn {
+  position: absolute;
 }
+.section__cont:has(.cont__wrap-cms) {
+  padding: 92px 0 95px;
+  gap: 28px;
+}
+.section__cont:has(.cont__wrap-btBtn:not(:has(.flex-row)) button:nth-of-type(2)) {
+  padding-bottom: 240px;
+}
+
 .cont__wrap.cont__wrap-btBtn {
   padding: 0;
   background-color: transparent;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 999;
+  width: 100%;
 }
 .cont__wrap.cont__wrap-btBtn .btn-group {
   position: relative;
@@ -60,20 +72,59 @@
   height: 20px;
   background: linear-gradient(0deg, #FFF 17.5%, rgba(255, 255, 255, 0) 100%);
 }
-.cont__wrap.cont__wrap-btBtn .card-group {
-  padding: 0 20px 20px;
-}
-.cont__wrap.cont__wrap-btBtn .card-group .card.horizon.solid {
-  padding: 15px 16px;
-}
-.cont__wrap.cont__wrap-btBtn .card-group .sub-tit {
-  font-size: 16px;
-  font-weight: 500;
-  color: var(--dt-gray11);
-  margin-bottom: 12px;
-}
-.cont__wrap:not(:has(.px-0)) .btn-group {
+.cont__wrap.cont__wrap-btBtn .btn-group.full {
   padding: 0;
+}
+.cont__wrap.cont__wrap-btBtn .btn-group.full .btn {
+  border-radius: 0;
+}
+.cont__wrap.cont__wrap-btBtn .btn.bg-bank {
+  width: calc(100% - 40px);
+  margin: 0 auto 20px;
+  background-color: var(--dt-gray01);
+  border: 1px solid var(--dt-gray08);
+}
+.cont__wrap.cont__wrap-btBtn:has(.accordion-container:first-child) {
+  box-shadow: 0px -8px 13px rgba(0, 0, 0, 0.04);
+}
+.cont__wrap.cont__wrap-btBtn:has(.accordion-container:first-child) .accordion-container {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 8px;
+}
+.cont__wrap.cont__wrap-cms .con__tit-box.flex-column {
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 28px;
+  gap: 12px;
+}
+.cont__wrap.cont__wrap-cms .con__tit-box.flex-column .text-box {
+  text-align: left;
+  gap: 6px;
+}
+.cont__wrap.cont__wrap-cms .con__tit-box.flex-column .text-box .tit {
+  font-size: 14px;
+}
+.cont__wrap.cont__wrap-cms .con__tit-box.flex-column .text-box .txt {
+  font-size: 16px;
+}
+.cont__wrap.pauseTemp {
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+}
+.cont__wrap.pauseTemp .info-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 12px;
+}
+.cont__wrap.pauseTemp .info-wrap .txt-tit {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--dt-gray16);
 }
 
 .txt-infoWrap {

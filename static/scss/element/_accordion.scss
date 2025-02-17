@@ -4,41 +4,41 @@
 .accordion-container {
     /* 마지막요소일 경우 */
     &:last-of-type {
-        .info-price, .info-price-detail {
+        .info-price{
+            // padding-bottom:0;
+            &::after {display:none}
+        }
+        .info-price-detail  {
             padding-bottom:0;
             &::after {display:none}
         }
         &.open {
-            .info-price{
-                padding-bottom:16px;
-                &::after {display:block}
-            }
+            .info-price {&::after {display:block}}
         }
     }
 
     /* default */
+    > button.accordion-header {cursor: pointer;}
     .accordion-header {
-        cursor: pointer;
         .ico-toggle{
             transition: transform 0.3s ease;
         }
     }
     .accordion-content {
-        visibility:hidden;
-        height:0;
+        display: none;
     }
     &.open {
         .accordion-header {
+            padding-bottom:16px;
             .ico-toggle{
                 transform:rotate(180deg);
             }
         }
         > .accordion-content {
-            visibility:visible;
-            height:auto;
+            display: block;
             &:has(+ .btn-toggle) { /* 자세히보기-간단히보기 */
                 border-top:1px solid var(--dt-gray06);
-                margin-top:20px;padding-top:20px;
+                padding-top:20px;
             }
         }
     }
@@ -48,13 +48,13 @@
     @include flexRow;
     justify-content: space-between;
     width: 100%;
-    padding: 22px 20px 16px;
+    padding: 22px 20px;
     gap: 6px;
     .row {
         @include flexRow;
         align-items:center;
         &.txt-title {
-            >span {@include fw-7(16px);}
+            > span {@include fw-7(16px);line-height:150%;}
         }
     }
     .txt-title {
@@ -65,9 +65,6 @@
         .badge-round {
             align-self:baseline;
             margin-right:4px;
-            & + span {
-                @include fw-7(16px);
-            }
         }
     }
     .txt-price {
@@ -86,7 +83,7 @@
     &.chckbox-area { // 체크박스 영역의 경우
         position:relative;
         align-items:center;
-        padding:20px 0 0;
+        padding:20px 0 10px;
         .chck-group {
             width:calc(100% - 30px);
         }
@@ -97,51 +94,52 @@
             max-height:112px;
             overflow-y:auto;
             .bullet-list {
-                margin-top:12px;
+                padding-bottom:16px;
             }
         }
     }
 }
-.accordion-content {
-    .info-price-detail {
-        padding:16px 20px;
-        @include flexColum;
-        row-gap:8px;
-        .info-wrap {
-            .row {
-                display:flex;
-                justify-content:space-between;
-            }
+
+.info-price-detail {
+    padding:0 20px;
+    @include flexColum;
+    row-gap:8px;
+    .info-wrap {
+        &:first-of-type {padding-top:16px;}
+        &:last-of-type {padding-bottom:16px;}
+        padding-right:10px;
+        .row {
+            display:flex;
+            justify-content:space-between;
         }
-        .txt-title {
-            padding-left:10px;
-            &.ico {
-                padding-left:22px;
-                background-image:url(../images/icon/ic-list-brace.svg);
-                background-position:10px 3px;
-                background-size:8px;
-                background-repeat:no-repeat;
-            }
+    }
+    .txt-title {
+        padding-left:10px;
+        &.ico {
+            padding-left:22px;
+            background-image:url(../images/icon/ic-list-brace.svg);
+            background-position:10px 3px;
+            background-size:8px;
+            background-repeat:no-repeat;
         }
+    }
+    .txt-title, .txt-price {
+        @include fw-5(14px); 
+        color:var(--dt-gray14);
+    }
+    .txt-price {
+        min-width:82px;text-align:right;
+        padding-right: 2px;
+        word-break: break-all;
+    }
+    .list-detail {
+        padding-top:4px;
+        padding-left:14px;
+        row-gap:4px;
         .txt-title, .txt-price {
-            @include fw-5(14px); 
-            color:var(--dt-gray14);
-        }
-        .txt-title {
-            @include ellipsis(3);
-        }
-        .txt-price {
-            min-width:82px;text-align:right;
-        }
-        .list-detail {
-            padding-top:4px;
-            padding-left:14px;
-            row-gap:4px;
-            .txt-title, .txt-price {
-                @include fw-5(12px);
-                color:var(--dt-gray11);
-                line-height:18px; 
-            }
+            @include fw-5(12px);
+            color:var(--dt-gray11);
+            line-height:18px; 
         }
     }
 }

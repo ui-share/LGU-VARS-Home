@@ -3,20 +3,19 @@
 .btn-group {
     //default
     .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 100%;
         padding:17px 4px 16px;
         background-color:var(--dt-gray03);
         border: 1px solid var(--dt-gray03);
-        text-align: center;
-        vertical-align:middle;
         border-radius: 4px;
+        gap: 4px;
         .txt {
             color: var(--dt-gray11);
             @include fw-6($fs: 16px);
             letter-spacing: -0.5px;
-        }
-        .img-box.ht16{
-            img {margin-top: 2px;}
         }
         &:active { // pressed 인터렉션
             box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
@@ -69,6 +68,7 @@
     &.flex-row {
         @include flexRow();
         justify-content: space-between;align-items:center;
+        width: 100%;
         &:not(.accordion-header) {
             gap: 8px;
         }
@@ -77,6 +77,12 @@
         }
         &.is-confirm {// 버튼2개 + 확인,취소 영역의 경우 우측버튼(마지막버튼) 언제나 primary full bg
             .btn {
+                background-color:transparent;
+                border: 1px solid var(--dt-gray17);
+                &.btn-sec { 
+                    background-color: var(--dt-gray13);
+                    border: 1px solid var(--dt-gray13);
+                }
                 &:last-of-type {
                     background-color: var(--dt-primary);
                     border: 1px solid var(--dt-primary);
@@ -91,6 +97,46 @@
         row-gap: 8px;
         .btn {
             width: 100%;
+        }
+    }
+    // 로밍요금 선택 버튼
+    .btn-remain-data {
+        justify-content: flex-start;
+        padding:16px 20px;
+        background-color: var(--dt-white);
+        @include border(var(--dt-gray17));
+        .txt-wrap {
+            gap: 0;
+            .txt {
+                &:nth-of-type(1) {
+                    @include fw-6();
+                    color: var(--dt-gray16);
+                    &::after {
+                        display: inline-block;
+                        content: '';
+                        margin: 0 12px;
+                        width: 1px;
+                        height: 10px;
+                        background-color: var(--dt-gray09);
+                    }
+                }
+                &:nth-of-type(2) {
+                    @include fw-5(14px);
+                }
+            }
+        }
+        &.is-selected {
+            border: 2px solid var(--dt-primary);
+            .txt-wrap {
+                .txt {
+                    color: var(--dt-primary);
+                    &:nth-of-type(1) {
+                        &::after {
+                            background-color: var(--dt-primary);
+                        }
+                    }
+                } 
+            }
         }
     }
 }
@@ -163,7 +209,12 @@
     &.bg-withdraw {
         padding: 8px 10px;
         background-color: var(--dt-white);
-        border:1px solid var(--dt-gray07);
+        border:1px solid var(--dt-gray08);
+    }
+    &.appStore {
+        padding: 8px 10px;
+        background-color: var(--dt-white);
+        border:1px solid var(--dt-gray08);
     }
     &.bg-bank {
         padding: 8px;
@@ -193,41 +244,12 @@
             }
         }
     }
-    &.btn-remain-data {
-        padding:16px 20px;
-        background-color: var(--dt-white);
-        @include border(var(--dt-gray17));
-        .txt-wrap {
-            .txt {
-                &:nth-of-type(1) {
-                    @include fw-6();
-                    color: var(--dt-gray16);
-                    &::after {
-                        display: inline-block;
-                        content: '';
-                        margin: 0 12px;
-                        width: 1px;
-                        height: 10px;
-                        background-color: var(--dt-gray09);
-                    }
-                }
-                &:nth-of-type(2) {
-                    color: var(--dt-gray11);
-                }
-            }
-        }
-        &.is-selected {
-            border: 2px solid var(--dt-primary);
-            .txt-wrap {
-                .txt {
-                    color: var(--dt-primary);
-                    &:nth-of-type(1) {
-                        &::after {
-                            background-color: var(--dt-primary);
-                        }
-                    }
-                } 
-            }
-        }
+}
+
+
+
+@media screen and (max-width: 359px) {
+    .btn-group.flex-row {
+        flex-direction: column;
     }
 }

@@ -1,52 +1,59 @@
 @import "../scss/base/mixin";
-
 .page-wrapper {
-	height: 100%;
 	.container {
-		height: 100%;
 		.section__cont {
-			height: 100%;
-			justify-content: space-between;
-			&.scan {
-				.cont__wrap-service {padding:0;}
-				.cont__wrap.cont__wrap-btBtn .btn-group {
-					position:fixed;
-					bottom:0;
-					left:0;
-					width:calc(100% - 40px);
-					padding:0;
-					margin:0 20px 20px;
-					border-radius: 4px;
-					overflow:hidden;
-					&::before {display:none;}
-				}
-				.scan-area:empty {
-					&:after {
-						content: "카드스캔API영역입니다";
-						display: block;
-						width: 100%;
-						height: calc(var(--vh) - 56px);
-						text-align: center;
-						font-size: 14px;
-						border: 1px solid red;
-						padding-top: 40vh;
-					}
-				}
-			}
+			padding: 92px 0 155px;
 		}
 	}
 }
-.cont__wrap {
 
-	&.cont__wrap-service {
-		height: 100%;
-		overflow-y: auto;
-		padding: 40px 20px 40px;
+.section__cont {
+	&.scan {
+		position:relative;
+		padding-top:56px;
+		padding-bottom:0;
+		.cont__wrap-service {padding:0;}
+		.cont__wrap.cont__wrap-btBtn .btn-group {
+			position:absolute;
+			bottom:0;
+			left:0;
+			width:calc(100% - 40px);
+			padding:0;
+			margin:0 20px 20px;
+			border-radius: 4px;
+			overflow:hidden;
+			&::before {display:none;}
+		}
+		.scan-area:empty {
+			&:after {
+				content: "카드스캔API영역입니다";
+				display: block;
+				width: 100%;
+				height: calc(var(--vh) - 56px);
+				text-align: center;
+				font-size: 14px;
+				border: 1px solid red;
+				padding-top: 40vh;
+			}
+		}
+		.cont__wrap-btBtn {position:absolute;}
 	}
+	&:has(.cont__wrap-cms) {
+		padding: 92px 0 95px;
+		gap: 28px;
+	}
+	&:has(.cont__wrap-btBtn:not(:has(.flex-row)) button:nth-of-type(2)){
+		padding-bottom:240px;
+	}
+}
+.cont__wrap {
 	&.cont__wrap-btBtn {
 		padding: 0;
 		background-color: transparent;
-
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		width: 100%;
 		.btn-group {
 			position: relative;
 			background-color: var(--dt-white);
@@ -61,31 +68,50 @@
 				height: 20px;
 				background: linear-gradient(0deg, #FFF 17.5%, rgba(255, 255, 255, 0.00) 100%);
 			}
-
+			// 풀버튼일 경우 패딩 0
+			&.full { 
+				padding: 0;
+				.btn {
+					border-radius: 0;
+				}
+			}
 		}
-		.card-group {
-			padding: 0 20px 20px;
-			.card {
-				&.horizon {
-					&.solid {
-						padding: 15px 16px;
+		.btn.bg-bank {
+			width:calc(100% - 40px);
+			margin:0 auto 20px;
+			background-color:var(--dt-gray01);
+			border:1px solid var(--dt-gray08);
+		}
+		&:has(.accordion-container:first-child) { // 버튼 위 아코디언(동의영역) 올라가는 케이스
+			.accordion-container {
+				padding-left:20px;
+				padding-right:20px;
+				padding-bottom:8px;
+			}
+			box-shadow:0px -8px 13px rgba(0, 0, 0, 0.04);
+		}
+	}
+	// CMS : 실시간출금동의
+	&.cont__wrap-cms {
+		.con__tit-box {
+			&.flex-column {
+				flex-direction: column;
+				align-items: flex-start;
+				margin-bottom: 28px;
+				gap: 12px;
+				.text-box {
+					text-align: left;
+					gap: 6px;
+					.tit {
+						font-size: 14px;
+					}
+					.txt {
+						font-size: 16px;
 					}
 				}
-
-			}
-			.sub-tit {
-				@include fw-5(16px);
-				color: var(--dt-gray11);
-				margin-bottom: 12px;
 			}
 		}
-	}
-	// 풀버튼일 경우 패딩 0
-	&:not(:has(.px-0)) {
-		.btn-group {
-			padding: 0;
-		}
-	}
+	}	
 }
 
 .txt-infoWrap {
