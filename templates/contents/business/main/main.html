@@ -20,16 +20,16 @@
 	<script src="../../../../static/js/swiper-11.1.5/swiper-bundle.js"></script>
 </head>
 <body>
-	<!-- 개발관련 주석 확인 후 필요 없으시면  삭제 -->
-	<!-- 
+	
+	<!-- 개발관련 주석 확인 후 필요 없으시면  삭제
 		스크롤 감지시 is-scrolled 
-		<div class="page-wrapper">
+		<div class="page-wrapper is-scrolled">
 	-->
 	<div class="page-wrapper">
 		<!-- header -->
 		<header class="header">
 			<div class="header__util">
-				<button type="button" class="btn btn-util prev hidden"><span>이전</span></button>
+				<!-- <button type="button" class="btn btn-util prev hidden"><span>이전</span></button> -->
                 <!-- <button type="button" class="btn btn-util end hidden"><span>처음</span></button> -->
 				<span class="header-tit"><span class="header-txt">눈으로 보는 ARS</span></span>
 			</div>
@@ -48,6 +48,7 @@
 						<!-- Additional required wrapper -->
 						<div class="swiper-wrapper">
 							<!-- Slides -->
+							<!--  상황 발생 고개만 노출 : 서비스 품질개선 안내 -->
 							<div class="swiper-slide">
 								<div class="card horizon banner">
 									<div class="card-body">
@@ -58,28 +59,13 @@
 										</div>
 										<div class="item text">
 											<span class="tit">서비스 품질개선 안내</span>
-											<span class="txt">고객님께서 이용중인 지역은 서비스 품질 개선 작업중으로 인터넷, TV등 일부 서비스가 일시적으로 중단될 수 있습니다.</span>
+											<span class="txt">고객님께서 이용중인 지역에 서비스<br/>개선(장애복구) 작업중입니다.</span>
 										</div>
-										<button type="button" class="btn end">종료</button>
+										<button type="button" class="btn end">닫기</button>
 									</div>
 								</div>
 							</div>
-							<div class="swiper-slide">
-								<div class="card horizon banner">
-									<div class="card-body">
-										<div class="item util">
-											<span class="img-box">
-												<img src="../../../../static/images/icon/ic-banner-alarm1.svg" alt="서비스 품질개선 안내">
-											</span>
-										</div>
-										<div class="item text">
-											<span class="tit">서비스 품질개선 안내</span>
-											<span class="txt">고객님께서 이용중인 지역에 서비스 개선 장애복구 작업중입니다.</span>
-										</div>
-										<button type="button" class="btn end">종료</button>
-									</div>
-								</div>
-							</div>
+							<!--  상황 발생 고개만 노출 : 서비스 일시적 중단 안내 -->
 							<div class="swiper-slide">
 								<div class="card horizon banner">
 									<div class="card-body">
@@ -90,12 +76,13 @@
 										</div>
 										<div class="item text">
 											<span class="tit">서비스 일시적 중단 안내</span>
-											<span class="txt">고객님의 이용중인 지역에 서비스 작업/장애조치 중입니다.</span>
+											<span class="txt">고객님께서 이용중인 지역에 서비스<br/>작업/장애조치 작업중입니다.</span>
 										</div>
-										<button type="button" class="btn end">종료</button>
+										<button type="button" class="btn end">닫기</button>
 									</div>
 								</div>
 							</div>
+							<!--  상황 발생 고개만 노출 : 홈 서비스 점검 예약 일정 -->
 							<div class="swiper-slide">
 								<div class="card horizon banner">
 									<div class="card-body">
@@ -106,44 +93,13 @@
 										</div>
 										<div class="item text">
 											<span class="tit">홈 서비스 점검 예약 일정</span>
-											<span class="txt">기사 방문 날짜: 10월 09일 13시 30분<br>담당 서비스 센터: (OOO서비스 센터) 000-000-0000</span>
+											<span class="txt">12월 12일 13시 서비스 (방문)점검이 예약이 되어 있습니다.</span>
 										</div>
-										<button type="button" class="btn end">종료</button>
+										<button type="button" class="btn end">닫기</button>
 									</div>
 								</div>
 							</div>
-							<div class="swiper-slide">
-								<div class="card horizon banner">
-									<div class="card-body">
-										<div class="item util">
-											<span class="img-box">
-												<img src="../../../../static/images/icon/ic-banner-reservaton.svg" alt="홈 서비스 점검 예약 일정">
-											</span>
-										</div>
-										<div class="item text">
-											<span class="tit">홈 서비스 점검 예약 일정</span>
-											<span class="txt">0월 0일 00시 서비스(방문)점검이 예약이 되어 있습니다.</span>
-										</div>
-										<button type="button" class="btn end">종료</button>
-									</div>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="card horizon banner">
-									<div class="card-body">
-										<div class="item util">
-											<span class="img-box">
-												<img src="../../../../static/images/icon/ic-banner-gift.svg" alt=">가입 사은품 확인">
-											</span>
-										</div>
-										<div class="item text">
-											<span class="tit">가입 사은품 확인</span>
-											<span class="txt">사은품 배송문의/사은품 변경/배송주소 변경을 원하시면 가입하신 상담사와 통화를 선택해 주세요!</span>
-										</div>
-										<button type="button" class="btn end">종료</button>
-									</div>
-								</div>
-							</div>
+							<!--  상황 발생 고개만 노출 : 가입 사은품 배송 확인 -->
 							<div class="swiper-slide">
 								<div class="card horizon banner">
 									<div class="card-body">
@@ -156,10 +112,11 @@
 											<span class="tit">가입 사은품 배송 확인</span>
 											<span class="txt">신청한 사은품 배송 현황을 확인할 수 있습니다.</span>
 										</div>
-										<button type="button" class="btn end">종료</button>
+										<button type="button" class="btn end">닫기</button>
 									</div>
 								</div>
 							</div>
+							<!--  종소세 신고월에만 노출 : 납부확인서 신청 -->
 							<div class="swiper-slide">
 								<div class="card horizon banner">
 									<div class="card-body">
@@ -170,25 +127,26 @@
 										</div>
 										<div class="item text">
 											<span class="tit">납부확인서 신청</span>
-											<span class="txt">종합소득세 신고기간입니다.<br>신고용 서류를 신청해 보세요!</span>
+											<span class="txt">종합소득세 신고기간입니다.<br/>신고용 서류를 신청해 보세요!</span>
 										</div>
-										<button type="button" class="btn end">종료</button>
+										<button type="button" class="btn end">닫기</button>
 									</div>
 								</div>
 							</div>
+							<!--  기본 노출 : 청구요금 -->
 							<div class="swiper-slide">
 								<div class="card horizon banner">
 									<div class="card-body">
 										<div class="item util">
 											<span class="img-box">
-												<img src="../../../../static/images/icon/ic-banner-alarm2.svg" alt="청구요금">
+												<img src="../../../../static/images/icon/ic-banner-billing.svg" alt="청구 요금">
 											</span>
 										</div>
 										<div class="item text">
-											<span class="tit">청구요금</span>
-											<span class="txt">이번달 이용요금 포함 납부하실 금액은 000원 입니다.</span>
+											<span class="tit">청구 요금</span>
+											<span class="txt">이번달 이용요금 포함 납부하실 금액은 9,999,000원 입니다.</span>
 										</div>
-										<button type="button" class="btn end">종료</button>
+										<button type="button" class="btn end">닫기</button>
 									</div>
 								</div>
 							</div>
@@ -306,7 +264,7 @@
 									<span class="img-box">
 										<img src="../../../../static/images/icon/ic-home-change_payment.png" alt="요금 납부방법 변경" />
 									</span>
-									<div class="flag flag-recent hidden">
+									<div class="flag flag-recent ">
 										<span class="txt">최근사용</span>
 									</div>
 								</div>
@@ -350,7 +308,7 @@
 							<div class="card-body">
 								<div class="item util">
 									<span class="img-box">
-										<img src="../../../../static/images/icon/ic-home-phone_payment_setting.png" alt="고장 문의" />
+										<img src="../../../../static/images/icon/ic-home-diagnosis_restart.png" alt="고장 문의" />
 									</span>
 									<div class="flag flag-recent hidden">
 										<span class="txt">최근사용</span>
@@ -480,7 +438,8 @@
 								</div>
 							</div>
 						</div>
-						<div class="card" role="button" tabindex="0">
+						<!-- 세금계산서 신청 메뉴: 개인 사업자 경우 노출 -->
+						<!-- <div class="card" role="button" tabindex="0">
 							<div class="card-body">
 								<div class="item util">
 									<span class="img-box">
@@ -494,7 +453,7 @@
 									<span class="tit">세금계산서 신청</span>
 								</div>
 							</div>
-						</div>
+						</div> -->
 					</div>
 				</div>
 
@@ -595,7 +554,7 @@
 							<div class="card-body">
 								<div class="item util">
 									<span class="img-box">
-										<img src="../../../../static/images/icon/ic-home-payment_confirm.png" alt="데이터 선물ㆍ충전" />
+										<img src="../../../../static/images/icon/ic-home-diagnosis_apply.png" alt="설치 장소 변경 내역" />
 									</span>
 									<div class="flag flag-recent hidden">
 										<span class="txt">최근사용</span>
@@ -620,14 +579,15 @@
 							<div class="card-body">
 								<div class="item util">
 									<span class="img-box">
-										<img src="../../../../static/images/icon/ic-home-added_service.png" alt="휴대폰 결제 설정" />
+										<img src="../../../../static/images/icon/ic-home-diagnosis_restart.png" alt="간편 조치ㆍA/S 신청" />
 									</span>
 									<div class="flag flag-recent hidden">
 										<span class="txt">최근사용</span>
 									</div>
 								</div>
 								<div class="item text">
-									<h3 class="tit">간편 조치ㆍAS신청</h3>
+									<h3 class="tit">간편 조치ㆍA/S 신청</h3>
+									<p class="txt">인터넷ㆍ와이파이ㆍIPTV</p>
 								</div>
 							</div>
 						</div>
@@ -635,7 +595,7 @@
 							<div class="card-body">
 								<div class="item util">
 									<span class="img-box">
-										<img src="../../../../static/images/icon/ic-home-phone_payment_setting.png" alt="휴대폰 결제 이용내역" />
+										<img src="../../../../static/images/icon/ic-home-diagnosis_guide.png" alt="문제해결 가이드" />
 									</span>
 									<div class="flag flag-recent hidden">
 										<span class="txt">최근사용</span>
@@ -650,14 +610,15 @@
 							<div class="card-body">
 								<div class="item util">
 									<span class="img-box">
-										<img src="../../../../static/images/icon/ic-home-payment_confirm.png" alt="AS신청 내역" />
+										<img src="../../../../static/images/icon/ic-home-diagnosis_apply.png" alt="A/S신청 내역" />
 									</span>
 									<div class="flag flag-recent hidden">
 										<span class="txt">최근사용</span>
 									</div>
 								</div>
 								<div class="item text">
-									<h3 class="tit">AS신청 내역</h3>
+									<h3 class="tit">A/S 신청 내역</h3>
+									<p class="txt">확인ㆍ변경ㆍ취소</p>
 								</div>
 							</div>
 						</div>
@@ -678,18 +639,18 @@
 						</div>
 					</div>
 				</div>
-
+				<!-- 챗봇 상담 문의  -->
 				<div class="cont__wrap">
-					<div class="card horizon home">
+					<div class="card horizon chatbot">
 						<div class="card-body">
 							<div class="item util">
 								<span class="img-box">
-									<img src="../../../../static/images/icon/ic-home-iptv.png" alt="홈 고객센터 문의">
+									<img src="../../../../static/images/icon/ic-home-holeman.png" alt="챗봇 상담 문의">
 								</span>
 							</div>
 							<div class="item text">
-								<h3 class="tit">홈 고객센터 문의</h3>
-								<p class="txt">IPTVㆍ인터넷ㆍU+스마트홈</p>
+								<span class="tit">챗봇 상담 문의</span>
+								<span class="txt">24시간 대기없이 바로 문의</span>
 							</div>
 						</div>
 						<div class="card-footer">
@@ -705,36 +666,37 @@
 			
 			<div class="section__cont counsel">
 				<div class="cont__wrap cont__wrap-counsel">
-					<div class="btn-group conversion">
+					<div class="btn-group conversion flex-column">
+						<button class="btn" type="button">
+							<span class="txt">음성 ARS로 이동</span>
+						</button>
 						<button class="btn" type="button">
 							<span class="txt">모바일 고객센터 이동</span>
+						</button>
+						<button class="btn" type="button">
+							<span class="txt">기업 고객센터 이동</span>
+						</button>
+					</div>
+				</div>
+				<div class="cont__wrap cont__wrap-counsel">
+					<div class="btn-group conversion">
+						<button class="btn" type="button">
+							<span class="txt">음성 ARS로 이동</span>
 						</button>
 						<span class="divider"></span>
 						<button class="btn" type="button">
-							<span class="txt">기업 고객센터 이동</span>
+							<span class="txt">모바일 고객센터 이동</span>
 						</button>
 					</div>
 
 					<div class="btn-group conversion">
 						<button class="btn" type="button">
-							<span class="txt">음성 ARS로 이동</span>
+							<span class="txt">기업 고객센터 이동</span>
 						</button>
 					</div>
 				</div>
 
-				<div class="cont__wrap cont__wrap-counsel">
-					<div class="btn-group conversion flex-column">
-						<button class="btn" type="button">
-							<span class="txt">모바일 고객센터 이동</span>
-						</button>
-						<button class="btn" type="button">
-							<span class="txt">기업 고객센터 이동</span>
-						</button>
-						<button class="btn" type="button">
-							<span class="txt">음성 ARS로 이동</span>
-						</button>
-					</div>
-				</div>
+				
 			</div>
 
 			<!-- top button -->

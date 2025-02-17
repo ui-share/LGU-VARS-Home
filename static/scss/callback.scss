@@ -1,0 +1,16 @@
+@import "../scss/base/mixin";
+.page-wrapper {
+	.container {
+		.section__cont {
+			padding: 92px 0 155px;
+		}
+	}
+}
+.cont__wrap {
+	&.cont__wrap-vertical {
+		gap: 36px;
+		
+		}
+		
+	}
+
