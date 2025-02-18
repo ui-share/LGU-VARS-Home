@@ -44,8 +44,7 @@ input::-webkit-inner-spin-button {
 	-webkit-appearance: none;
 	margin: 0;
 }
-input,
-textarea {
+input {
 	width: 100%;
 	margin: 0;
 	padding: 0;
@@ -54,17 +53,11 @@ textarea {
 	-webkit-appearance: none;
 	appearance: none;
 	background: transparent;
+	@include fw-6(18px);
 	font-family: "Pretendard", system-ui, sans-serif;
 	color: var(--dt-gray16);
-	@include fw-6(18px);
-	line-height: 1.2;
 }
-textarea {
-	min-height: 60px;
-	word-break: break-all;
-}
-input::placeholder,
-textarea::placeholder {
+input::placeholder {
 	font-family: "Pretendard", system-ui, sans-serif;
 	color: var(--dt-gray11);
 	@include fw-6(18px);
@@ -87,42 +80,6 @@ textarea::placeholder {
 		border-bottom: 2px solid var(--dt-gray08);
 		padding: 4px 0;
 		gap: 12px;
-	}
-	.textarea-group {
-		position: relative;
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		gap: 10px;
-		.input-label {
-			position: relative;
-		}
-	}
-	.textarea-box {
-		width: 100%;
-		position: relative;
-		display: flex;
-		flex-direction: column;
-		flex-wrap: wrap;
-		flex: 1 1 auto;
-		border: 2px solid var(--dt-gray08);
-		border-radius: 0.725em;
-		text-align: left;
-		padding: 12px;
-	}
-	.textarea-info {
-		position: relative;
-    	display: flex;
-	}
-	.textarea-limit {
-		margin-left: auto;
-		text-align: right;
-		@include fw-6(14px);
-		color: var(--dt-gray10);
-	}
-	.limit-point {
-		@include fw-6(14px);
-		color: var(--dt-gray16);
 	}
 	// 라벨 스타일
 	.input-label {
@@ -198,9 +155,10 @@ textarea::placeholder {
 		@include fw-6(14px);
 		line-height: 1;
 		color: var(--dt-gray11);
-		padding: 8px 16px;
+		padding: 9px 16px;
 		border-radius: 4px;
 		background-color: var(--dt-gray03);
+		border: 1px solid var(--dt-gray03);
 	}
 	// 헬퍼 텍스트
 	.validation-txt {

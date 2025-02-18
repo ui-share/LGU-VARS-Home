@@ -8,6 +8,7 @@
   flex-direction: column;
   gap: 9px;
   position: relative;
+  height: -moz-max-content;
   height: max-content;
   min-height: 188px;
   padding-top: 28px;
@@ -18,34 +19,8 @@
 .section__cont.summary .cont__wrap .info-price-wrap .info-price.total-last .row, .section__cont.summary .cont__wrap .info-price-wrap .info-price-detail.total-last .row {
   margin-top: 4px;
 }
-.section__cont.summary .cont__wrap-bill {
-  background-image: url(../images/img/img-hm-bill.png);
-}
-.section__cont.summary .cont__wrap-realtime {
-  background-image: url(../images/img/img-hm-realtime.png);
-}
-.section__cont.summary .cont__wrap-usestate {
-  background-image: url(../images/img/img-hm-usestate.png);
-}
-.section__cont.summary .cont__wrap-account {
-  background-image: url(../images/img/img-hm-account.png);
-}
-.section__cont.summary .cont__wrap-payment {
-  background-image: url(../images/img/img-hm-automatic-withdrawal.png);
-}
-.section__cont.summary .cont__wrap-billMthdChng {
-  background-image: url(../images/img/img-hm-bill.png);
-}
-.section__cont.summary .cont__wrap-MOPaymentUsed {
-  background-image: url(../images/img/img-hm-MOpayment.png);
-  background-position: right -5px top 16px;
-}
-.section__cont.summary .cont__wrap-MOPaymentUsed + .info-price-single p.txt-info {
-  font-size: 14px;
-  font-weight: 500;
-}
-.section__cont.summary .cont__wrap-plan {
-  background-image: url(../images/img/img-hm-myplan.png);
+.section__cont.summary .cont__wrap-diagnosis {
+  background-image: url(../images/img/img-hm-diagnosis.png);
 }
 .section__cont.summary .txt-select-wrap {
   display: flex;
@@ -90,6 +65,7 @@
   font-weight: 700;
 }
 .cont__wrap .con__tit-box .tit-tail {
+  min-width: -moz-max-content;
   min-width: max-content;
 }
 .cont__wrap .con__tit-box:not(:has(.tit-tail)):has(.bullet-list) {
@@ -211,7 +187,8 @@
   /* 화살표 아이콘 */
 }
 .btn-srch-childline .txt-title {
-  column-gap: 8px;
+  -moz-column-gap: 8px;
+       column-gap: 8px;
   flex-wrap: wrap;
   line-height: 150%;
 }

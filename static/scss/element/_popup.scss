@@ -43,6 +43,7 @@
 		.popup-tit {
 			@include flexBox(start, center);
 			padding: 8px 0;
+			gap: 8px;
 			> .txt {
 				color: var(--dt-gray16);
 				@include fw-7(20px);
@@ -110,10 +111,10 @@
         }
     }
 }
-// popup-footer hidden일 경우 popup-body 패딩 수정
-.popup-wrapper:has(.popup-footer.hidden) .popup-body {
-	padding-bottom: 20px;
-}
+// popup-footer hidden일 경우 popup-body 패딩 수정 (250218 | 패딩 수정 : 재변경 없을 경우 삭제 예정)
+// .popup-wrapper:has(.popup-footer.hidden) .popup-body {
+// 	padding-bottom: 20px;
+// }
 
 // popbody 내 content
 .popup-body {
@@ -255,8 +256,10 @@
 	}
 	.btn {
 		/* popup-solid */
+		&.btn-popSolid-md { 
+			padding: 12px 20px;
+		}
 		&.btn-popSolid {
-			@include flexBox();
 			padding:16px 20px;
 			background-color: var(--dt-gray02);
 			gap: 4px;
@@ -264,22 +267,31 @@
 				color:var(--dt-gray12);
 				line-height: var(--dt-lh150);
 			}
-			.txt-wrap {
-				display: none;
-			}
-			&.is-selected {
-				.txt-wrap {
-					display: flex;
-					align-items: center;
-					gap: 2px;
-				}
-				.txt {
-					@include fw-5(14px);
-					color: var(--dt-primary);
-				} 
-			}
+			
 			&.between {
 				justify-content: space-between;
+				gap: 12px;
+				.txt {
+					text-align: left;
+					line-height: 1.2;
+				}
+				.txt-wrap {				
+					display: flex;
+					align-items: center;
+					.txt {
+						@include fw-5(14px);
+						line-height: 1.2;
+						color: var(--dt-primary);
+						text-align: right;
+					} 
+					.img-box {
+						display: inline-block;
+						img {
+							width: 16px;
+							height: 16px;
+						}
+					}
+				}				
 			}
 			.delay-txt {
 				@include fw-5(14px);

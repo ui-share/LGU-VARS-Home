@@ -31,19 +31,31 @@
 			@include flexRow;
 			column-gap:4px;
 			align-items:center;
-			width:calc(100% - 32px);
 		}
 		.ico {
 			align-self: flex-start;
 			display:inline-block;
-			width:16px;height:16px;
+			width:16px;
+			min-width:16px;
+			height:16px;
 			background-image: url(../images/icon/ic-info-white.svg);
 			background-repeat:no-repeat;
 			background-size:100%;
 		}
 	}
 } 
+.tooltip-wrap {
+	.txt-wrap:has(.ico) {
+		width:calc(100% - 32px);
+	}
+}
 .bubble-box {
+	max-height:max-content;
+	.txt-wrap:has(.ico) {
+		width:100%;
+		padding-left:6px;
+		padding-right:6px;
+	}
 	&.show {display:block}
 	
 	&.topleft {
@@ -185,12 +197,13 @@ div[data-popper-arrow]::before {
 		.txt-wrap {width:100%;}
 	}
 }
-.input-control .bubble-box.topleft,
-.input-control .bubble-box.topright{
-	bottom:42px;
+.error .bubble-box.topleft,
+.error .bubble-box.topright{
+	max-width:max-content;
+	bottom:calc(100% - 16px) !important;
 }
 .chckbox-area .bubble-box.topleft { 
-	bottom:33px;
+	bottom:calc(100% -  20px) !important;
 	left:-12px;
 }
 .lunch-toolWrap {
@@ -204,7 +217,15 @@ div[data-popper-arrow]::before {
 }
 
 @media screen and (max-width:359px) {
-	.tooltip-wrap, .bubble-box { // 툴팁박스
+	.tooltip-wrap{ // 툴팁박스
 		max-width: 60vw !important;
+	}
+	.bubble-box {
+		max-width:70vw !important;
+		.txt-wrap:has(.ico) {
+			width:100%;
+			padding-left:0;
+			padding-right:0px;
+		}
 	}
 }
