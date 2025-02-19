@@ -1,0 +1,21 @@
+.diagnosisRestart .accordion-container {
+  border-radius: 8px;
+  background-color: var(--dt-gray02);
+  overflow: hidden;
+}
+.diagnosisRestart .accordion-container .accordion-header {
+  padding: 22px 20px;
+}
+.diagnosisRestart .accordion-container .accordion-content {
+  padding: 0px 20px 22px;
+}
+.diagnosisRestart .accordion-container .accordion-content .row {
+  width: 100%;
+  border-top: 1px solid var(--dt-gray06);
+}
+.diagnosisRestart .accordion-container .accordion-content .row:first-child {
+  padding-top: 16px;
+}
+.diagnosisRestart + .popup-wrapper .inform-wrap .img-box.reset {
+  width: 162px;
+}

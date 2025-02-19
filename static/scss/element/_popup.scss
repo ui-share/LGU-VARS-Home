@@ -427,3 +427,13 @@
 		}
 	}
 }
+
+// 2차인증
+.twoFactorAuth {
+	.accordion-header.chckbox-area + .accordion-content {
+		max-height: unset;
+		.txt-caution {
+			text-align: left;
+		}
+	}
+}

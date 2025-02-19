@@ -1320,6 +1320,26 @@ button {
 .btn-group .btn-remain-data.is-selected .txt-wrap .txt:nth-of-type(1)::after {
   background-color: var(--dt-primary);
 }
+.btn-group .btn-radio {
+  padding: 16px 20px;
+  background-color: var(--dt-white);
+  border: 1px solid var(--dt-gray17);
+}
+.btn-group .btn-radio .txt:nth-of-type(1) {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--dt-gray16);
+}
+.btn-group .btn-radio .txt:nth-of-type(2) {
+  font-size: 14px;
+  font-weight: 500;
+}
+.btn-group .btn-radio.is-selected {
+  border: 2px solid var(--dt-primary);
+}
+.btn-group .btn-radio.is-selected .txt {
+  color: var(--dt-primary);
+}
 
 /* single button util */
 .btn-top {
@@ -2533,6 +2553,16 @@ button {
   background-color: var(--dt-gray09);
   margin: 0 1px;
 }
+.conversion.flex-column {
+  border-radius: unset;
+  background-color: transparent;
+}
+.conversion.flex-column .btn {
+  border-color: rgba(24, 26, 27, 0.02);
+}
+.conversion + .conversion {
+  margin-top: 8px;
+}
 
 @media (max-width: 359px) {
   .cont__wrap-counsel .card-group {
@@ -2710,7 +2740,8 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-input {
+input,
+textarea {
   width: 100%;
   margin: 0;
   padding: 0;
@@ -2720,13 +2751,19 @@ input {
   -moz-appearance: none;
        appearance: none;
   background: transparent;
-  font-size: 18px;
-  font-weight: 600;
   font-family: "Pretendard", system-ui, sans-serif;
   color: var(--dt-gray16);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.2;
 }
 
-input::-moz-placeholder {
+textarea {
+  min-height: 60px;
+  word-break: break-all;
+}
+
+input::-moz-placeholder, textarea::-moz-placeholder {
   font-family: "Pretendard", system-ui, sans-serif;
   color: var(--dt-gray11);
   font-size: 18px;
@@ -2734,7 +2771,8 @@ input::-moz-placeholder {
   line-height: 1.2;
 }
 
-input::placeholder {
+input::placeholder,
+textarea::placeholder {
   font-family: "Pretendard", system-ui, sans-serif;
   color: var(--dt-gray11);
   font-size: 18px;
@@ -2759,6 +2797,44 @@ input::placeholder {
   border-bottom: 2px solid var(--dt-gray08);
   padding: 4px 0;
   gap: 12px;
+}
+.input-control .textarea-group {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.input-control .textarea-group .input-label {
+  position: relative;
+}
+.input-control .textarea-box {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex: 1 1 auto;
+  border: 2px solid var(--dt-gray08);
+  border-radius: 0.725em;
+  text-align: left;
+  padding: 12px;
+}
+.input-control .textarea-info {
+  position: relative;
+  display: flex;
+}
+.input-control .textarea-limit {
+  margin-left: auto;
+  text-align: right;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--dt-gray10);
+}
+.input-control .limit-point {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--dt-gray16);
 }
 .input-control .input-label {
   position: absolute;
@@ -2810,10 +2886,9 @@ input::placeholder {
   font-weight: 600;
   line-height: 1;
   color: var(--dt-gray11);
-  padding: 9px 16px;
+  padding: 8px 16px;
   border-radius: 4px;
   background-color: var(--dt-gray03);
-  border: 1px solid var(--dt-gray03);
 }
 .input-control .validation-txt {
   width: 100%;
@@ -3602,6 +3677,13 @@ input::placeholder {
 }
 .full-popup .popup-body .section__cont .cont__wrap {
   padding: 0 20px;
+}
+
+.twoFactorAuth .accordion-header.chckbox-area + .accordion-content {
+  max-height: unset;
+}
+.twoFactorAuth .accordion-header.chckbox-area + .accordion-content .txt-caution {
+  text-align: left;
 }
 
 .switch-group .switch-input {
