@@ -2613,12 +2613,13 @@ button {
   padding: 2px 20px 2px 12px;
   z-index: 2;
 }
-.header .header__util {
+
+.header__util {
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
-.header .header__util .btn-util {
+.header__util .btn-util {
   width: 32px;
   height: 32px;
   background-repeat: no-repeat;
@@ -2628,24 +2629,25 @@ button {
   font-size: 0px;
   text-indent: -9999px;
 }
-.header .header__util .btn-util.prev {
+.header__util .btn-util.prev {
   background-image: url(../images/icon/ic_chevron_previous_line.svg);
 }
-.header .header__util .btn-util.end {
+.header__util .btn-util.end {
   background-image: url(../images/icon/ic-close24-gray15.svg);
 }
-.header .header__util .header-tit {
+.header__util .header-tit {
   font-size: 16px;
   font-weight: 700;
   color: var(--dt-gray16);
   margin-left: 4px;
 }
-.header .header__util .header-tit .header-txt {
+.header__util .header-tit .header-txt {
   font-size: 16px;
   font-weight: 700;
   color: var(--dt-gray10);
 }
-.header .header__btn {
+
+.header__btn {
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -2653,7 +2655,7 @@ button {
        column-gap: 6px;
   margin-left: auto;
 }
-.header .header__btn .btn {
+.header__btn .btn {
   display: flex;
   border-radius: 4px;
   padding: 9px 12px 8px;
@@ -2661,15 +2663,15 @@ button {
   min-width: -moz-max-content;
   min-width: max-content;
 }
-.header .header__btn .btn .txt {
+.header__btn .btn .txt {
   font-size: 14px;
   font-weight: 600;
 }
-.header .header__btn .btn-callEnd {
+.header__btn .btn-callEnd {
   background-color: var(--dt-primary);
   border-color: var(--dt-primary);
 }
-.header .header__btn .btn-callEnd .icon {
+.header__btn .btn-callEnd .icon {
   display: inline-block;
   content: "";
   width: 16px;
@@ -2679,7 +2681,7 @@ button {
   background-repeat: no-repeat;
   background-size: 16px 16px;
 }
-.header .header__btn .btn-callEnd .txt {
+.header__btn .btn-callEnd .txt {
   color: var(--dt-white);
 }
 
@@ -3602,8 +3604,6 @@ textarea::placeholder {
   max-height: unset;
   display: flex;
   flex-direction: column;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
   background-color: var(--dt-white);
   overflow-y: auto;
 }
@@ -3688,9 +3688,12 @@ textarea::placeholder {
   color: var(--dt-white);
 }
 .full-popup .popup-body {
+  display: flex;
+  flex-direction: column;
   height: 100%;
-  padding: 20px 0 42px 0px;
+  padding: 20px 20px 40px;
   overflow-y: auto;
+  gap: 48px;
 }
 .full-popup .popup-body .section__cont {
   gap: 48px;
