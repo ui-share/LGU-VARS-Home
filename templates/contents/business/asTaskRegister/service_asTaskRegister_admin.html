@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<!-- Set the viewport. -->
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1.0">
+	<!-- Disable automatic phone number detection. -->
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	<title>LGU+ 눈으로 보는 ARS</title>
+
+	<!-- Css -->
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/common.css">
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/service.css">
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/asTaskRegister.css">
+
+	<!-- Scripts -->
+</head>
+<body>
+	<div class="page-wrapper asTaskRegister">
+		<!-- header -->
+		<header class="header">
+			<div class="header__util">
+				<button type="button" class="btn btn-util end"><span>처음</span></button>
+			</div>
+			<div class="header__btn btn-group">
+				<button type="button" class="btn btn-callEnd"><span class="icon"></span><span class="txt">종료</span></button>
+			</div>
+		</header>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			<div class="section__cont" style="gap: 48px;">
+				<div class="cont__wrap cont__wrap-vertical" style="gap: 32px;">
+					<div class="cont__txt-box">
+						<h4 class="txt">
+							<span class="color-prim">어떤 문제</span>인지 선택해 주세요
+						</h4>
+					</div>
+
+					<!-- 
+						[[ 입력 상태 별 class ]] : input-control에 클래스를 추가하여 모든 상태를 제어
+							** 포커스 : focused 
+							** 유효성 검사 성공 : success
+							** 유효성 검사 에러 : error
+							** 읽기 전용 : disabled
+							** 비활성 : disabled
+							기본 : <div class="input-control">
+							포커스 : <div class="input-control focused">
+							비활성, 읽기 전용 : <div class="input-control disabled">
+							유효성 검사 성공 : <div class="input-control success">
+							유효성 검사 에러 : <div class="input-control error">
+					-->
+					<!-- 증상 선택 -->
+					<div class="input-control">
+						<div class="input-group">
+							<label class="input-label">장애 증상 선택</label>
+							<div class="input-row">
+								<button type="button" class="btn-field-dropdown">
+									<!-- 선택 값 -->
+									<!-- <span class="value">
+										<span class="txt">인터넷 접속이 안돼요</span>
+									</span> -->
+
+									<!-- placeholder성 안내 문구 노출 상태 : 값 노출 상태에서는 hidden 추가 <span class="txt hidden">은행/증권사 선택</span> -->
+									<span class="txt ">어떤 상황인지 선택해 주세요</span>
+								</button>
+							</div>
+						</div>
+					</div>
+
+					<!-- 추가 요청사항 입력 -->
+					<div class="input-control">				
+						<div class="textarea-group">
+							<label class="input-label">추가 요청사항</label>
+							<div class="textarea-box">
+								<textarea class="c-textarea" placeholder="홈매니저에게 전달하고 싶은 내용을 입력해 주세요" title="홈매니저에게 전달하고 싶은 내용을 입력해 주세요" rows="4" maxlength="201" ></textarea> 
+								<div class="textarea-info">
+									<p class="textarea-limit" tabindex="-1" >
+										<span><span class="limit-point">0</span>/200자</span>
+									</p>
+								</div>
+							</div>                            
+						</div>
+					</div>
+				</div>
+				
+				<div class="cont__wrap cont__wrap-vertical">
+					<div class="cont__txt-box">
+						<h4 class="txt">
+							<span class="color-prim">연락받을 번호</span>를 확인해 주세요
+						</h4>
+					</div>
+
+					<!-- 
+						[[ 입력 상태 별 class ]] : input-control에 클래스를 추가하여 모든 상태를 제어
+							** 포커스 : focused 
+							** 유효성 검사 성공 : success
+							** 유효성 검사 에러 : error
+							** 읽기 전용 : disabled
+							** 비활성 : disabled
+							기본 : <div class="input-control">
+							포커스 : <div class="input-control focused">
+							비활성, 읽기 전용 : <div class="input-control disabled">
+							유효성 검사 성공 : <div class="input-control success">
+							유효성 검사 에러 : <div class="input-control error">
+					-->
+					<!-- 휴대폰 번호 확인 -->
+					<div class="input-control">				
+						<div class="input-group">
+							<label class="input-label">휴대폰 번호</label>
+							<div class="input-row">
+								<input type="text" class="input-field" value="010-12**-56**" autocomplete='off' readonly/>
+								<div class="util-box">									
+									<button type="button" class="clear-btn hidden"></button>
+									<button type="button" class="srch-btn">변경</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="cont__wrap cont__wrap-vertical">
+					<div class="cont__txt-box">
+						<h4 class="txt">
+							<span class="color-prim">방문 희망 날짜와 시간</span>을<br>선택해 주세요
+						</h4>
+					</div>
+
+					<!-- 데이터 노출되는 리스트 -->
+                    <ul class="list-wrap">
+                        <li class="list-box">
+                            <span class="head">4월 15일(월)</span>
+                            <ul>
+								<li></li>
+							</ul>
+                        </li> 
+                        <li class="list-box">
+                            <span class="head">4월 16일(화)</span>
+                            <span class="tail"><span>LGU+@lguplus.com</span></span>
+                        </li> 
+                    </ul>
+
+					<div class="timetable">
+						<div class="item-list">
+							<!-- item 반복 -->
+							<div class="item schedule">
+								<p class="date">4월 15일(월)</p>
+								<div class="chips-group">
+									<div class="card-radio">
+										<input type="radio" name="dateTime" id="1">
+										<label for="1" class="btn chip">
+											<span class="txt">10:00</span>
+										</label>
+									</div>
+									<div class="card-radio">
+										<input type="radio" name="dateTime" id="1">
+										<label for="1" class="btn chip">
+											<span class="txt">10:00</span>
+										</label>
+									</div>
+									<div class="card-radio">
+										<input type="radio" name="dateTime" id="1">
+										<label for="1" class="btn chip">
+											<span class="txt">10:00</span>
+										</label>
+									</div>
+									<div class="card-radio">
+										<input type="radio" name="dateTime" id="1">
+										<label for="1" class="btn chip">
+											<span class="txt">10:00</span>
+										</label>
+									</div>
+									<div class="card-radio">
+										<input type="radio" name="dateTime" id="1">
+										<label for="1" class="btn chip">
+											<span class="txt">10:00</span>
+										</label>
+									</div>
+									<div class="card-radio">
+										<input type="radio" name="dateTime" id="1">
+										<label for="1" class="btn chip">
+											<span class="txt">10:00</span>
+										</label>
+									</div>
+									<div class="card-radio">
+										<input type="radio" name="dateTime" id="1">
+										<label for="1" class="btn chip">
+											<span class="txt">10:00</span>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="item schedule">
+								<p class="date">4월 16일(화)</p>
+								<div class="chips-group">
+									<div class="card-radio">
+										<input type="radio" name="dateTime" id="1">
+										<label for="1" class="btn chip">
+											<span class="txt">10:00</span>
+										</label>
+									</div>
+									<div class="card-radio">
+										<input type="radio" name="dateTime" id="1">
+										<label for="1" class="btn chip">
+											<span class="txt">10:00</span>
+										</label>
+									</div>
+									<div class="card-radio">
+										<input type="radio" name="dateTime" id="1">
+										<label for="1" class="btn chip">
+											<span class="txt">10:00</span>
+										</label>
+									</div>
+									<div class="card-radio">
+										<input type="radio" name="dateTime" id="1">
+										<label for="1" class="btn chip">
+											<span class="txt">10:00</span>
+										</label>
+									</div>
+									<div class="card-radio">
+										<input type="radio" name="dateTime" id="1">
+										<label for="1" class="btn chip">
+											<span class="txt">10:00</span>
+										</label>
+									</div>
+									<div class="card-radio">
+										<input type="radio" name="dateTime" id="1">
+										<label for="1" class="btn chip">
+											<span class="txt">10:00</span>
+										</label>
+									</div>
+									<div class="card-radio">
+										<input type="radio" name="dateTime" id="1">
+										<label for="1" class="btn chip">
+											<span class="txt">10:00</span>
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="cont__wrap cont__wrap-btBtn">
+					<div class="btn-group flex-row is-confirm">
+						<!-- 기본 disabled 상태 | 모든 필드 입력 및 선택 완료 후 활성화 is-disabled 삭제 -->
+						<button class="btn is-disabled" type="button">
+							<span class="txt">확인</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //container -->
+	</div>
+</body>
+</html>

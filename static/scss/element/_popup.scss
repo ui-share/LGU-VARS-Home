@@ -483,6 +483,15 @@
         display: block;
     }
 }
+// 간편조치,  AS신청 : 리셋팝업
+.reset {
+	.inform-wrap {
+		.img-box {
+			width: 162px;
+		}
+	}
+}
+
 
 // 2차인증 팝업
 .twoFactorAuth {

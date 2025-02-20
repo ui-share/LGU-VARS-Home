@@ -3736,6 +3736,10 @@ textarea::placeholder {
   display: block;
 }
 
+.reset .inform-wrap .img-box {
+  width: 162px;
+}
+
 .twoFactorAuth .btn-group .btn-radio {
   flex-direction: column;
   justify-content: flex-start;

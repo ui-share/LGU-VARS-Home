@@ -1,5 +1,5 @@
 @import "../scss/base/mixin";
-.diagnosisRestart {
+.asTaskRegister {
     // 아코디온 수정
     .accordion-container {
         border-radius: 8px;
@@ -19,12 +19,7 @@
             }
         }
     }
-    & + .popup-wrapper {
-        // 리셋 팝업
-        .inform-wrap {
-            .img-box.reset {
-                width: 162px;
-            }
-        }
-    }
+
+    // 날짜선택 칩스
+    
 }
