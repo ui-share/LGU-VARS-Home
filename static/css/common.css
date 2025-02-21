@@ -1320,26 +1320,6 @@ button {
 .btn-group .btn-remain-data.is-selected .txt-wrap .txt:nth-of-type(1)::after {
   background-color: var(--dt-primary);
 }
-.btn-group .btn-radio {
-  padding: 16px 20px;
-  background-color: var(--dt-white);
-  border: 1px solid var(--dt-gray17);
-}
-.btn-group .btn-radio .txt:nth-of-type(1) {
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--dt-gray16);
-}
-.btn-group .btn-radio .txt:nth-of-type(2) {
-  font-size: 14px;
-  font-weight: 500;
-}
-.btn-group .btn-radio.is-selected {
-  border: 2px solid var(--dt-primary);
-}
-.btn-group .btn-radio.is-selected .txt {
-  color: var(--dt-primary);
-}
 
 /* single button util */
 .btn-top {
@@ -3753,9 +3733,28 @@ textarea::placeholder {
 }
 .twoFactorAuth .slctAuth {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 8px;
   grid-auto-rows: 1fr;
+}
+.twoFactorAuth .slctAuth .btn-radio {
+  background-color: var(--dt-white);
+  border: 1px solid var(--dt-gray17);
+}
+.twoFactorAuth .slctAuth .btn-radio .txt:nth-of-type(1) {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--dt-gray16);
+}
+.twoFactorAuth .slctAuth .btn-radio .txt:nth-of-type(2) {
+  font-size: 14px;
+  font-weight: 500;
+}
+.twoFactorAuth .slctAuth .btn-radio.is-selected {
+  border: 1px solid var(--dt-primary);
+}
+.twoFactorAuth .slctAuth .btn-radio.is-selected .txt {
+  color: var(--dt-primary);
 }
 .twoFactorAuth .auth-status {
   width: 100%;

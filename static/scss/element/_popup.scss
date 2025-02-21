@@ -508,9 +508,29 @@
 	}
 	.slctAuth {
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(2, 1fr); // 네이버 이용시 3, 1fr 로 변경
 		gap: 8px;
 		grid-auto-rows: 1fr;
+		// 선택형 버튼
+		.btn-radio {
+			background-color: var(--dt-white);
+			@include border(var(--dt-gray17));
+			.txt {
+				&:nth-of-type(1) {
+					@include fw-6();
+					color: var(--dt-gray16);
+				}
+				&:nth-of-type(2) {
+					@include fw-5(14px);
+				}
+			}
+			&.is-selected {
+				border: 1px solid var(--dt-primary);
+				.txt {
+					color: var(--dt-primary);
+				} 
+			}
+		}
 	}
 	.auth-status {
 		width: 100%;

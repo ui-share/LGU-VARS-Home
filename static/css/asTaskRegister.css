@@ -16,3 +16,10 @@
 .asTaskRegister .accordion-container .accordion-content .row:first-child {
   padding-top: 16px;
 }
+.asTaskRegister .timetable {
+  background-color: transparent;
+  padding: 0;
+}
+.asTaskRegister .timetable .list-box {
+  flex-wrap: nowrap;
+}

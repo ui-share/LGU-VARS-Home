@@ -21,5 +21,12 @@
     }
 
     // 날짜선택 칩스
-    
+    .timetable {
+        background-color: transparent;
+        padding: 0;
+        .list-box {
+            flex-wrap: nowrap;
+            
+        }
+    }
 }
