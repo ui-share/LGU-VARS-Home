@@ -666,6 +666,50 @@
     & + .bullet-list {margin-top:8px;}
 }
 
+// 고장문의 : 리셋팝업
+.reset {
+	.inform-wrap {
+		.img-box {
+			width: 196px;
+		}
+	}
+}
+// 고장문의 : 신고내역 확인 팝업
+.asTaskPop {
+	.asTaskList {
+		.list-box .tail {
+			max-width: unset;
+		}
+	}
+	.bullet-list {
+		margin-top: 8px;
+	}
+	.chck-group {
+		margin-top: 28px;
+		.chck-label {
+			justify-content: center;
+		}
+	}
+}
+// 고장 증상 선택 팝업
+.asSymptomsPop {
+	.accordion-container {
+		border-top: 1px solid var(--dt-gray06);
+		&:first-child {
+			border: none;
+		}
+		&.open {
+			.accordion-content {
+				padding-bottom: 16px;
+			}
+		}
+		.btn-popSolid {
+			justify-content: flex-start;
+			text-align: left;
+		}
+	}
+}
+
 
 // 2차인증 : twoFactorAuth 팝업
 .twoFactorAuth {

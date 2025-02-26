@@ -14,7 +14,7 @@
 	<link rel="stylesheet" type="text/css" href="../../../../static/css/common.css">
 	<link rel="stylesheet" type="text/css" href="../../../../static/css/style.css">
 	<link rel="stylesheet" type="text/css" href="../../../../static/css/asTaskRegister.css">
-
+	
 	<!-- Scripts -->
 </head>
 <body>
@@ -30,22 +30,30 @@
 	-->
 	<div class="popup-wrapper show">
 		<div class="back-drop"></div>
-		<div class="popup__wrap reset">
+		<div class="popup__wrap">
 			<div class="popup-header">
 				<div class="popup-tit hidden">
 					<span class="txt"></span>
 				</div>
 				<button class="btn btn-util close hidden" type="button" alt="닫기"></button>
 			</div>
-			<div class="popup-body">				
+			<div class="popup-body">
 				<div class="inform-wrap">
+					<span class="inform-img csCenter"></span>
 					<div class="text-box">
-						<span class="tit">서비스를 자동으로<br><span class="color-prim">다시 시작</span>하고 있어요</span>
-						<span class="txt">약 2분 정도 걸릴 수 있어요</span>
+						<span class="tit">눈으로 보는 ARS 종료 후,<br><span class="color-prim">당신의 U+앱</span>으로 이동합니다</span>
 					</div>
-					<span class="img-box">
-						<img src="../../../../static/images/img/img_homeAS_reset.png" alt="리셋중">
-					</span>
+				</div>
+			</div>
+			
+			<div class="popup-footer">
+				<div class="btn-group flex-row is-confirm">
+					<button class="btn line" type="button">
+						<span class="txt">취소</span>
+					</button>
+					<button class="btn" type="button">
+						<span class="txt">확인</span>
+					</button>
 				</div>
 			</div>
 		</div>

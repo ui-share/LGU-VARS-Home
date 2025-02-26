@@ -2865,10 +2865,6 @@ button {
   color: var(--dt-white);
 }
 
-.chips-group {
-  margin-top: 8px;
-}
-
 .notice-txt {
   margin-top: 8px;
 }
@@ -2890,6 +2886,10 @@ button {
 }
 .input-col-wrap .segment__wrap {
   padding-top: 14px;
+}
+.input-col-wrap:has(.bubble-box) input[type=text]:valid,
+.input-col-wrap:has(.bubble-box) input[type=tel]:valid {
+  color: var(--dt-error) !important;
 }
 
 .input-row-wrap {
@@ -2915,7 +2915,8 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-input {
+input,
+textarea {
   width: 100%;
   margin: 0;
   padding: 0;
@@ -2925,13 +2926,19 @@ input {
   -moz-appearance: none;
        appearance: none;
   background: transparent;
-  font-size: 18px;
-  font-weight: 600;
   font-family: "Pretendard", system-ui, sans-serif;
   color: var(--dt-gray16);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.2;
 }
 
-input::-moz-placeholder {
+textarea {
+  min-height: 60px;
+  word-break: break-all;
+}
+
+input::-moz-placeholder, textarea::-moz-placeholder {
   font-family: "Pretendard", system-ui, sans-serif;
   color: var(--dt-gray11);
   font-size: 18px;
@@ -2939,7 +2946,8 @@ input::-moz-placeholder {
   line-height: 1.2;
 }
 
-input::placeholder {
+input::placeholder,
+textarea::placeholder {
   font-family: "Pretendard", system-ui, sans-serif;
   color: var(--dt-gray11);
   font-size: 18px;
@@ -2964,6 +2972,44 @@ input::placeholder {
   border-bottom: 2px solid var(--dt-gray08);
   padding: 4px 0;
   gap: 12px;
+}
+.input-control .textarea-group {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.input-control .textarea-group .input-label {
+  position: relative;
+}
+.input-control .textarea-box {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex: 1 1 auto;
+  border: 2px solid var(--dt-gray08);
+  border-radius: 0.725em;
+  text-align: left;
+  padding: 12px;
+}
+.input-control .textarea-info {
+  position: relative;
+  display: flex;
+}
+.input-control .textarea-limit {
+  margin-left: auto;
+  text-align: right;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--dt-gray10);
+}
+.input-control .limit-point {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--dt-gray16);
 }
 .input-control .input-label {
   position: absolute;
@@ -4125,6 +4171,37 @@ input::placeholder {
 }
 .appPaid-wrap + .bullet-list {
   margin-top: 8px;
+}
+
+.reset .inform-wrap .img-box {
+  width: 196px;
+}
+
+.asTaskPop .asTaskList .list-box .tail {
+  max-width: unset;
+}
+.asTaskPop .bullet-list {
+  margin-top: 8px;
+}
+.asTaskPop .chck-group {
+  margin-top: 28px;
+}
+.asTaskPop .chck-group .chck-label {
+  justify-content: center;
+}
+
+.asSymptomsPop .accordion-container {
+  border-top: 1px solid var(--dt-gray06);
+}
+.asSymptomsPop .accordion-container:first-child {
+  border: none;
+}
+.asSymptomsPop .accordion-container.open .accordion-content {
+  padding-bottom: 16px;
+}
+.asSymptomsPop .accordion-container .btn-popSolid {
+  justify-content: flex-start;
+  text-align: left;
 }
 
 .twoFactorAuth .btn-group .btn-radio {

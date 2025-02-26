@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<!-- Set the viewport. -->
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1.0">
+	<!-- Disable automatic phone number detection. -->
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	<title>LGU+ 눈으로 보는 ARS</title>
+
+	<!-- Css -->
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/common.css">
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/style.css">
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/asTaskRegister.css">
+
+	<!-- Scripts -->
+</head>
+<body>
+	<div class="page-wrapper asTaskRegister">
+		<div class="container">
+			<div class="section__cont"></div>
+		</div>
+	</div>
+
+	<!-- popup 위치 : page-wrapper 바깥 -->
+	<!-- popup 오픈 시 show 추가 / 닫을 경우 show 삭제 / 불러올 경우 show 붙은채로 사용
+		<div class="popup-wrapper show">
+	-->
+	<div class="popup-wrapper show">
+		<div class="back-drop"></div>
+		<div class="popup__wrap asTaskPop">
+			<div class="popup-header">
+				<div class="popup-tit">
+					<span class="txt"><span class="color-prim">고장 신고 내역</span>을<br/>확인해 주세요</span>
+				</div>
+				<button class="btn btn-util close hidden" type="button" alt="닫기"></button>
+			</div>
+
+			<div class="popup-body">
+				<!-- 데이터 노출되는 리스트 -->
+				<ul class="list-wrap asTaskList">
+					<li class="list-box">
+						<span class="head">주소</span>
+						<span class="tail">서울시 양천구 목동동로 ***</span>
+					</li> 
+					<li class="list-box">
+						<span class="head">연락받을 번호</span>
+						<span class="tail">010-12**-56**</span>
+					</li>
+					<li class="list-box">
+						<span class="head">방문 희망일</span>
+						<span class="tail">2025년 4월 15일 (월) 오전 11시</span>
+					</li> 
+					<li class="list-box">
+						<span class="head">추가 요청사항</span> 
+						<span class="tail"></span>
+					</li> 
+				</ul>
+
+				<!-- 유의사항 영역 -->
+				<ul class="bullet-list">
+					<li class="bullet-item">홈매니저 방문 시 U+에서 받은 기기 문제가 아닌 경우에는 15,400원의 출장비가 청구될 수 있어요.</li>
+				</ul>
+
+				<!-- 필수 체크 영역 -->
+				<div class="chck-group">
+					<!-- checkbox id, label for 값 임시 : 개발시 변경 필요하며 id = for 값 동일하게 맞춰야 함 -->
+					<input type="checkbox" id="chck01" class="chck-input">
+					<label for="chck01" class="chck-label">
+						<span class="chck-box"></span>네, 확인했어요
+					</label>
+				</div>
+			</div>
+			
+			<div class="popup-footer">
+				<!-- 
+					defalt : disabled 상태
+
+					확인 체크 시 활성화 : is-disabled 삭제
+					<button class="btn" type="button">
+				-->
+				<div class="btn-group flex-row is-confirm">
+					<button class="btn is-disabled" type="button">
+						<span class="txt">A/S 신청하기</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
