@@ -1,6 +1,26 @@
 @import "../scss/base/mixin";
 .page-wrapper {
 	&.requestMoveInstall {
-		
+		.cont__wrap.cont__wrap-service {
+			@include flexColum;
+			row-gap:12px;
+			padding-bottom:24px;
+			.cont__txt-box {
+				margin-top:16px;
+				.txt {
+					font-size:18px;
+				}
+			}
+		}
+		.list-wrap{
+			margin-top:0;
+			&:first-of-type {margin-top:12px;}
+			.list-box {
+				gap:4px 8px;
+				.tail {
+					max-width: 220px;
+				}
+			}
+		}
 	}
 }
