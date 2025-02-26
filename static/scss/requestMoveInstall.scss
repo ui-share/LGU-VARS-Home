@@ -22,5 +22,23 @@
 				}
 			}
 		}
+		.card.rmPeriod {
+			row-gap:10px;
+			.card-header .tit {color:var(--dt-black);}
+			.item {
+				column-gap:0;
+				.img-box {
+					width:18px;
+					min-width:18px;
+					height:18px;
+					transform:rotate(180deg);
+				}
+			}
+			.list-wrap {
+				margin-top:0;
+				.list-box .tail {color:var(--dt-gray16);}
+			}
+			.card-footer {margin-top:12px;}
+		}
 	}
 }
