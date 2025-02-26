@@ -3,11 +3,8 @@
   background-color: var(--dt-gray02);
   overflow: hidden;
 }
-.asTaskRegister .accordion-container .accordion-header {
-  padding: 22px 20px;
-}
 .asTaskRegister .accordion-container .accordion-content {
-  padding: 0px 20px 22px;
+  padding: 0 20px 16px;
 }
 .asTaskRegister .accordion-container .accordion-content .row {
   width: 100%;
@@ -15,6 +12,36 @@
 }
 .asTaskRegister .accordion-container .accordion-content .row:first-child {
   padding-top: 16px;
+}
+.asTaskRegister .unlockBtn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 110%;
+  color: #E6007E;
+  text-align: left;
+  margin-left: auto;
+  padding: 4px;
+}
+.asTaskRegister .unlockBtn::before, .asTaskRegister .unlockBtn::after {
+  display: block;
+  content: "";
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center center;
+}
+.asTaskRegister .unlockBtn::before {
+  width: 18px;
+  height: 18px;
+  background-image: url(../../static/images/icon/m_ic_lock.png);
+}
+.asTaskRegister .unlockBtn::after {
+  width: 12px;
+  height: 12px;
+  background-image: url(../../static/images/icon/m_ic_arrow_pink.png);
 }
 .asTaskRegister .timetable {
   background-color: transparent;
