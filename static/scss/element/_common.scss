@@ -103,7 +103,7 @@ http://scripts.sil.org/OFL
 	--dt-safeRight: env(safe-area-inset-right);
 	--dt-safeLeft: env(safe-area-inset-left);
 
-	--vh: 100vh;
+	--vh: 100%;
 	--max-devicewidth: 100vw;
 }
 
@@ -122,6 +122,8 @@ body {
 	color: var(--dt-black);
 	text-overflow: ellipsis;
     background-color: var(--dt-white);
+	padding-top: env(safe-area-inset-top);
+  	padding-bottom: env(safe-area-inset-bottom, 0px);
 }
 // body * {
 // 	font-family: 'Pretendard', system-ui, sans-serif;
@@ -218,6 +220,7 @@ button {
 .pt-20 {padding-top: 20px !important;}
 .pt-40 {padding-top: 40px !important;}
 .color-prim {color:var(--dt-primary) !important;}
+.semibold {font-weight:600 !important;}
 .bold {font-weight:700 !important;}
 .t-left {text-align: left !important;}
 .wd-full {padding-right:0 !important; padding-left:0 !important;}
@@ -439,20 +442,13 @@ button {
 	display: flex;
 	flex-direction: column;
 }
-.container {
-	> .section__cont {
-		&:first-child {
-			padding-top: 56px;
-		}
-	}
-}
 .section__divider {
 	width: 100%;
 	min-height: 10px;
 	background-color: var(--dt-gray03);
 	box-shadow: inset 0px 4px 2px 0px rgba(0, 0, 0, 0.02);
 	& + .section__cont {
-		padding-top: 36px;
+		padding-top: 48px;
 	}
 }
 .section__cont {
@@ -464,6 +460,9 @@ button {
 	}
 	&:has(+ .section__divider) {
 		padding-bottom: 48px;
+	}
+	&:has(.switch__wrap) { // summary, service 
+		// padding-top: 56px;
 	}
 }
 .cont__wrap {
@@ -697,7 +696,7 @@ button {
 		}
 		.txt-desc {
 			> span {
-				&:not(.txt-sub) {
+				&:not(.txt-sub, .flag) {
 					display:inline-block;
 					@include fw-5(14px);line-height:21px;
 				}
@@ -786,6 +785,7 @@ button {
 		@include fw-5(14px);
 		line-height:21px;
 		text-align:right;
+		word-break: break-all;
 		.flag:first-child {margin-right:8px;}
 	}
 	.info-price.total-last {
@@ -904,7 +904,9 @@ button {
 	background-color: var(--dt-gray02);
 	border-radius: 8px;
 	padding: 20px;
-	margin-top: 24px;
+	&:not(:first-child) {
+		margin-top: 24px;
+	}
 	.list-box {
 		padding-top: 16px;
 		&:first-child {
@@ -922,12 +924,13 @@ button {
 			color: var( --dt-gray14);
 		}
 		.tail {
+			max-width:166px;
+			margin-left: auto;
 			@include fw-5(14px);
 			line-height: 150%;
 			color: var(--dt-black);
 			text-align: right;
-			max-width:166px;
-			margin-left: auto;
+			word-break:break-all;
 		}
 	}
 }
@@ -981,9 +984,65 @@ button {
 				}
 				.txt-price {
 					font-size:18px;
-					line-height:21px;
+					line-height:120%;
 				}
 			}
 		}
 	}
+}
+
+// i 아이콘 있는 그레이박스 : 해외로밍 이용내역
+.caption-wrap {
+	width: 100%;
+	padding: 10px 8px;
+	text-align: center;
+	border-radius: 4px;
+	background-color: var(--dt-gray03);
+	.caption {
+		@include fw-6(12px);
+		line-height: 120%;
+		color: var(--dt-gray11);
+	}
+	.caption::before {
+		content: "";
+		display: inline;
+		padding-left: 20px;
+		background-image: url(../images/icon/ic-bullet-info.svg);
+		background-size: 16px 16px;
+		background-repeat: no-repeat;
+		background-position: left 0 center;
+	}
+}
+
+//서비스 변경 버튼
+.switch__wrap {
+	>button {
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		padding: 10px 12px 10px 20px;
+		border-radius: 0;
+		background-color: var(--dt-gray15);
+		.txt-title {
+			column-gap: 8px;
+			flex-wrap: wrap;
+			>span {
+				@include fw-6(14px);
+				line-height: 1.5;
+				color: var(--dt-white);
+			}
+		}
+		.img-box {/* 화살표 아이콘 */
+			padding: 8px;
+			img {
+				width: 24px;
+				height: 24px;
+			}
+		}
+		&.btn-srch-childline {//자녀 선택 버튼
+			.txt-childname {font-weight:700;}
+			.txt-phone {color:#A8B3BD;font-weight:500;}
+		}
+	}
+	
 }

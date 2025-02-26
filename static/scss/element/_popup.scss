@@ -14,7 +14,12 @@
 		bottom: 0;
 		left: 0;
 		width: 100%;
-		max-height: calc(var(--vh) - 45px);
+		max-height: calc(100% - 45px);
+
+		// 삭제금지 아이폰 테스트 중
+		padding-top: env(safe-area-inset-top, 45px);
+		-webkit-transform: translateZ(0);
+
 		@include flexColum;
 		border-top-left-radius: 20px;
 		border-top-right-radius: 20px;
@@ -43,11 +48,15 @@
 		.popup-tit {
 			@include flexBox(start, center);
 			padding: 8px 0;
-			gap: 8px;
+			gap: 10px 8px;
 			> .txt {
 				color: var(--dt-gray16);
 				@include fw-7(20px);
 				line-height: var(--dt-lh150);
+			}
+			&:has(.flag-etc) {
+				flex-wrap:wrap;
+				> .txt {line-height:120%;}
 			}
 		}
 		.btn-util {
@@ -118,6 +127,7 @@
 
 // popbody 내 content
 .popup-body {
+	&:has(.appPaid-wrap) {padding-bottom:30px;}
 	.section__cont {
 		gap: 24px;
 	}
@@ -324,22 +334,72 @@
 			}
 		}
 	}
+	&.submitSignupInfo{ //가입확인서발급
+		padding-top:18px;
+		.con__tit-box {
+			.tit-head .txt-title {
+				color:var(--dt-gray15);
+			}
+		}
+		.info-col-wrap { // 조회 리스트
+			margin-bottom:24px;
+			padding:16px 18px;
+			.plan-wrap .list-plan.line .row:not(:first-of-type) {padding-top:12px;}
+			.plan-wrap .list-plan.line .row + .row {margin-top:12px;}
+		}
+		.input-col-wrap { // 가입확인서발급정보입력
+			row-gap:8px;
+			padding-bottom:16px;
+			.input-control:first-of-type {
+				margin-top:6px;
+				& + .input-control {
+					margin-top:0;
+					.input-group {padding-top:0;}
+				}
+			}
+			.input-control + .input-control {
+				margin-top:20px;
+			}
+		}
+	}
+	&.contract {//선택약정 프리미어
+		.cont__txt-box {
+			padding:10px 0 12px;
+			.txt {color:var(--dt-gray15); font-size:16px;font-weight:600;}
+		}
+		.accordion-header.chckbox-area {padding-top:0;}
+		.accordion-header.chckbox-area + .accordion-content {max-height:max-content;}
+		.accordion-header.chckbox-area + .accordion-content .bullet-list {padding-bottom:0;}
+		.card.solid {padding:16px 20px;}
+		.bullet-list .bullet-item::before {
+			--bulletList-font-size: 14px;
+			--bulletList-bullet-size: 0.21em;
+			--bulletList-bullet-translateY:calc( var(--bulletList-font-size) - calc( var(--bulletList-bullet-size) + calc( var(--bulletList-bullet-size) / 2.5 ) ) );
+		}
+		.bullet-list .bullet-item {
+			&:first-child {margin-top:0;}
+			margin-top:12px;
+			font-size:14px;
+			color:var(--dt-gray14);
+			letter-spacing: -0.3px;
+		}
+	}
+
+	.list-wrap {//로밍데이터 팝업
+		&.chrgData {
+			margin-top: 0;
+		}
+	}
+	&:has(.invoice) { //로밍 이용내역 : rmInvoice 청구서 팝업
+		padding-top: 20px;
+		.cont__wrap .con__tit-box .tit-head{flex-wrap:wrap;}
+	}
 }
 
 //popup-body 패딩 수정
 .popup-body + .popup-footer.hidden {
 	padding-bottom: 20px;
 }
-
-// @media (max-width: 359px) {
-// 	.popup-body {
-// 		.calendar-box {
-// 			&.mnth-prd {
-// 				column-gap: 20px;
-// 			}
-// 		}
-// 	}
-// }
 
 // 풀 팝업
 .full-popup {
@@ -442,7 +502,12 @@
 			gap: 48px;
 			.cont__wrap {
 				padding: 0 20px;
+				&.cont__wrap-vertical {gap:16px;}
 			}
+		}
+		&:has(.section__cont) {
+			padding: 20px 0 40px;
+			gap: 0;
 		}
 	}
 	.popup-footer {
@@ -482,18 +547,127 @@
     &.show {
         display: block;
     }
-}
-// 간편조치,  AS신청 : 리셋팝업
-.reset {
-	.inform-wrap {
-		.img-box {
-			width: 162px;
+	//로밍 이용내역 : roamingUsed 풀팝업
+	.rmUsed {
+		.con__tit-box .tit-head .txt-title {
+			line-height:1.25;
+		}
+		.txt-day {
+			@include fw-6();
+			line-height: 120%;
+			color: var(--dt-primary);
+		}
+		// 로밍요금 라운드박스
+		.roamingPrice {
+			.info-price {
+				padding: 22px 20px;
+				.row {
+					align-items: center;
+				}
+				.txt-title {
+					font-size: 16px;
+					align-self: unset;
+				}
+				.txt-price {
+					display: flex;
+					align-items: center;
+					font-size: 18px;
+					color: var(--dt-black);
+					.flag {
+						margin-right: 6px;
+					}
+					.flag .txt {
+						font-size: 11px;
+					}
+				}
+				.btn.bg-withdraw {
+					margin-top: 20px;
+				}
+			}
+			.txt-caution { 
+				text-align: right;
+				line-height: 150%;
+				margin-top: 8px;
+			}
 		}
 	}
 }
 
 
-// 2차인증 팝업
+// 로밍 부가서비스 팝업 : 로밍멘트 수정
+.rmAnnounce {
+	.popup-body {
+		display: flex;
+		flex-direction: column;
+		gap: 36px;
+		.cont__wrap {
+			display: flex;
+			flex-direction: column;
+			gap: 12px;
+			padding: 0;
+			.con__tit-box {
+				margin-bottom: 0;
+			}
+			&:first-child {
+				padding-top: 12px;
+			}
+		}
+	}
+}
+// 로밍 부가서비스 팝업 : 해외도착알리미 핸드폰 입력
+.rmLandingAnnounce {
+	.popup-tit {
+		.txt {
+			span {
+				@include fw-7(20px);
+			}
+		}
+	}
+	.popup-body {
+		padding-top: 16px;
+	}
+}
+
+// 앱스토어 상세구매내역 확인방법 팝업 : 휴대폰결제 이용내역
+.appPaid-wrap {
+    background-color: var(--dt-gray02);
+    border-radius: 8px;
+    padding: 24px 20px;
+    .appStore {
+        padding: 16px;
+        background-color: var(--dt-white);
+        border: none;
+        border-radius: 8px;
+        pointer-events:none;
+        .txt-wrap {
+            gap: 4px;
+            .txt {
+                @include fw-5(14px);
+                line-height: 21px;
+                color: var(--dt-black);
+            }
+        }
+    }
+    .info-box {
+        @include flexRow;
+        align-items:center;
+        justify-content:center;
+        flex-wrap: wrap;
+        margin-top: 20px;
+        border-radius: 8px;
+        gap: 4px;
+        .txt {
+            @include fw-6(14px);
+            line-height: 1.5;
+            color: var(--dt-gray13);
+            letter-spacing: -0.5px;
+        }
+    }
+    & + .bullet-list {margin-top:8px;}
+}
+
+
+// 2차인증 : twoFactorAuth 팝업
 .twoFactorAuth {
 	.btn-group .btn-radio {
 		flex-direction: column;
