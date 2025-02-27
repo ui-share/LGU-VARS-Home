@@ -1,0 +1,41 @@
+@import "../scss/base/mixin";
+.asTaskList {
+    // AS List 카드
+    .asTask {
+        .item.text {
+            flex-direction: row;
+        }
+        .list-wrap {
+            width: 100%;
+            margin-top: 0;
+            padding: 20px 0 0 0;
+            border-top: 1px solid var(--dt-gray06);
+            background-color: transparent;
+            border-radius: unset;
+            .list-box {
+                flex-wrap: nowrap;
+                align-items: flex-start;
+                padding: 6px 0;
+                border-bottom: none;
+                gap: 12px;
+                &:first-child {
+                    padding-top: 0;
+                }
+                &:last-child {
+                    padding-bottom: 0;
+                }
+                .head {
+                    min-width: 64px;
+                    text-align: left;
+                    line-height: 150%;
+                    color: var(--dt-gray11);
+                }
+                .tail {
+                    line-height: 150%;
+                    margin-left: 0;
+                    max-width: unset;
+                }
+            }
+        }
+    }
+}
