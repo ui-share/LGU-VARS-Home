@@ -70,3 +70,6 @@
 .page-wrapper.requestMoveInstall .slct-box-wrap:has(.slct-box:nth-child(2):last-child) .slct-box {
   width: max-content;
 }
+.page-wrapper.requestMoveInstall .chckbox-wrap {
+  margin: 4px 0 12px;
+}
