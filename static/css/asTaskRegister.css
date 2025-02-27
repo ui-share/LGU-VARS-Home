@@ -68,7 +68,6 @@
   flex: 1;
 }
 .asTaskRegister .timetable .list-box .head {
-  max-width: -moz-fit-content;
   max-width: fit-content;
   margin-top: 4px;
 }

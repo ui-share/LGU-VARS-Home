@@ -65,6 +65,7 @@ textarea {
 textarea {
 	min-height: 60px;
 	word-break: break-all;
+	resize:none;
 }
 input::placeholder,
 textarea::placeholder {

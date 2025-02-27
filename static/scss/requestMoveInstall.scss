@@ -5,12 +5,11 @@
 			@include flexColum;
 			row-gap:12px;
 			padding-bottom:24px;
-
 			.con__tit-box {
 				margin-top: 20px;
 				margin-bottom: 0;
 			}
-			&:has(> .inform-wrap) {
+			&:has( > .inform-wrap) {
 				.cont__txt-box {
 					&:not(:first-child) {
 						margin-top: 16px;
@@ -49,28 +48,26 @@
 			}
 			.card-footer {margin-top:12px;}
 		}
-		.table-cont{
+		.table-cont {
 			th, td {
-				&:first-child {
-					width: 25%;
-				}
-				&.txt-amount {
-					width: 30%;
-				}
- 			}
+				&:first-child {width:25%;}
+				&.txt-amount {width:30%;} //금액
+			}
 		}
+
 		.input-col-wrap .input-control:first-of-type {
-			margin-top: 4px;
+			margin-top:4px;
 		}
 		.slct-box-wrap {
-			justify-content: flex-start;
+			justify-content:flex-start;
 			column-gap: 4px;
+
 			&:has(.slct-box:first-child:last-child) .slct-box {
-				width: max-content;
-				max-width: max-content;
+				width:max-content;
+				max-width:max-content;
 			}
 			&:has(.slct-box:nth-child(2):last-child) .slct-box {
-				width: max-content;
+				width:max-content;
 			}
 		}
 	}

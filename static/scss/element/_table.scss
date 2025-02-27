@@ -8,6 +8,7 @@ table {
         margin-top:12px;
         & + .bullet-list {margin-top:8px;}
     }
+
     th, td {
         width:auto;
         max-width:max-content;
@@ -18,24 +19,24 @@ table {
         word-wrap: break-word;
         word-break:keep-all;
         border:1px solid var(--dt-gray08);
+        &.txt-amount {padding-right:.4em;} //금액
     }
     th{
         padding:6px .3em;
         background-color:var(--dt-gray02);
         font-weight:600;
         line-height:17px;
-        letter-spacing: -0.3px;
+        letter-spacing: -0.2px;
     }
     td {
-        padding:8px .4em;
+        padding:8px .2em;
         background-color:var(--dt-white);
         font-weight:500;
         line-height:16px;
         letter-spacing: -0.3px;
         &.txt-amount {text-align:right;}
-
     }
-    .total-area {
+    .total-area { // 합계
         th, td {
             background-color:var(--dt-gray02);
             font-weight:700;

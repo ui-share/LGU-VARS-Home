@@ -2919,6 +2919,7 @@ textarea {
 textarea {
   min-height: 60px;
   word-break: break-all;
+  resize: none;
 }
 
 input::placeholder,
@@ -4747,15 +4748,18 @@ table th, table td {
   word-break: keep-all;
   border: 1px solid var(--dt-gray08);
 }
+table th.txt-amount, table td.txt-amount {
+  padding-right: 0.4em;
+}
 table th {
   padding: 6px 0.3em;
   background-color: var(--dt-gray02);
   font-weight: 600;
   line-height: 17px;
-  letter-spacing: -0.3px;
+  letter-spacing: -0.2px;
 }
 table td {
-  padding: 8px 0.4em;
+  padding: 8px 0.2em;
   background-color: var(--dt-white);
   font-weight: 500;
   line-height: 16px;
