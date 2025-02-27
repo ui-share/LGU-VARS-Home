@@ -4242,12 +4242,18 @@ textarea::placeholder {
 .asSymptomsPop .accordion-container.open .txt-title {
   color: var(--dt-gray16);
 }
+.asSymptomsPop .accordion-container .btn-popSolid {
+  padding: 12px 20px;
+}
 .asSymptomsPop .accordion-header .txt-title {
   color: var(--dt-gray12);
 }
 .asSymptomsPop .btn-popSolid {
   justify-content: flex-start;
   text-align: left;
+}
+.asSymptomsPop .btn-popSolid .txt {
+  font-size: 14px;
 }
 
 .twoFactorAuth .btn-group .btn-radio {
