@@ -16,9 +16,9 @@
 		width: 100%;
 		max-height: calc(100% - 45px);
 
-		// 삭제금지 아이폰 테스트 중
-		padding-top: env(safe-area-inset-top, 45px);
-		-webkit-transform: translateZ(0);
+		// // 삭제금지 아이폰 테스트 중
+		// padding-top: env(safe-area-inset-top, 45px);
+		// -webkit-transform: translateZ(0);
 
 		@include flexColum;
 		border-top-left-radius: 20px;
@@ -138,7 +138,9 @@
 			gap: 12px;
 		}
 	}
-	.notice-wrap { // 팝업 내 테이블_불릿_문장 등 
+
+	// 팝업 내 테이블_불릿_문장 등 
+	.notice-wrap {
 		@include flexColum;
 		row-gap:20px;
 		padding-top:20px;
@@ -152,10 +154,13 @@
 			}
 		}
 	}
-	.tab-container { // 팝업 내 탭UI
+
+	// 팝업 내 탭UI
+	.tab-container {
 		.tab-cont {padding-top:24px;}
 	}
 	
+	//월선택
 	.calendar-box {
 		@include flexBox(center, center);
 		flex-direction:column;
@@ -258,12 +263,15 @@
 			}
 		}
 	}
+
 	// 방법 선택 팝업 
 	.slctInfo-box {
 		display: flex;
 		flex-direction: column;
 		gap: 20px;
 	}
+
+	// popup btn solid 
 	.btn {
 		/* popup-solid */
 		&.btn-popSolid-md { 
@@ -315,7 +323,6 @@
 				color: var(--dt-gray11);
 			}
 		}
-
 		// 자녀선택 버튼
 		&.btn-child {
 			display: flex;
@@ -341,7 +348,9 @@
 			}
 		}
 	}
-	&.submitSignupInfo{ //가입확인서발급
+
+	//가입확인서발급
+	&.submitSignupInfo{
 		padding-top:18px;
 		.con__tit-box {
 			.tit-head .txt-title {
@@ -369,7 +378,9 @@
 			}
 		}
 	}
-	&.contract {//선택약정 프리미어
+
+	//선택약정 프리미어
+	&.contract {
 		.cont__txt-box {
 			padding:10px 0 12px;
 			.txt {color:var(--dt-gray15); font-size:16px;font-weight:600;}
@@ -392,12 +403,15 @@
 		}
 	}
 
-	.list-wrap {//로밍데이터 팝업
+	//로밍데이터 팝업
+	.list-wrap {
 		&.chrgData {
 			margin-top: 0;
 		}
 	}
-	&:has(.invoice) { //로밍 이용내역 : rmInvoice 청구서 팝업
+
+	//로밍 이용내역 : rmInvoice 청구서 팝업
+	&:has(.invoice) {
 		padding-top: 20px;
 		.cont__wrap .con__tit-box .tit-head{flex-wrap:wrap;}
 	}

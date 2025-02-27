@@ -60,35 +60,5 @@
             }
         }
     }
-
-    // 날짜선택 칩스
-    .timetable {
-        margin-top: 0;
-        background-color: transparent;
-        padding: 0;
-        .list-box {
-            flex-direction: row;
-            align-items: flex-start;
-            gap: 20px;
-            > * {
-                flex: 1;
-            }
-            .head {
-                max-width: fit-content;
-                margin-top: 4px;
-            }
-        }
-        .chips {
-            &.is-disabled {
-                opacity: 0.6;
-            }
-            &.is-selected {
-                border-color: var(--dt-primary);
-                .txt {
-                    color: var(--dt-primary);
-                }
-            }
-        }
-    }
 }
 

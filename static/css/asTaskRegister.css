@@ -54,29 +54,3 @@
 .asTaskRegister .cont__wrap-service .cont__txt-box:first-child {
   margin-top: 0;
 }
-.asTaskRegister .timetable {
-  margin-top: 0;
-  background-color: transparent;
-  padding: 0;
-}
-.asTaskRegister .timetable .list-box {
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 20px;
-}
-.asTaskRegister .timetable .list-box > * {
-  flex: 1;
-}
-.asTaskRegister .timetable .list-box .head {
-  max-width: fit-content;
-  margin-top: 4px;
-}
-.asTaskRegister .timetable .chips.is-disabled {
-  opacity: 0.6;
-}
-.asTaskRegister .timetable .chips.is-selected {
-  border-color: var(--dt-primary);
-}
-.asTaskRegister .timetable .chips.is-selected .txt {
-  color: var(--dt-primary);
-}
