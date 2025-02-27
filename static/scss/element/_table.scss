@@ -20,16 +20,25 @@ table {
         border:1px solid var(--dt-gray08);
     }
     th{
-        padding:6px 3px;
+        padding:6px .3em;
         background-color:var(--dt-gray02);
         font-weight:600;
         line-height:17px;
+        letter-spacing: -0.3px;
     }
     td {
-        padding:8px 10px;
+        padding:8px .4em;
         background-color:var(--dt-white);
         font-weight:500;
         line-height:16px;
         letter-spacing: -0.3px;
+        &.txt-amount {text-align:right;}
+
+    }
+    .total-area {
+        th, td {
+            background-color:var(--dt-gray02);
+            font-weight:700;
+        }
     }
 }
