@@ -38,7 +38,7 @@
 				<button class="btn btn-util close" type="button" alt="닫기"></button>
 			</div>
 			<div class="popup-body">
-				<div class="accordion-container"><!-- open 클래스로 show/hide 조정 <div class="list-info-price accordion-container open">-->
+				<div class="accordion-container open"><!-- open 클래스로 show/hide 조정 <div class="list-info-price accordion-container open">-->
 					<button class="accordion-header"><!-- 아코디언 버튼 -->
 						<span class="row txt-title">
 							<span>인터넷/와이파이</span>
@@ -59,8 +59,10 @@
 									</span>
 								</span>
 							</button>
-							<button class="btn btn-popSolid between" type="button">
+							<!-- 선택시 is-selected 클래스 붙음 -->
+							<button class="btn btn-popSolid between is-selected" type="button">
 								<span class="txt">인터넷이 자주 끊겨요</span>
+								<!-- selected 되었을 때 나타나는 부분 -->
 								<span class="txt-wrap">
 									<span class="img-box">
 										<img src="../../../../static/images/icon/ic-btn-chck.svg">
@@ -95,7 +97,7 @@
 					</div>
 				</div>
 
-				<div class="accordion-container open"><!-- open 클래스로 show/hide 조정 <div class="list-info-price accordion-container open">-->
+				<div class="accordion-container"><!-- open 클래스로 show/hide 조정 <div class="list-info-price accordion-container open">-->
 					<button class="accordion-header"><!-- 아코디언 버튼 -->
 						<span class="row txt-title">
 							<span>IPTV</span>
@@ -116,10 +118,8 @@
 									</span>
 								</span>
 							</button>
-							<!-- 선택시 is-selected 클래스 붙음 -->
-							<button class="btn btn-popSolid between is-selected" type="button">
+							<button class="btn btn-popSolid between" type="button">
 								<span class="txt">TV 소리가 안들려요</span>
-								<!-- selected 되었을 때 나타나는 부분 -->
 								<span class="txt-wrap">
 									<span class="img-box">
 										<img src="../../../../static/images/icon/ic-btn-chck.svg">
