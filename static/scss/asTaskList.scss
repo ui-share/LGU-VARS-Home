@@ -2,6 +2,8 @@
 .asTaskList {
     // AS List 카드
     .asTask {
+        background-color: var(--dt-white);
+        border: 1px solid var(--dt-gray06);
         .item.text {
             flex-direction: row;
         }

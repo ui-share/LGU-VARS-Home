@@ -1,3 +1,7 @@
+.asTaskList .asTask {
+  background-color: var(--dt-white);
+  border: 1px solid var(--dt-gray06);
+}
 .asTaskList .asTask .item.text {
   flex-direction: row;
 }
