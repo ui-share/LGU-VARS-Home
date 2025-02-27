@@ -1,0 +1,83 @@
+.asTaskRegister .accordion-container {
+  border-radius: 8px;
+  background-color: var(--dt-gray02);
+  overflow: hidden;
+}
+.asTaskRegister .accordion-container .accordion-content {
+  padding: 0 20px 16px;
+}
+.asTaskRegister .accordion-container .accordion-content .row {
+  width: 100%;
+  border-top: 1px solid var(--dt-gray06);
+}
+.asTaskRegister .accordion-container .accordion-content .row:first-child {
+  padding-top: 16px;
+}
+.asTaskRegister .unlockBtn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 110%;
+  color: #E6007E;
+  text-align: left;
+  margin-left: auto;
+  padding: 4px;
+}
+.asTaskRegister .unlockBtn::before, .asTaskRegister .unlockBtn::after {
+  display: block;
+  content: "";
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center center;
+}
+.asTaskRegister .unlockBtn::before {
+  width: 18px;
+  height: 18px;
+  background-image: url(../../static/images/icon/m_ic_lock.png);
+}
+.asTaskRegister .unlockBtn::after {
+  width: 12px;
+  height: 12px;
+  background-image: url(../../static/images/icon/m_ic_arrow_pink.png);
+}
+.asTaskRegister .cont__wrap-service {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.asTaskRegister .cont__wrap-service .cont__txt-box {
+  margin-top: 16px;
+}
+.asTaskRegister .cont__wrap-service .cont__txt-box:first-child {
+  margin-top: 0;
+}
+.asTaskRegister .timetable {
+  margin-top: 0;
+  background-color: transparent;
+  padding: 0;
+}
+.asTaskRegister .timetable .list-box {
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+}
+.asTaskRegister .timetable .list-box > * {
+  flex: 1;
+}
+.asTaskRegister .timetable .list-box .head {
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  margin-top: 4px;
+}
+.asTaskRegister .timetable .chips.is-disabled {
+  opacity: 0.6;
+}
+.asTaskRegister .timetable .chips.is-selected {
+  border-color: var(--dt-primary);
+}
+.asTaskRegister .timetable .chips.is-selected .txt {
+  color: var(--dt-primary);
+}

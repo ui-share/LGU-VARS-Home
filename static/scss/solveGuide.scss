@@ -1,0 +1,94 @@
+@import "../scss/base/mixin";
+.asTaskRegister {
+    // 아코디온 수정
+    .accordion-container {
+        border-radius: 8px;
+        background-color: var(--dt-gray02);
+        overflow: hidden;
+        .accordion-content {
+            padding: 0 20px 16px;
+            .row {
+                width: 100%;
+                border-top: 1px solid var(--dt-gray06);
+                &:first-child {
+                    padding-top: 16px;
+                }
+            }
+        }
+    }
+
+    // 가려진 주소 보기 버튼
+    .unlockBtn {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 0.15rem;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 110%;
+        color: #E6007E;
+        text-align: left;
+        margin-left: auto;
+        padding: 4px;
+        &::before, &::after {
+            display: block;
+            content: "";
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position: center center;
+        }
+        &::before {
+            width: 18px;
+            height: 18px;
+            background-image: url(../../static/images/icon/m_ic_lock.png);
+        }
+        &::after {
+            width: 12px;
+            height: 12px;
+            background-image: url(../../static/images/icon/m_ic_arrow_pink.png);
+        }
+    }
+
+    .cont__wrap-service {
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+        .cont__txt-box {
+            margin-top: 16px;
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+
+    // 날짜선택 칩스
+    .timetable {
+        margin-top: 0;
+        background-color: transparent;
+        padding: 0;
+        .list-box {
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 20px;
+            > * {
+                flex: 1;
+            }
+            .head {
+                max-width: fit-content;
+                margin-top: 4px;
+            }
+        }
+        .chips {
+            &.is-disabled {
+                opacity: 0.6;
+            }
+            &.is-selected {
+                border-color: var(--dt-primary);
+                .txt {
+                    color: var(--dt-primary);
+                }
+            }
+        }
+    }
+}
+
