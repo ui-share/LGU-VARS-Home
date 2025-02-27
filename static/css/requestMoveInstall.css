@@ -4,10 +4,14 @@
   row-gap: 12px;
   padding-bottom: 24px;
 }
-.page-wrapper.requestMoveInstall .cont__wrap.cont__wrap-service .cont__txt-box {
+.page-wrapper.requestMoveInstall .cont__wrap.cont__wrap-service .con__tit-box {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+.page-wrapper.requestMoveInstall .cont__wrap.cont__wrap-service:has(> .inform-wrap) .cont__txt-box:not(:first-child) {
   margin-top: 16px;
 }
-.page-wrapper.requestMoveInstall .cont__wrap.cont__wrap-service .cont__txt-box .txt {
+.page-wrapper.requestMoveInstall .cont__wrap.cont__wrap-service:has(> .inform-wrap) .cont__txt-box:not(:first-child) .txt {
   font-size: 18px;
 }
 .page-wrapper.requestMoveInstall .list-wrap {
@@ -29,8 +33,7 @@
   color: var(--dt-black);
 }
 .page-wrapper.requestMoveInstall .card.rmPeriod .item {
-  -moz-column-gap: 0;
-       column-gap: 0;
+  column-gap: 0;
 }
 .page-wrapper.requestMoveInstall .card.rmPeriod .item .img-box {
   width: 18px;
@@ -46,4 +49,24 @@
 }
 .page-wrapper.requestMoveInstall .card.rmPeriod .card-footer {
   margin-top: 12px;
+}
+.page-wrapper.requestMoveInstall .table-cont th:first-child, .page-wrapper.requestMoveInstall .table-cont td:first-child {
+  width: 25%;
+}
+.page-wrapper.requestMoveInstall .table-cont th.txt-amount, .page-wrapper.requestMoveInstall .table-cont td.txt-amount {
+  width: 30%;
+}
+.page-wrapper.requestMoveInstall .input-col-wrap .input-control:first-of-type {
+  margin-top: 4px;
+}
+.page-wrapper.requestMoveInstall .slct-box-wrap {
+  justify-content: flex-start;
+  column-gap: 4px;
+}
+.page-wrapper.requestMoveInstall .slct-box-wrap:has(.slct-box:first-child:last-child) .slct-box {
+  width: max-content;
+  max-width: max-content;
+}
+.page-wrapper.requestMoveInstall .slct-box-wrap:has(.slct-box:nth-child(2):last-child) .slct-box {
+  width: max-content;
 }
