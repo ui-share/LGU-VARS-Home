@@ -3781,6 +3781,9 @@ textarea::placeholder {
 .popup-body .btn.btn-popSolid.between .txt-wrap {
   display: flex;
   align-items: center;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  opacity: 0;
 }
 .popup-body .btn.btn-popSolid.between .txt-wrap .txt {
   font-size: 14px;
@@ -3795,6 +3798,9 @@ textarea::placeholder {
 .popup-body .btn.btn-popSolid.between .txt-wrap .img-box img {
   width: 16px;
   height: 16px;
+}
+.popup-body .btn.btn-popSolid.between.is-selected .txt-wrap {
+  opacity: 1;
 }
 .popup-body .btn.btn-popSolid .delay-txt {
   font-size: 14px;
@@ -4192,6 +4198,7 @@ textarea::placeholder {
 
 .asSymptomsPop .accordion-container {
   border-top: 1px solid var(--dt-gray06);
+  color: var(--dt-gray12);
 }
 .asSymptomsPop .accordion-container:first-child {
   border: none;
@@ -4199,7 +4206,13 @@ textarea::placeholder {
 .asSymptomsPop .accordion-container.open .accordion-content {
   padding-bottom: 16px;
 }
-.asSymptomsPop .accordion-container .btn-popSolid {
+.asSymptomsPop .accordion-container.open .txt-title {
+  color: var(--dt-gray16);
+}
+.asSymptomsPop .accordion-header .txt-title {
+  color: var(--dt-gray12);
+}
+.asSymptomsPop .btn-popSolid {
   justify-content: flex-start;
   text-align: left;
 }

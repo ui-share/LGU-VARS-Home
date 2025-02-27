@@ -1,0 +1,49 @@
+.page-wrapper.requestMoveInstall .cont__wrap.cont__wrap-service {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+  padding-bottom: 24px;
+}
+.page-wrapper.requestMoveInstall .cont__wrap.cont__wrap-service .cont__txt-box {
+  margin-top: 16px;
+}
+.page-wrapper.requestMoveInstall .cont__wrap.cont__wrap-service .cont__txt-box .txt {
+  font-size: 18px;
+}
+.page-wrapper.requestMoveInstall .list-wrap {
+  margin-top: 0;
+}
+.page-wrapper.requestMoveInstall .list-wrap:first-of-type {
+  margin-top: 12px;
+}
+.page-wrapper.requestMoveInstall .list-wrap .list-box {
+  gap: 4px 8px;
+}
+.page-wrapper.requestMoveInstall .list-wrap .list-box .tail {
+  max-width: 220px;
+}
+.page-wrapper.requestMoveInstall .card.rmPeriod {
+  row-gap: 10px;
+}
+.page-wrapper.requestMoveInstall .card.rmPeriod .card-header .tit {
+  color: var(--dt-black);
+}
+.page-wrapper.requestMoveInstall .card.rmPeriod .item {
+  -moz-column-gap: 0;
+       column-gap: 0;
+}
+.page-wrapper.requestMoveInstall .card.rmPeriod .item .img-box {
+  width: 18px;
+  min-width: 18px;
+  height: 18px;
+  transform: rotate(180deg);
+}
+.page-wrapper.requestMoveInstall .card.rmPeriod .list-wrap {
+  margin-top: 0;
+}
+.page-wrapper.requestMoveInstall .card.rmPeriod .list-wrap .list-box .tail {
+  color: var(--dt-gray16);
+}
+.page-wrapper.requestMoveInstall .card.rmPeriod .card-footer {
+  margin-top: 12px;
+}

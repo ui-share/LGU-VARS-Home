@@ -288,6 +288,8 @@
 				.txt-wrap {				
 					display: flex;
 					align-items: center;
+					min-width: fit-content;
+					opacity: 0;
 					.txt {
 						@include fw-5(14px);
 						line-height: 1.2;
@@ -301,7 +303,12 @@
 							height: 16px;
 						}
 					}
-				}				
+				}
+				&.is-selected {
+					.txt-wrap {
+						opacity: 1;
+					}
+				}		
 			}
 			.delay-txt {
 				@include fw-5(14px);
@@ -695,6 +702,7 @@
 .asSymptomsPop {
 	.accordion-container {
 		border-top: 1px solid var(--dt-gray06);
+		color: var(--dt-gray12);
 		&:first-child {
 			border: none;
 		}
@@ -702,11 +710,19 @@
 			.accordion-content {
 				padding-bottom: 16px;
 			}
+			.txt-title {
+				color: var(--dt-gray16);
+			}
 		}
-		.btn-popSolid {
-			justify-content: flex-start;
-			text-align: left;
+	}
+	.accordion-header {
+		.txt-title {
+			color: var(--dt-gray12);
 		}
+	}
+	.btn-popSolid {
+		justify-content: flex-start;
+		text-align: left;
 	}
 }
 
