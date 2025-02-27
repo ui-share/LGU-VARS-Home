@@ -4196,6 +4196,10 @@ textarea::placeholder {
   justify-content: center;
 }
 
+.asSymptomsPop:has(.accordion-container) .popup-body {
+  padding: 4px 0px 40px 0;
+  max-height: 500px;
+}
 .asSymptomsPop .accordion-container {
   border-top: 1px solid var(--dt-gray06);
   color: var(--dt-gray12);
@@ -4204,7 +4208,7 @@ textarea::placeholder {
   border: none;
 }
 .asSymptomsPop .accordion-container.open .accordion-content {
-  padding-bottom: 16px;
+  padding: 0 20px 16px;
 }
 .asSymptomsPop .accordion-container.open .txt-title {
   color: var(--dt-gray16);

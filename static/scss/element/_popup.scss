@@ -700,6 +700,12 @@
 }
 // 고장 증상 선택 팝업
 .asSymptomsPop {
+	&:has(.accordion-container) {
+		.popup-body {
+			padding: 4px 0px 40px 0;
+			max-height: 500px;
+		}
+	}
 	.accordion-container {
 		border-top: 1px solid var(--dt-gray06);
 		color: var(--dt-gray12);
@@ -708,7 +714,7 @@
 		}
 		&.open {
 			.accordion-content {
-				padding-bottom: 16px;
+				padding: 0 20px 16px;
 			}
 			.txt-title {
 				color: var(--dt-gray16);
