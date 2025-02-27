@@ -524,6 +524,7 @@
 			.cont__wrap {
 				padding: 0 20px;
 				&.cont__wrap-vertical {gap:16px;}
+				&.cont__wrap-btBtn {padding:0;}
 			}
 		}
 		&:has(.section__cont) {
@@ -612,6 +613,68 @@
 			}
 		}
 	}
+	//설치변경신청(이전설치) : 주소검색 풀팝업
+	.movement {
+		.popup-body .section__cont {
+			gap:24px;
+			padding-bottom:110px;
+		}
+		.input-col-wrap {
+			gap:10px;
+			.slct-box-wrap:has(.slct-box:first-child:last-child) .slct-box {
+				max-width:100%;
+				width:100%;
+			}
+			.form-select {width:100%;}
+		}
+		.input-row-wrap {
+			&.double {
+				.input-control:first-child {width:120px;}
+			}
+			&.triple{
+				> * {
+					width:30%;
+				}
+			}
+		}
+		.bullet-list {
+			margin-bottom:10px;
+		}
+		.addr-wrap {
+			.addr-box {
+				&:first-child {padding-top:8px;}
+				padding: 16px 0 17px;
+				border-bottom: 1px solid var(--dt-gray17);
+				&[role="button"]:active {
+					box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
+				}
+				.zip-code {
+					@include fw-6(14px);
+					color: var(--dt-primary);
+					display:inline-block;
+					margin-right:6px;
+				}
+				.flag {margin-bottom:4px;}
+				.addr-main {
+					flex-wrap:wrap;
+					@include fw-5(14px);
+					line-height: 21px;
+					color: var(--dt-gray16);
+					margin-bottom: 2px;
+				}
+				.addr-detail {
+					@include fw-5(12px);
+					line-height: 18px;
+					color: var(--dt-gray11);
+				}
+				&.card.solid {
+					background-color: transparent;
+					border-bottom: unset;
+					padding: 72px 0;
+				}
+			}    
+		}
+	} 
 }
 
 

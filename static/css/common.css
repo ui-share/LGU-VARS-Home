@@ -2158,6 +2158,14 @@ button {
   opacity: 0.6;
 }
 
+.chckbox-wrap {
+  flex-wrap: wrap;
+  gap: 10px 6px;
+}
+.chckbox-wrap .chck-group {
+  width: calc((100% - 6px) / 2);
+}
+
 .chips-group {
   display: flex;
   align-items: center;
@@ -4022,6 +4030,9 @@ textarea::placeholder {
 .full-popup .popup-body .section__cont .cont__wrap.cont__wrap-vertical {
   gap: 16px;
 }
+.full-popup .popup-body .section__cont .cont__wrap.cont__wrap-btBtn {
+  padding: 0;
+}
 .full-popup .popup-body:has(.section__cont) {
   padding: 20px 0 40px;
   gap: 0;
@@ -4098,6 +4109,68 @@ textarea::placeholder {
   text-align: right;
   line-height: 150%;
   margin-top: 8px;
+}
+.full-popup .movement .popup-body .section__cont {
+  gap: 24px;
+  padding-bottom: 110px;
+}
+.full-popup .movement .input-col-wrap {
+  gap: 10px;
+}
+.full-popup .movement .input-col-wrap .slct-box-wrap:has(.slct-box:first-child:last-child) .slct-box {
+  max-width: 100%;
+  width: 100%;
+}
+.full-popup .movement .input-col-wrap .form-select {
+  width: 100%;
+}
+.full-popup .movement .input-row-wrap.double .input-control:first-child {
+  width: 120px;
+}
+.full-popup .movement .input-row-wrap.triple > * {
+  width: 30%;
+}
+.full-popup .movement .bullet-list {
+  margin-bottom: 10px;
+}
+.full-popup .movement .addr-wrap .addr-box {
+  padding: 16px 0 17px;
+  border-bottom: 1px solid var(--dt-gray17);
+}
+.full-popup .movement .addr-wrap .addr-box:first-child {
+  padding-top: 8px;
+}
+.full-popup .movement .addr-wrap .addr-box[role=button]:active {
+  box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
+}
+.full-popup .movement .addr-wrap .addr-box .zip-code {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--dt-primary);
+  display: inline-block;
+  margin-right: 6px;
+}
+.full-popup .movement .addr-wrap .addr-box .flag {
+  margin-bottom: 4px;
+}
+.full-popup .movement .addr-wrap .addr-box .addr-main {
+  flex-wrap: wrap;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  color: var(--dt-gray16);
+  margin-bottom: 2px;
+}
+.full-popup .movement .addr-wrap .addr-box .addr-detail {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  color: var(--dt-gray11);
+}
+.full-popup .movement .addr-wrap .addr-box.card.solid {
+  background-color: transparent;
+  border-bottom: unset;
+  padding: 72px 0;
 }
 
 .rmAnnounce .popup-body {
@@ -4813,6 +4886,18 @@ table .total-area th, table .total-area td {
   background-color: var(--dt-gray02);
   font-weight: 700;
 }
+table .slct-area .radio-group::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -16px;
+  margin-left: -16px;
+  width: 32px;
+  height: 32px;
+  border: 1px solid red;
+}
 
 /* 
   popper.js 사용
@@ -5065,4 +5150,67 @@ div[data-popper-arrow]::before {
     padding-left: 0;
     padding-right: 0px;
   }
+}
+.radio-group {
+  display: inline-flex;
+  position: relative;
+  min-width: 20px;
+  min-height: 20px;
+  padding-left: 20px;
+  color: #000;
+  text-align: left;
+  cursor: pointer;
+  align-items: center;
+}
+.radio-group .ic-radio {
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--dt-gray09);
+  transition: border-color 0.15s ease-in-out;
+  align-self: baseline;
+}
+.radio-group .ic-radio + span {
+  display: inline-block;
+  margin-left: 8px;
+}
+.radio-group input[type=radio] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  opacity: 0;
+}
+.radio-group input[type=radio]:checked ~ .radio-label .ic-radio {
+  border-color: var(--dt-primary);
+}
+.radio-group input[type=radio]:checked ~ .radio-label .ic-radio::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -5px;
+  margin-left: -5px;
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: var(--dt-primary);
+  border-radius: 50%;
+}
+.radio-group input[type=radio]:disabled ~ .radio-label, .radio-group input[type=radio]:checked:disabled ~ .radio-label {
+  pointer-events: none;
+  opacity: 0.36;
+}
+.radio-group .radio-label {
+  display: inline-block;
+  vertical-align: baseline;
+  font-size: 14px;
 }
