@@ -1,0 +1,23 @@
+.homeCode .cont__wrap-service {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.homeCode .chngCode {
+  border: none;
+  background-color: var(--dt-gray02);
+  padding: 12px 16px;
+}
+.homeCode .chngCode .item {
+  flex-direction: column;
+  align-items: flex-start;
+}
+.homeCode .chngCode .item.text {
+  gap: 0;
+}
+.homeCode .chngCode .item.text .tit {
+  font-size: 16px;
+}
+.homeCode .chngCode .item.text .txt:not(.service) {
+  margin-top: 4px;
+}

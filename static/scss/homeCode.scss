@@ -1,0 +1,27 @@
+@import "../scss/base/mixin";
+.homeCode {
+    .cont__wrap-service {
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+    }
+    // 홈코드 선택 카드
+	.chngCode {
+		border: none;
+		background-color: var(--dt-gray02);
+        padding: 12px 16px;
+		.item {
+			flex-direction: column;
+            align-items: flex-start;
+			&.text {
+				gap: 0;
+				.tit {
+					font-size: 16px;
+				}
+				.txt:not(.service) {
+					margin-top: 4px;
+				}
+			}
+		}
+	}
+}
