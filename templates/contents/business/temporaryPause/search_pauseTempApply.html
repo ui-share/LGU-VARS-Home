@@ -75,115 +75,82 @@
 					</div>
 				</div>
 			</div>
+
+
+
 			<div class="section__cont desc">
 				<div class="cont__wrap cont__wrap-vertical">
+
+					<!-- 서비스선택// -->
 					<div class="con__tit-box">
 						<h6 class="tit-head">
-							<span class="txt-title">일시정지 상세</span>
-						</h6> 
+							<span class="txt-title">일시정지 할 서비스 선택</span>
+						</h6>
 					</div>
-					<!-- 일시정지 신청 가능 -->
-					<div class="info-col-wrap">
-						<div class="plan-wrap">
-							<div class="list-plan line">
-								<div class="row">
-									<span class="txt-title">
-										남은 정지 가능 횟수
-										<!-- 남은 정지 가능 횟수 -->
-									</span>
-									<span class="txt-desc">
-										<span>2회</span>
-									</span>
-								</div>
-								<div class="row">
-									<span class="txt-title">
-										남은 정지 가능 일수
-										<!-- 남은 정지 가능 일수 -->
-									</span>
-									<span class="txt-desc"><span>180일</span></span>
-								</div>
-							</div>
+					<div class="chckbox-wrap col">
+						<!-- 체크박스 상태
+						비활성 : is-disabled 클래스 추가 <div class="chck-group is-disabled"> -->
+						<div class="chck-group">
+							<input type="checkbox" id="chck01" class="chck-input">
+							<label for="chck01" class="chck-label">
+								<span class="chck-box"></span>
+								<span>와이파이기본_기가안심_1G [U+ 인터넷] <span class="color-prim">사용중</span></span>
+							</label>
+						</div>
+						<div class="chck-group is-disabled">
+							<input type="checkbox" id="chck04" class="chck-input" >
+							<label for="chck04" class="chck-label">
+								<span class="chck-box"></span>
+								<span>와이파이기본_기가안심_1G [U+ TV] <span class="color-prim">사용중</span></span>
+							</label>
 						</div>
 					</div>
+					<!-- 서비스선택// -->
+
+					<!-- 가입정보 테이블// -->
+					<div class="con__tit-box">
+						<h6 class="tit-head">
+							<span class="txt-title">가입 정보</span>
+						</h6>
+					</div>
+					<table>
+						<thead>
+							<tr>
+								<th scope="col">서비스 명</th>
+								<th scope="col">남은 정지가능 횟수</th>
+								<th scope="col">남은 정지가능 일수</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>와이파이기본_기가안심_1G</td>
+								<td>3회</td>
+								<td>90일</td>
+							</tr>
+							<tr>
+								<td>프리미엄 디즈니+</td>
+								<td>3회</td>
+								<td>90일</td>
+							</tr>
+						</tbody>
+					</table>
+					<!-- //가입정보 테이블 -->
+
+
 					<!-- 일시정지 신청/취소 단일버튼 -->
 					<div class="btn-group">
 						<button type="button" class="btn btn-sec">
 							<span class="txt">일시정지 신청</span>
 						</button>
 					</div>
-					<!-- 일시정지 신청 불가능 -->
-					<div class="info-col-wrap">
-						<div class="plan-wrap">
-							<div class="list-plan line">
-								<div class="row">
-									<span class="txt-title">
-										일시정지 신청일
-										<!-- 일시정지 기간 -->
-									</span>
-									<span class="txt-desc">
-										<span>24년 7월 1일</span>
-									</span>
-								</div>
-								<div class="row">
-									<span class="txt-title">
-										일시정지 사유
-										<!-- 일시정지 사유 -->
-									</span>
-									<span class="txt-desc"><span>해외출장/여행(단기부재)</span></span>
-								</div>
-								<div class="row">
-									<span class="txt-title">
-										남은 정지 가능 횟수
-										<!-- 남은 정지 가능 횟수 -->
-									</span>
-									<span class="txt-desc"><span>1회</span></span>
-								</div>
-								<div class="row">
-									<span class="txt-title">
-										남은 정지 가능 일수
-										<!-- 남은 정지 가능 일수 -->
-									</span>
-									<span class="txt-desc"><span>100일</span></span>
-								</div>
-							</div>
-						</div>
-					</div>
+					
 					<!-- 일시정지 신청/취소 단일버튼 -->
 					<div class="btn-group">
 						<button type="button" class="btn btn-sec">
 							<span class="txt">일시정지 해제</span>
 						</button>
 					</div>
-					<!-- 일시정지 신청 예약 -->
-					<div class="info-col-wrap">
-						<div class="plan-wrap">
-							<div class="list-plan line">
-								<div class="row">
-									<span class="txt-title">
-										서비스 이용 상태
-										<!-- 서비스 이용 상태 -->
-									</span>
-									<span class="txt-desc">
-										<span>일시정지 예약중</span>
-									</span>
-								</div>
-								<div class="row">
-									<span class="txt-title">
-										시작(예정)일
-										<!-- 시작(예정)일 -->
-									</span>
-									<span class="txt-desc"><span>25년 2월 15일</span></span>
-								</div>
-								<div class="row">
-									<span class="txt-title">
-										종료(예정)일
-										<!-- 종료(예정)일 -->
-									</span>
-									<span class="txt-desc"><span>25년 2월 28일</span></span>
-								</div>
-							</div>
-						</div>
-					</div>
+					
 					<!-- 일시정지 예약 더블버튼 -->
 					<div class="btn-group flex-column">
 						<button type="button" class="btn btn-sec">
