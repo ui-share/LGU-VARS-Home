@@ -3570,7 +3570,7 @@ textarea::placeholder {
   bottom: 0;
   left: 0;
   width: 100%;
-  max-height: calc(100% - 45px);
+  max-height: calc(100% - 8px);
   display: flex;
   flex-direction: column;
   border-top-left-radius: 20px;
@@ -4324,7 +4324,7 @@ textarea::placeholder {
 
 .asSymptomsPop:has(.accordion-container) .popup-body {
   padding: 4px 0px 40px 0;
-  max-height: 500px;
+  min-height: 464px;
 }
 .asSymptomsPop .accordion-container {
   border-top: 1px solid var(--dt-gray06);
