@@ -1,8 +1,10 @@
 @import "../scss/base/mixin";
 .page-wrapper {
-	.container {
-		.section__cont {
-			padding: 92px 0 155px;
+	&.counselReservation {	
+		.container {
+			.section__cont {
+				padding: 92px 0 155px;
+			}
 		}
 	}
 }
