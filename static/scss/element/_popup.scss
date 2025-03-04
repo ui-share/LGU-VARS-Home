@@ -859,6 +859,7 @@
 			}
 			&.is-selected {
 				border: 1px solid var(--dt-primary);
+				box-shadow: 0 0 0 1px var(--dt-primary) inset;
 				.txt {
 					color: var(--dt-primary);
 				} 
