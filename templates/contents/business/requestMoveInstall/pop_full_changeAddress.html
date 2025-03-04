@@ -42,7 +42,7 @@
 					<div class="cont__wrap cont__wrap-vertical">
 						<div class="cont__txt-box">
 							<h4 class="txt">
-								주소 검색하기
+								주소 검색 하기
 							</h4>
 						</div>
 						<!-- 
@@ -50,22 +50,22 @@
 							** 포커스 : focused 
 							** 유효성 검사 성공 : success
 							** 유효성 검사 에러 : error
-							** 읽기 전용 : disabled
+							** 읽기 전용 : read-only
 							** 비활성 : disabled
 							기본 : <div class="input-control">
 							포커스 : <div class="input-control focused">
-							비활성, 읽기 전용 : <div class="input-control disabled">
+							비활성 : <div class="input-control disabled">
+							읽기 전용 : <div class="input-control read-only">
 							유효성 검사 성공 : <div class="input-control success">
 							유효성 검사 에러 : <div class="input-control error">
 						-->
 
-						<!-- 주소입력 -->
-						<div class="input-control">				
+						<!-- 주소 검색 -->
+						<div class="input-control">
 							<div class="input-group">
-								<label class="input-label">주소 입력</label>
 								<div class="input-row">
-									<input type="text" class="input-field" placeholder="도로명, 지번, 또는 건물명 검색" autocomplete="off">
-									<div class="util-box">									
+									<input type="text" class="input-field" placeholder="도로명주소 건물명 또는 지번 입력" autocomplete="off">
+									<div class="util-box">
 										<!-- 1글자 이상 입력 시 [X]버튼 노출 : hidden 삭제 <button type="button" class="clear-btn"> -->
 										<button type="button" class="clear-btn hidden"></button>
 										<button type="button" class="srch-btn">검색</button>
@@ -74,61 +74,6 @@
 							</div>
 							<!-- <div class="validation-txt">validation 메시지 필요시 노출</div> -->
 						</div>
-						<div class="input-row-wrap double">
-							<!-- 상세주소선택 -->
-							<div class="input-control">
-								<select id="" class="form-select">
-									<option value="">상세주소 선택</option>
-									<option value="">옵션1</option>
-									<option value="">옵션2</option>
-								</select>
-							</div>
-							<div class="input-control">
-								<div class="input-group">
-									<div class="input-row">
-										<input type="text" class="input-field" placeholder="상세주소 직접 입력" autocomplete="off">
-										<div class="util-box">									
-											<!-- 1글자 이상 입력 시 [X]버튼 노출 : hidden 삭제 <button type="button" class="clear-btn"> -->
-											<button type="button" class="clear-btn hidden"></button>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="input-row-wrap triple">
-							<!-- 지상, 지하 케이스 -->
-							<div class="input-control">
-								<select id="" class="form-select">
-									<option value="">지상</option>
-									<option value="">지하</option>
-								</select>
-							</div>
-							<div class="input-control">
-								<div class="input-group">
-									<div class="input-row">
-										<input type="text" class="input-field" placeholder="층" autocomplete="off">
-										<div class="util-box">									
-											<!-- 1글자 이상 입력 시 [X]버튼 노출 : hidden 삭제 <button type="button" class="clear-btn"> -->
-											<button type="button" class="clear-btn hidden"></button>
-											<span class="input-unit">층</span> 
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="input-control">
-								<div class="input-group">
-									<div class="input-row">
-										<input type="text" class="input-field" placeholder="호" autocomplete="off">
-										<div class="util-box">									
-											<!-- 1글자 이상 입력 시 [X]버튼 노출 : hidden 삭제 <button type="button" class="clear-btn"> -->
-											<button type="button" class="clear-btn hidden"></button>
-											<span class="input-unit">호</span> 
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-
 						<div class="bullet-wrap caution">
 							<h5 class="bullet-caption">
 								유의사항
@@ -156,46 +101,48 @@
 							</ul>
 						</div>
 					</div>
-
-					<!-- 검색결과 케이스// -->
-					<div class="cont__wrap cont__wrap-vertical">
-						
-						<div class="con__tit-box"><!-- 검색 결과 있는 경우// -->
+					<!-- 검색 결과 있는 경우// -->
+					<div class="cont__wrap cont__wrap-vertical ">
+						<div class="con__tit-box">
 							<h6 class="tit-head">
 								<span class="txt-title">주소 선택</span>
 							</h6>
 						</div>
-						<ul class="addr-wrap"><!-- 주소리스트 -->
-							<li class="addr-box" role="button" aria-label="주소선택버튼">
-								<div class="flag flag-etc">
-									<span class="txt">아파트</span>
-								</div>
-								<p class="addr-main row">
-									<span class="zip-code">06252</span> 서울특별시 용산구 한강대로 32 (한강로3가)
-								</p>
-								<p class="addr-detail">[지번] 서울특별시 용산구 한강로N가 NN-NN</p>
-							</li>
-							<li class="addr-box" role="button" aria-label="주소선택버튼">
-								<div class="flag flag-etc">
-									<span class="txt">건물</span>
-								</div>
-								<p class="addr-main row">
-									<span class="zip-code">06252</span> 서울특별시 용산구 한강대로 32 (한강로3가)
-								</p>
-								<p class="addr-detail">[지번] 서울특별시 용산구 한강로N가 NN-NN</p>
-							</li>
-							<li class="addr-box" role="button" aria-label="주소선택버튼">
-								<div class="flag flag-etc">
-									<span class="txt">빌라</span>
-								</div>
-								<p class="addr-main row">
-									<span class="zip-code">06252</span> 서울특별시 용산구 한강대로 32 (한강로3가)
-								</p>
-								<p class="addr-detail">[지번] 서울특별시 용산구 한강로N가 NN-NN</p>
-							</li>
-						</ul>
-
-						<div class="card solid center"><!-- 검색 결과가 없는 경우// -->
+						<div class="addr-wrap">
+							<ul ><!-- 주소리스트 -->
+								<li class="addr-box" role="button" aria-label="주소선택버튼">
+									<div class="flag flag-etc">
+										<span class="txt">아파트</span>
+									</div>
+									<p class="addr-main row">
+										<span class="zip-code">06252</span> <span>서울특별시 용산구 한강대로 32 (한강로3가)</span>
+									</p>
+									<p class="addr-detail">[지번] 서울특별시 용산구 한강로N가 NN-NN</p>
+								</li>
+								<li class="addr-box" role="button" aria-label="주소선택버튼">
+									<div class="flag flag-etc">
+										<span class="txt">건물</span>
+									</div>
+									<p class="addr-main row">
+										<span class="zip-code">06252</span> <span>서울특별시 용산구 한강대로 32 (한강로3가)</span>
+									</p>
+									<p class="addr-detail">[지번] 서울특별시 용산구 한강로N가 NN-NN</p>
+								</li>
+								<li class="addr-box" role="button" aria-label="주소선택버튼">
+									<div class="flag flag-etc">
+										<span class="txt">빌라</span>
+									</div>
+									<p class="addr-main row">
+										<span class="zip-code">06252</span> <span>서울특별시 용산구 한강대로 32 (한강로3가)</span>
+									</p>
+									<p class="addr-detail">[지번] 서울특별시 용산구 한강로N가 NN-NN</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- 검색 결과가 없는 경우// -->
+					<div class="cont__wrap cont__wrap-vertical hidden">
+						<div class="card solid center">
 							<div class="card-body">
 								<span class="img-box">
 									<img src="../../../../static/images/icon/ic-card-address_x.png" alt="검색결과 없음">
@@ -206,6 +153,84 @@
 								</div>
 							</div>
 						</div>
+					</div>
+					<!-- 상세주소 선택 -->
+					<div class="cont__wrap cont__wrap-vertical">
+						<!-- 기본 주소 -->
+						<div class="input-control read-only">
+							<div class="input-group">
+								<label class="input-label">주소 검색 하기</label>
+								<div class="input-row">
+									<input type="text" class="input-field" placeholder="도로명주소 건물명 또는 지번" value="서울특별시 용산구 한강대로 32 (한강로3가)" autocomplete="off" readonly>
+									<div class="util-box">
+										<!-- 1글자 이상 입력 시 [X]버튼 노출 : hidden 삭제 <button type="button" class="clear-btn"> -->
+										<button type="button" class="clear-btn hidden"></button>
+									</div>
+								</div>
+							</div>
+							<!-- <div class="validation-txt">validation 메시지 필요시 노출</div> -->
+						</div>
+						<div class="input-row-wrap double">
+							<div class="input-control">
+								<select id="" class="form-select">
+									<option value="">상세주소 선택</option>
+									<option value="">옵션1</option>
+									<option value="">옵션2</option>
+									<option value="">직접인력</option>
+								</select>
+							</div>
+							<div class="input-control disabled">
+								<div class="input-group">
+									<div class="input-row">
+										<input type="text" class="input-field" placeholder="건물명 입력" autocomplete="off">
+										<div class="util-box">
+											<!-- 1글자 이상 입력 시 [X]버튼 노출 : hidden 삭제 <button type="button" class="clear-btn"> -->
+											<button type="button" class="clear-btn hidden"></button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="input-row-wrap triple">
+							<div class="input-control">
+								<div class="input-group">
+									<div class="input-row">
+										<input type="tel" class="input-field" placeholder="동" autocomplete="off">
+										<div class="util-box">
+											<!-- 1글자 이상 입력 시 [X]버튼 노출 : hidden 삭제 <button type="button" class="clear-btn"> -->
+											<button type="button" class="clear-btn hidden"></button>
+											<span class="input-unit">동</span> 
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="input-control">
+								<div class="input-group">
+									<div class="input-row">
+										<input type="tel" class="input-field" placeholder="층" autocomplete="off">
+										<div class="util-box">	
+											<!-- 1글자 이상 입력 시 [X]버튼 노출 : hidden 삭제 <button type="button" class="clear-btn"> -->
+											<button type="button" class="clear-btn hidden"></button>
+											<span class="input-unit">층</span> 
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="input-control">
+								<div class="input-group">
+									<div class="input-row">
+										<input type="tel" class="input-field" placeholder="호" autocomplete="off">
+										<div class="util-box">
+											<!-- 1글자 이상 입력 시 [X]버튼 노출 : hidden 삭제 <button type="button" class="clear-btn"> -->
+											<button type="button" class="clear-btn hidden"></button>
+											<span class="input-unit">호</span> 
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						
 					</div>
 					<!-- //검색결과 케이스 -->
 

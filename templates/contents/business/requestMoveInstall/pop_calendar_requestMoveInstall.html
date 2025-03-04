@@ -30,7 +30,7 @@
 	};
 	document.addEventListener("DOMContentLoaded", function () {
 		const elem = document.getElementById("datepicker");
-		const rangepicker = new DateRangePicker(elem, {
+		const datepicker = new Datepicker(elem, {
 			format: "yy년 mm월 dd일",
 			language: "ko",
 			todayHighlight: true,
@@ -84,29 +84,17 @@
 	-->
 	<div class="popup-wrapper show">
 		<div class="back-drop"></div>
-		<div class="popup__wrap">
+		<div class="popup__wrap datepicker-UI">
 			<div class="popup-header">
 				<div class="popup-tit">
-					<span class="txt"><span class="color-prim">일시정지 기간</span>을<br/>선택해 주세요</span>
+					<span class="txt"><span class="color-prim">설치 희망일</span>을 선택해 주세요</span>
 				</div>
 				<button class="btn btn-util close hidden" type="button" alt="닫기"></button>
 			</div>
 			<div class="popup-body">
-				<ul class="bullet-list info">
-					<li class="bullet-item">남은 신청 가능 일수는 <span>180</span>일 입니다</li>
-				</ul>
+				
 				<div class="vanillajs-datepicker year-month-day" id="datepicker">
-					<div class="datepicker__input-wrap" >
-						<span class="datePicker__input-box">
-							<input type="text" name="start" class="input-field" disabled/>							
-							<span class="input-field-unit">부터</span>
-						</span>						
-						<span class="datePicker__input-box">
-							<span class="input-field-unit hyphen">~</span>
-							<input type="text" name="end" class="input-field" disabled/>							
-							<span class="input-field-unit">까지</span>
-						</span>
-					</div>
+					
 				</div>
 			</div>
 			<div class="popup-footer">
