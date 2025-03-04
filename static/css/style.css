@@ -29,6 +29,9 @@
 .section__cont.summary .cont__wrap-moveHistory {
   background-image: url(../images/img/img-hm-default.png);
 }
+.section__cont.summary .cont__wrap-networkErrorNotice {
+  background-image: url(../images/img/img-hm-information.png);
+}
 .section__cont.summary .txt-select-wrap {
   display: flex;
   flex-direction: row;

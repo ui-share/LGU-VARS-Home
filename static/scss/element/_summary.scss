@@ -34,6 +34,9 @@
 		.cont__wrap-moveHistory {
 			background-image: url(../images/img/img-hm-default.png);
 		}
+		.cont__wrap-networkErrorNotice {
+			background-image: url(../images/img/img-hm-information.png);
+		}
 		.txt-select-wrap {
 			@include flexRow;
 			flex-wrap: wrap;
