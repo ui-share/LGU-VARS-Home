@@ -1,0 +1,14 @@
+.page-wrapper.networkErrorNotice .list-wrap {
+  margin-top: 0;
+}
+.page-wrapper.networkErrorNotice .list-wrap .list-box {
+  flex-wrap: wrap;
+  gap: 4px 8px;
+}
+.page-wrapper.networkErrorNotice .list-wrap .list-box > * {
+  flex: auto;
+}
+.page-wrapper.networkErrorNotice .list-wrap .list-box .tail {
+  max-width: unset;
+  margin: 0;
+}
