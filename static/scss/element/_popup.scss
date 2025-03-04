@@ -617,7 +617,7 @@
 	.movement {
 		.popup-body .section__cont {
 			gap:24px;
-			padding-bottom:110px;
+			padding-bottom:115px;
 		}
 		.input-col-wrap {
 			gap:10px;
@@ -628,8 +628,15 @@
 			.form-select {width:100%;}
 		}
 		.input-row-wrap {
+			.input-control {
+				.input-group {padding-top:0;}
+			}
 			&.double {
-				.input-control:first-child {width:120px;}
+				.input-control:first-child {
+					width:120px;
+					min-width:100px;
+					> select {width:100%;}
+				}
 			}
 			&.triple{
 				> * {
@@ -641,6 +648,9 @@
 			margin-bottom:10px;
 		}
 		.addr-wrap {
+			max-height: calc(100vh - 260px);
+			overflow-y: auto;
+			> ul {}
 			.addr-box {
 				&:first-child {padding-top:8px;}
 				padding: 16px 0 17px;
