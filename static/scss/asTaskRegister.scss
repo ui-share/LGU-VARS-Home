@@ -1,5 +1,17 @@
 @import "../scss/base/mixin";
 .asTaskRegister {
+    //summary con__tit-box 수정
+    .con__tit-box {
+        .tit-head {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 12px;
+            .txt-sub {
+                font-size: 16px;
+                margin-top: 0;
+            }
+        }
+    }
     // 아코디온 수정
     .accordion-container {
         border-radius: 8px;

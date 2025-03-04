@@ -4323,8 +4323,8 @@ textarea::placeholder {
 }
 
 .asSymptomsPop:has(.accordion-container) .popup-body {
-  padding: 4px 0px 40px 0;
-  min-height: 464px;
+  padding: 4px 0px;
+  min-height: 450px;
 }
 .asSymptomsPop .accordion-container {
   border-top: 1px solid var(--dt-gray06);

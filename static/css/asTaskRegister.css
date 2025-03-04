@@ -1,3 +1,12 @@
+.asTaskRegister .con__tit-box .tit-head {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+.asTaskRegister .con__tit-box .tit-head .txt-sub {
+  font-size: 16px;
+  margin-top: 0;
+}
 .asTaskRegister .accordion-container {
   border-radius: 8px;
   background-color: var(--dt-gray02);

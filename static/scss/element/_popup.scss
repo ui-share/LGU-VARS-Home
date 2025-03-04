@@ -789,8 +789,8 @@
 .asSymptomsPop {
 	&:has(.accordion-container) {
 		.popup-body {
-			padding: 4px 0px 40px 0;
-			min-height: 464px;
+			padding: 4px 0px;
+			min-height: 450px;
 		}
 	}
 	.accordion-container {
