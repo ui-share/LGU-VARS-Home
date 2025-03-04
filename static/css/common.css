@@ -2785,6 +2785,16 @@ button {
   background-color: var(--dt-gray09);
   margin: 0 1px;
 }
+.conversion.flex-column {
+  border-radius: unset;
+  background-color: transparent;
+}
+.conversion.flex-column .btn {
+  border-color: rgba(24, 26, 27, 0.02);
+}
+.conversion + .conversion {
+  margin-top: 8px;
+}
 
 @media (max-width: 359px) {
   .cont__wrap-counsel .card-group {
