@@ -29,38 +29,6 @@
         }
     }
 
-    // 가려진 주소 보기 버튼
-    .unlockBtn {
-        position: relative;
-        display: flex;
-        align-items: center;
-        gap: 0.15rem;
-        font-size: 14px;
-        font-weight: 500;
-        line-height: 110%;
-        color: #E6007E;
-        text-align: left;
-        margin-left: auto;
-        padding: 4px;
-        &::before, &::after {
-            display: block;
-            content: "";
-            background-repeat: no-repeat;
-            background-size: 100%;
-            background-position: center center;
-        }
-        &::before {
-            width: 18px;
-            height: 18px;
-            background-image: url(../../static/images/icon/m_ic_lock.png);
-        }
-        &::after {
-            width: 12px;
-            height: 12px;
-            background-image: url(../../static/images/icon/m_ic_arrow_pink.png);
-        }
-    }
-
     .cont__wrap-service {
         display: flex;
         flex-direction: column;
