@@ -76,7 +76,8 @@ ul {list-style: none;perspective: 900;margin: 0;}
 						<li class="txt">
 							<h3>화면</h3>
 							<a href="./templates/contents/business/common/service_homeCode.html" target="_blank"><span>홈코드 선택</span>
-								<span class="flag error"><span class="txt">임시</span></span>
+								<span class="flag success"><span class="txt">02.28</span></span>
+								<span class="flag error"><span class="txt">up 03.04</span></span>
 							</a>
 						</li>
 					</ul>
@@ -132,78 +133,87 @@ ul {list-style: none;perspective: 900;margin: 0;}
 			<!-- 설치장소 변경_movement > requestMoveInstall + moveInstallHistory  -->
 			<li>
 				<input type="checkbox" ><i></i>
-				<h2>⭐ 설치장소 변경</h2>
+				<h2>⭐ 설치장소 변경_movement</h2>
 				<div class="accordion-con">
 					<ul class="menu">
-						<li class="tit">↳ 설치 장소 변경 신청 / 주소검색</li>
+						<li class="tit">↳ 설치 장소 변경 신청 / 주소검색_requestMoveInstall</li>
 						<li class="txt">
 							<h3>화면</h3>
-							<a href="./templates/contents/business/requestMoveInstall/search_requestMoveInstall.html" target="_blank"><span>조회 : 설치 장소 변경 신청</span>
+							<a href="./templates/contents/business/requestMoveInstall/search_requestMoveInstall.html" target="_blank"><span>설치 장소 변경 서비스 정보</span>
 								<span class="flag error"><span class="txt"></span></span>
 							</a>
-							<a href="./templates/contents/business/requestMoveInstall/submit_requestInfo.html" target="_blank"><span>입력 : 다른주소로 변경 - 가입 정보 상세 및 주소변경 정보</span>
+							<a href="./templates/contents/business/requestMoveInstall/submit_requestInfo.html" target="_blank"><span>다른 주소로 변경 신청</span>
 								<span class="flag error"><span class="txt"></span></span>
 							</a>
-							<a href="./templates/contents/business/requestMoveInstall/submit_requestInfo_home.html" target="_blank"><span>입력 : 집안 내 이동 - 가입 정보 상세 집안 내 이동 정보</span>
+							<a href="./templates/contents/business/requestMoveInstall/submit_requestInfo_home.html" target="_blank"><span>집안 내 이동 신청</span>
 								<span class="flag error"><span class="txt"></span></span>
 							</a>
-							<a href="./templates/contents/business/requestMoveInstall/finish_apply_changeMove.html" target="_blank"><span>완료 : 설치 장소 변경 신청완료</span>
+							<a href="./templates/contents/business/requestMoveInstall/finish_apply_changeMove.html" target="_blank"><span>다른 주소로 변경 신청 완료</span>
 								<span class="flag error"><span class="txt"></span></span>
 							</a>
-							<a href="./templates/contents/business/requestMoveInstall/finish_apply_homeMove.html" target="_blank"><span>완료 : 집안 내 이동 신청완료</span>
+							<a href="./templates/contents/business/requestMoveInstall/finish_apply_homeMove.html" target="_blank"><span>집안 내 이동 신청 완료</span>
+								<span class="flag error"><span class="txt"></span></span>
+							</a>
+							<h3>전창 팝업</h3>
+							<a href="./templates/contents/business/requestMoveInstall/pop_full_changeAddress.html" target="_blank"><span>주소 검색</span>
 								<span class="flag error"><span class="txt"></span></span>
 							</a>
 							
 							<h3>바텀시트</h3>
-							<a href="./templates/contents/business/requestMoveInstall/pop_full_changeAddress.html" target="_blank"><span>풀팝업 : 주소검색</span>
-								<span class="flag error"><span class="txt"></span></span>
+							<a href="./templates/contents/business/requestMoveInstall/pop_calendar_requestMoveInstall.html" target="_blank"><span>신청 날짜 선택</span>
+								<span class="flag success"><span class="txt">02.28</span></span>
 							</a>
-							<a href="./templates/contents/business/requestMoveInstall/pop_address_buildingNumber.html" target="_blank"><span>동 또는 건물 선택</span>
-								<span class="flag error"><span class="txt"></span></span>
+							<a href="./templates/contents/business/moveInstallHistory/pop_slctTime_requestMoveInstall.html" target="_blank"><span>방문 희망시간 선택</span>
+								<span class="flag success"><span class="txt">02.28</span></span>
 							</a>
-							<a href="./templates/contents/business/requestMoveInstall/pop_address_buildingNumber.html" target="_blank"><span>지상 또는 지하 선택</span>
-								<span class="flag error"><span class="txt"></span></span>
+							<a href="./templates/contents/business/moveInstallHistory/pop_impossibilityNotice.html" target="_blank"><span>접수 불가 안내</span>
+								<span class="flag success"><span class="txt">02.28</span></span>
 							</a>
+							<!-- <a href="./templates/contents/business/requestMoveInstall/pop_address_buildingNumber.html" target="_blank"><span>동 또는 건물 선택</span>
+								<span class="flag error"><span class="txt"></span></span>
+							</a> -->
+							<!-- <a href="./templates/contents/business/requestMoveInstall/pop_address_buildingNumber.html" target="_blank"><span>지상 또는 지하 선택</span>
+								<span class="flag error"><span class="txt"></span></span>
+							</a> -->
 						</li>
 					</ul>
 
 					<ul class="menu">
-						<li class="tit">↳ 설치 장소 변경 내역</li>
+						<li class="tit">↳ 설치 장소 변경 내역_moveInstallHistory</li>
 						<li class="txt">
 							<h3>화면</h3>
-							<a href="./templates/contents/business/moveInstallHistory/search_installhistory.html" target="_blank"><span>조회 : 설치장소변경내역</span>
-								<span class="flag error"><span class="txt"></span></span>
+							<a href="./templates/contents/business/moveInstallHistory/search_installhistory.html" target="_blank"><span>설치 장소 변경 접수 내역</span>
+								<span class="flag success"><span class="txt">02.28</span></span>
 							</a>
-							<a href="./templates/contents/business/moveInstallHistory/finish_applyvisiting.html" target="_blank"><span>완료 : 방문신청 완료</span>
-								<span class="flag error"><span class="txt"></span></span>
+							<a href="./templates/contents/business/moveInstallHistory/finish_applyvisiting.html" target="_blank"><span>방문 희망일 변경 완료</span>
+								<span class="flag success"><span class="txt">02.28</span></span>
 							</a>
-							<a href="./templates/contents/business/moveInstallHistory/finish_cancle_apply.html" target="_blank"><span>완료 : 변경접수 취소 완료</span>
-								<span class="flag error"><span class="txt"></span></span>
+							<a href="./templates/contents/business/moveInstallHistory/finish_cancle_apply.html" target="_blank"><span>설치 장소 변경 접수 취소 완료</span>
+								<span class="flag success"><span class="txt">02.28</span></span>
 							</a>
-							<a href="./templates/contents/business/moveInstallHistory/finish_cancle_notice_reapply.html" target="_blank"><span>완료 : 변경 접수 취소 완료 및 주소변경 재접수 안내</span>
-								<span class="flag error"><span class="txt"></span></span>
+							<a href="./templates/contents/business/moveInstallHistory/finish_cancle_notice_reapply.html" target="_blank"><span>접수 취소 완료 및 변경 재접수 안내</span>
+								<span class="flag success"><span class="txt">02.28</span></span>
 							</a>
 							
-							<h3>바텀시트</h3>
-							<a href="./templates/contents/business/moveInstallHistory/pop_slctTime.html" target="_blank"><span>바텀시트 : 방문 희망시간 선택</span>
-								<span class="flag error"><span class="txt"></span></span>
+							<h3>바텀시트</h3>							
+							<a href="./templates/contents/business/moveInstallHistory/pop_cancle_change_apply.html" target="_blank"><span>접수 취소 확인</span>
+								<span class="flag success"><span class="txt">02.28</span></span>
 							</a>
-							<a href="./templates/contents/business/moveInstallHistory/pop_cancle_change_apply.html" target="_blank"><span>바텀시트 : 설치장소변경 접수 취소 확인</span>
-								<span class="flag error"><span class="txt"></span></span>
+							<a href="./templates/contents/business/moveInstallHistory/pop_confirm_changevisitdate.html" target="_blank"><span>방문 희망일 변경 안내</span>
+								<span class="flag success"><span class="txt">02.28</span></span>
 							</a>
-							<a href="./templates/contents/business/moveInstallHistory/pop_confirm_changevisitdate.html" target="_blank"><span>바텀시트 : 방문희망일 변경 안내</span>
-								<span class="flag error"><span class="txt"></span></span>
+							<a href="./templates/contents/business/requestMoveInstall/pop_calendar_requestMoveInstall.html" target="_blank"><span>변경 날짜 선택</span>
+								<span class="flag success"><span class="txt">02.28</span></span>
 							</a>
-							<a href="./templates/contents/business/moveInstallHistory/pop_confirm_move_reapply.html" target="_blank"><span>바텀시트 : 재접수화면 이동 안내</span>
-								<span class="flag error"><span class="txt"></span></span>
+							<a href="./templates/contents/business/requestMoveInstall/pop_confirm_move_reapply.html" target="_blank"><span>재접수화면 이동 안내</span>
+								<span class="flag success"><span class="txt">02.28</span></span>
 							</a>
-							<a href="./templates/contents/business/moveInstallHistory/pop_impossible_applylist.html" target="_blank"><span>바텀시트 : 변경접수 내역 없음 안내</span>
-								<span class="flag error"><span class="txt"></span></span>
+							<a href="./templates/contents/business/requestMoveInstall/pop_calendar_moveInstallHistory.html" target="_blank"><span>변경 날짜 선택</span>
+								<span class="flag success"><span class="txt">02.28</span></span>
 							</a>
-							<!-- ----- -->
-							<a href="./templates/contents/business/moveInstallHistory/#.html" target="_blank" class="hidden"><span>바텀시트 : 방문 희망일 선택</span>
-								<span class="flag error"><span class="txt"></span></span>
-							</a> 
+							<a href="./templates/contents/business/moveInstallHistory/pop_slctTime_moveInstallHistory.html" target="_blank"><span>방문 희망시간 선택</span>
+								<span class="flag success"><span class="txt">02.28</span></span>
+							</a>
 							
 						</li>
 					</ul>
