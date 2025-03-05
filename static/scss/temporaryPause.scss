@@ -1,1 +1,11 @@
 @import "../scss/base/mixin";
+.temporaryPause {
+    .chckbox-wrap {
+        .chck-group {
+            width: 100%;
+        }
+        .flag {
+            flex: 0;
+        }
+    }
+}
