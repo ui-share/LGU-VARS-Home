@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>퍼블리싱 리스트 | LGU+ 눈으로 보는 ARS</title>
+	<link rel="stylesheet" href="./static/css/common.css">
+</head>
+<style>
+.transition,.menu-wrap > li i:before, .menu-wrap > li i:after, .accordion-con {transition: all 0.25s ease-in-out;}
+.flipIn, .menu-wrap > li, h1 {animation: flipdown 0.5s ease both;}
+.no-select, h2 {-webkit-tap-highlight-color: rgba(0, 0, 0, 0);-webkit-touch-callout: none;-webkit-user-select: none;-khtml-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;}
+html {width: 100%;height: 100%;perspective: 900;position: relative;}
+body {width: 100%;height: 100%;color: rgba(48, 69, 92, 1);}
+.accordion-wrapper {width: 100%;height: calc(100% - 30px);min-height: 0;display: inline-block;position: relative;background-color: #fafcff;}
+h1 {text-transform: uppercase;font-size: 22px;line-height: 1.5;font-weight: 700;background-color: #fafcff;padding: 10px 20px;z-index: 99;}
+h2 {font-size: 18px;line-height: 3;font-weight: 600;display: block;cursor: pointer; padding: 0 20px}
+.accordion-con {max-height: 500px;position: relative;opacity: 1;transform: translate(0, 0);display: flex;flex-direction: column;padding: 0 20px;overflow-y: auto;z-index: 2;background-color: #f7f7f7;box-shadow: inset 0px 2px 6px 0px rgba(0, 0, 0, 0.04);} /* box-shadow: inset 0px 2px 6px 0px rgba(0, 0, 0, 0.04); */
+ul {list-style: none;perspective: 900;margin: 0;}
+.menu-wrap {border-bottom : 1px solid #dce7eb;}
+.menu-wrap > li {position: relative;border-top: 1px solid #dce7eb;} /* box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.04);*/
+.menu-wrap > li:last-of-type {padding-bottom: 0;}
+.menu-wrap > li i {position: absolute;transform: translate(-28px, 6px);margin-top: 15px;right: 0;}
+.menu-wrap > li i:before,.menu-wrap > li i:after {content: "";position: absolute;background-color: #ff6873;width: 3px;height: 9px;}
+.menu-wrap > li i:before {transform: translate(-2px, 0) rotate(45deg);}
+.menu-wrap > li i:after {transform: translate(2px, 0) rotate(-45deg);}
+.menu-wrap > li input[type=checkbox] {position: absolute;cursor: pointer;width: 100%;height: 100%;opacity: 0;z-index: 1;}
+.menu-wrap > li input[type=checkbox]:checked ~ .accordion-con {margin-top: 0;max-height: 0;opacity: 0;transform: translate(0, 20%);}
+.menu-wrap > li input[type=checkbox]:checked ~ i:before {transform: translate(2px, 0) rotate(45deg);}
+.menu-wrap > li input[type=checkbox]:checked ~ i:after {transform: translate(-2px, 0) rotate(-45deg);}
+.menu,.menu > .txt {display: flex;flex-direction: column;}
+.menu {padding: 20px 0 0 0;}
+.menu:last-child {padding: 20px 0 30px}
+.menu .tit {font-size: 16px;line-height: 1.5;font-weight: 600;color: #ff6873;}
+.menu .txt > a {display: flex;flex-direction: row;align-items: center;gap: 5px;}
+.menu .txt > a > span:not(.flag) {font-size: 16px;line-height: 1.5;color:#333;}
+.menu .txt > h3 {font-size: 12px;line-height: 1.5;font-weight: 600;color: #689fff;padding-top: 10px;}
+.menu > .txt {gap: 5px;padding: 0 10px;}
+.flag .txt {line-height: 1;}
+@keyframes flipdown {
+	0% {
+		opacity: 0;
+		transform-origin: top center;
+		transform: rotateX(-90deg);
+	}
+	5% {
+		opacity: 1;
+	}
+	80% {
+		transform: rotateX(8deg);
+	}
+	83% {
+		transform: rotateX(6deg);
+	}
+	92% {
+		transform: rotateX(-3deg);
+	}
+	100% {
+		transform-origin: top center;
+		transform: rotateX(0deg);
+	}
+}
+</style>
+<body>
+	<div class="accordion-wrapper">
+		<h1>홈 서비스</h1>
+		<ul class="menu-wrap">
+
+			<!-- 공통_common -->
+			<li>
+				<input type="checkbox" ><i></i>
+				<h2>⭐ 공통_common</h2>
+				<div class="accordion-con">
+					<ul class="menu">
+						<li class="tit">↳ 진입/종료/채널이동</li>
+						<li class="txt">
+							<h3>화면</h3>
+							<a href="./templates/contents/common/splash.html" target="_blank"><span>스플래시 화면</span>
+								<span class="flag success"><span class="txt">02.28</span></span>
+							</a>
+							<a href="./templates/contents/common/end_service.html" target="_blank"><span>서비스 종료 화면</span>
+								<span class="flag success"><span class="txt">02.28</span></span>
+							</a>
+							<a href="./templates/contents/common/end_identityMismatch.html" target="_blank"><span>인증 3회 실패 종료</span>
+								<span class="flag success"><span class="txt">02.28</span></span>
+							</a>
+							<h3>바텀시트</h3>
+							<a href="./templates/contents/common/pop_callEnd_AI.html" target="_blank"><span>AI 상담 이동</span>
+								<span class="flag success"><span class="txt">02.28</span></span>
+							</a>
+							<a href="./templates/contents/common/pop_callEnd_chatbot.html" target="_blank"><span>챗봇 상담 이동</span>
+								<span class="flag success"><span class="txt">02.28</span></span>
+							</a>
+							<a href="./templates/contents/common/pop_callEnd_app.html" target="_blank"><span>당신의 U+ 앱 이동</span>
+								<span class="flag success"><span class="txt">02.28</span></span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+			
+			<!-- 공통_business_common -->
+			<li>
+				<input type="checkbox" ><i></i>
+				<h2>⭐ 공통_business_common</h2>
+				<div class="accordion-con">
+					<ul class="menu">
+						<li class="tit">↳ 인증_identity</li>
+						<li class="txt">
+							<h3>화면</h3>
+							<a href="./templates/contents/business/common/service_identity.html" target="_blank"><span>생년월일 or 상업자번호 인증 </span>
+								<span class="flag success"><span class="txt">02.28</span></span>
+							</a>
+						</li>
+						<li class="tit">↳ 홈코드 선택_identity</li>
+						<li class="txt">
+							<h3>화면</h3>
+							<a href="./templates/contents/business/common/service_homeCode.html.html" target="_blank"><span>홈코드 선택</span>
+								<span class="flag success"><span class="txt">02.28</span></span>
+							</a>
+						</li>
+                        <ul class="menu">
+                            <li class="tit">↳ 공통 바텀시트</li>
+                            <li class="txt">
+                                <h3>바텀시트</h3>
+                                <a href="./templates/contents/business/common/pop_corpLimit.html" target="_blank"><span>법인 제한</span>
+                                    <span class="flag success"><span class="txt">02.28</span></span>
+                                </a>
+                                <a href="./templates/contents/business/common/pop_underageLimit.html" target="_blank"><span>미성년 제한</span>
+                                    <span class="flag success"><span class="txt">02.28</span></span>
+                                </a>
+                                <a href="./templates/contents/business/common/pop_svcCancel.html" target="_blank"><span>서비스 중단</span>
+                                    <span class="flag success"><span class="txt">02.28</span></span>
+                                </a>
+                                <a href="./templates/contents/business/common/pop_processError.html" target="_blank"><span>처리중 오류</span>
+                                    <span class="flag success"><span class="txt">02.28</span></span>
+                                </a>
+                                <a href="./templates/contents/business/common/pop_callEnd.html" target="_blank"><span>눈으로 보는 ARS 종료 확인</span>
+                                    <span class="flag success"><span class="txt">02.28</span></span>
+                                </a>
+                            </li>
+                        </ul>
+					</ul>
+                    <ul class="menu">
+						<li class="tit">↳ 상담사 연결_counsel</li>
+						<li class="txt">
+							<h3>바텀시트</h3>
+							<a href="./templates/contents/business/counsel/pop_slctLimitedCounsel.html" target="_blank"><span>상담 유형 선택</span>
+								<span class="flag success"><span class="txt">02.28</span></span>
+							</a>
+							<a href="./templates/contents/business/counsel/pop_noticeCounselTime.html" target="_blank"><span>상담 시간 안내</span>
+								<span class="flag success"><span class="txt">02.28</span></span>
+							</a>
+							<a href="./templates/contents/business/counsel/pop_counselLimit.html" target="_blank"><span>상담콜 폭주</span>
+								<span class="flag success"><span class="txt">02.28</span></span>
+							</a>
+							<a href="./templates/contents/business/counsel/pop_counselCnfrm.html" target="_blank"><span>상담사 연결 확인</span>
+								<span class="flag success"><span class="txt">02.28</span></span>
+							</a>						
+						</li>
+					</ul>
+					<ul class="menu">
+						<li class="tit">↳ 상담예약_counselReservation</li>
+						<li class="txt">
+							<h3>화면</h3>
+							<a href="./templates/contents/business/counselReservation/submit_callBack_reservation.html" target="_blank"><span>상담 예약 정보 입력</span>
+								<span class="flag success"><span class="txt">02.11</span></span>
+							</a>
+							<a href="./templates/contents/business/counselReservation/finish_callBack.html" target="_blank"><span>상담 예약 완료</span>
+								<span class="flag success"><span class="txt">02.07</span></span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<!-- 메인 _main -->
+			<li>
+				<input type="checkbox" ><i></i>
+				<h2>⭐ 메인_main</h2>
+				<div class="accordion-con">
+					<ul class="menu">
+						<li class="tit">메인</li>
+						<li class="txt">
+							<h3>화면</h3>
+							<a href="./templates/contents/business/main/main.html" target="_blank"><span>홈서비스 메인</span>
+								<span class="flag flag-recent"><span class="txt">02.17</span></span>
+                                <span class="flag success"><span class="txt">up 03.04</span></span>
+							</a>
+							<h3>바텀시트</h3>
+						</li>
+					</ul>
+				</div>
+			</li>
+
+			<!-- 요금 및 납부_billInfo -->
+			
+
+			<!-- 서비스 변경_changeService -->
+		
+			<!-- 설치장소 변경_movement > requestMoveInstall + moveInstallHistory  -->
+			<li>
+				<input type="checkbox" ><i></i>
+				<h2>⭐ 설치장소 변경</h2>
+				<div class="accordion-con">
+					<ul class="menu">
+						<li class="tit">↳ 설치 장소 변경 신청 / 주소검색</li>
+						<li class="txt">
+							<h3>화면</h3>
+							<a href="./templates/contents/business/requestMoveInstall/search_requestMoveInstall.html" target="_blank"><span>조회 : 설치 장소 변경 신청</span>
+								<span class="flag error"><span class="txt"></span></span>
+							</a>
+							<a href="./templates/contents/business/requestMoveInstall/submit_requestInfo.html" target="_blank"><span>입력 : 다른주소로 변경 - 가입 정보 상세 및 주소변경 정보</span>
+								<span class="flag error"><span class="txt"></span></span>
+							</a>
+							<a href="./templates/contents/business/requestMoveInstall/submit_requestInfo_home.html" target="_blank"><span>입력 : 집안 내 이동 - 가입 정보 상세 집안 내 이동 정보</span>
+								<span class="flag error"><span class="txt"></span></span>
+							</a>
+							<a href="./templates/contents/business/requestMoveInstall/finish_apply_changeMove.html" target="_blank"><span>완료 : 설치 장소 변경 신청완료</span>
+								<span class="flag error"><span class="txt"></span></span>
+							</a>
+							<a href="./templates/contents/business/requestMoveInstall/finish_apply_homeMove.html" target="_blank"><span>완료 : 집안 내 이동 신청완료</span>
+								<span class="flag error"><span class="txt"></span></span>
+							</a>
+							
+							<h3>바텀시트</h3>
+							<a href="./templates/contents/business/requestMoveInstall/pop_full_changeAddress.html" target="_blank"><span>풀팝업 : 주소검색</span>
+								<span class="flag error"><span class="txt"></span></span>
+							</a>
+							<a href="./templates/contents/business/requestMoveInstall/pop_address_buildingNumber.html" target="_blank"><span>동 또는 건물 선택</span>
+								<span class="flag error"><span class="txt"></span></span>
+							</a>
+							<a href="./templates/contents/business/requestMoveInstall/pop_address_buildingNumber.html" target="_blank"><span>지상 또는 지하 선택</span>
+								<span class="flag error"><span class="txt"></span></span>
+							</a>
+						</li>
+					</ul>
+
+					<ul class="menu">
+						<li class="tit">↳ 설치 장소 변경 내역</li>
+						<li class="txt">
+							<h3>화면</h3>
+							<a href="./templates/contents/business/moveInstallHistory/search_installhistory.html" target="_blank"><span>조회 : 설치장소변경내역</span>
+								<span class="flag error"><span class="txt"></span></span>
+							</a>
+							<a href="./templates/contents/business/moveInstallHistory/finish_applyvisiting.html" target="_blank"><span>완료 : 방문신청 완료</span>
+								<span class="flag error"><span class="txt"></span></span>
+							</a>
+							<a href="./templates/contents/business/moveInstallHistory/finish_cancle_apply.html" target="_blank"><span>완료 : 변경접수 취소 완료</span>
+								<span class="flag error"><span class="txt"></span></span>
+							</a>
+							<a href="./templates/contents/business/moveInstallHistory/finish_cancle_notice_reapply.html" target="_blank"><span>완료 : 변경 접수 취소 완료 및 주소변경 재접수 안내</span>
+								<span class="flag error"><span class="txt"></span></span>
+							</a>
+							
+							<h3>바텀시트</h3>
+							<a href="./templates/contents/business/moveInstallHistory/pop_slctTime.html" target="_blank"><span>바텀시트 : 방문 희망시간 선택</span>
+								<span class="flag error"><span class="txt"></span></span>
+							</a>
+							<a href="./templates/contents/business/moveInstallHistory/pop_cancle_change_apply.html" target="_blank"><span>바텀시트 : 설치장소변경 접수 취소 확인</span>
+								<span class="flag error"><span class="txt"></span></span>
+							</a>
+							<a href="./templates/contents/business/moveInstallHistory/pop_confirm_changevisitdate.html" target="_blank"><span>바텀시트 : 방문희망일 변경 안내</span>
+								<span class="flag error"><span class="txt"></span></span>
+							</a>
+							<a href="./templates/contents/business/moveInstallHistory/pop_confirm_move_reapply.html" target="_blank"><span>바텀시트 : 재접수화면 이동 안내</span>
+								<span class="flag error"><span class="txt"></span></span>
+							</a>
+							<a href="./templates/contents/business/moveInstallHistory/pop_impossible_applylist.html" target="_blank"><span>바텀시트 : 변경접수 내역 없음 안내</span>
+								<span class="flag error"><span class="txt"></span></span>
+							</a>
+							<!-- ----- -->
+							<a href="./templates/contents/business/moveInstallHistory/#.html" target="_blank" class="hidden"><span>바텀시트 : 방문 희망일 선택</span>
+								<span class="flag error"><span class="txt"></span></span>
+							</a> 
+							
+						</li>
+					</ul>
+				</div>
+			</li>
+			
+			<!-- 고장 진단 및 점검_diagnosis -->
+			<li>
+				<input type="checkbox" ><i></i>
+				<h2>⭐ 고장 진단 및 점검</h2>
+				<div class="accordion-con">
+					<ul class="menu">
+						<li class="tit">간편 조치·A/S신청</li>
+						<li class="txt">
+							<h3>화면</h3>
+							<a href="./templates/contents/business/asTaskRegister/search_asTaskRegister.html" target="_blank"><span>조회 : 간편 조치·A/S신청</span>
+								<span class="flag error"><span class="txt">임시</span></span>
+							</a>
+							<a href="./templates/contents/business/asTaskRegister/service_asTaskRegister_admin.html" target="_blank"><span>서비스 : A/S신청</span>
+								<span class="flag error"><span class="txt">임시</span></span>
+							</a>
+							<a href="./templates/contents/business/asTaskRegister/finish_asTaskRegister.html" target="_blank"><span>완료 : 홈서비스 방문 신청 완료</span>
+								<span class="flag error"><span class="txt">임시</span></span>
+							</a>
+							
+							<h3>바텀시트</h3>
+							<a href="./templates/contents/business/asTaskRegister/pop_reset_1.html" target="_blank"><span>바텀시트 : 장비 리셋 안내</span>
+								<span class="flag error"><span class="txt">임시</span></span>
+							</a>
+							<a href="./templates/contents/business/asTaskRegister/pop_reset_2.html" target="_blank"><span>바텀시트 : 장비 리셋중</span>
+								<span class="flag error"><span class="txt">임시</span></span>
+							</a>
+							<a href="./templates/contents/business/asTaskRegister/pop_reset_3.html" target="_blank"><span>바텀시트 : 장비 완료</span>
+								<span class="flag error"><span class="txt">임시</span></span>
+							</a>
+							<a href="./templates/contents/business/asTaskRegister/pop_slct_asSymptoms.html" target="_blank"><span>바텀시트 : 증상선택(아코디언)</span>
+								<span class="flag error"><span class="txt">임시</span></span>
+							</a>
+							<a href="./templates/contents/business/asTaskRegister/pop_slct_asSymptoms_1depth.html" target="_blank"><span>바텀시트 : 증상선택 1depth</span>
+								<span class="flag error"><span class="txt">임시</span></span>
+							</a>
+							<a href="./templates/contents/business/asTaskRegister/pop_slct_asSymptoms_2depth_1.html" target="_blank"><span>바텀시트 : 증상선택 2depth 인터넷/와이파이</span>
+								<span class="flag error"><span class="txt">임시</span></span>
+							</a>
+							<a href="./templates/contents/business/asTaskRegister/pop_slct_asSymptoms_2depth_2.html" target="_blank"><span>바텀시트 : 증상선택 2depth IPTV</span>
+								<span class="flag error"><span class="txt">임시</span></span>
+							</a>
+							<a href="./templates/contents/business/asTaskRegister/pop_slct_asSymptoms_2depth_3.html" target="_blank"><span>바텀시트 : 증상선택 2depth IPTV 리모컨/VOD</span>
+								<span class="flag error"><span class="txt">임시</span></span>
+							</a>
+							<a href="./templates/contents/business/asTaskRegister/pop_cnfm_asTaskRegister_admin.html" target="_blank"><span>바텀시트 : 고장 신고 내역 확인</span>
+								<span class="flag error"><span class="txt">임시</span></span>
+							</a>
+							<a href="./templates/contents/business/asTaskRegister/pop_svcCancel_admin.html" target="_blank"><span>바텀시트 : 고장 신고 접수 중단 확인</span>
+								<span class="flag error"><span class="txt">임시</span></span>
+							</a>
+							<a href="./templates/contents/business/asTaskRegister/pop_callEnd.html" target="_blank"><span>바텀시트 : 당신의 U+ 앱 연결</span>
+								<span class="flag error"><span class="txt">임시</span></span>
+							</a>
+						</li>
+					</ul>
+
+					<ul class="menu">
+						<li class="tit">문제해결 가이드</li>
+						<li class="txt">
+							<h3>화면</h3>
+							<a href="./templates/contents/business/solveGuide/search_solveGuide.html" target="_blank"><span>조회 : 간편 조치·A/S신청</span>
+								<span class="flag error"><span class="txt">임시</span></span>
+							</a>
+							
+							<h3>바텀시트</h3>
+							<a href="./templates/contents/business/solveGuide/pop_callEnd.html" target="_blank"><span>바텀시트 : 당신의 U+ 앱 연결</span>
+								<span class="flag error"><span class="txt">임시</span></span>
+							</a>
+						</li>
+					</ul>
+
+					<ul class="menu">
+						<li class="tit">A/S신청 내역</li>
+						<li class="txt">
+							<h3>화면</h3>
+							<a href="./templates/contents/business/asTaskList/search_asTaskList_listNone.html" target="_blank"><span>조회 : A/S신청 내역_없음</span>
+								<span class="flag error"><span class="txt">임시</span></span>
+							</a>
+							<a href="./templates/contents/business/asTaskList/search_asTaskList_list.html" target="_blank"><span>조회 : A/S신청 내역_있음</span>
+								<span class="flag error"><span class="txt">임시</span></span>
+							</a>
+							
+							<h3>바텀시트</h3>
+							<a href="./templates/contents/business/asTaskList/pop_chngDateCalendar.html" target="_blank"><span>바텀팝업 : 방문 희망일 변경 달력 팝업</span>
+								<span class="flag error"><span class="txt">임시</span></span>
+							</a>
+							<a href="./templates/contents/business/asTaskList/pop_confirm_chngDate.html" target="_blank"><span>바텀팝업 : 방문 희망일 변경 확인 팝업</span>
+								<span class="flag error"><span class="txt">임시</span></span>
+							</a>
+							<a href="./templates/contents/business/asTaskList/pop_cancel_asTaskAdmin.html" target="_blank"><span>바텀팝업 : AS 신청 취소 확인 팝업</span>
+								<span class="flag error"><span class="txt">임시</span></span>
+							</a>
+							<a href="./templates/contents/business/asTaskList/pop_callEnd.html" target="_blank"><span>바텀시트 : 당신의 U+ 앱 연결</span>
+								<span class="flag error"><span class="txt">임시</span></span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+			
+		</ul>
+	</div>
+</body>
+</html>
