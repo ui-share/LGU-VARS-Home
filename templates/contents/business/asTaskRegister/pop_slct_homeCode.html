@@ -39,12 +39,13 @@
 			</div>
 			<div class="popup-body">				
 				<div class="slctInfo-box">
-					<button type="button" class="unlockBtn"><span>가려진 주소 보기</span></button>
+					<!-- <button type="button" class="unlockBtn"><span>가려진 주소 보기</span></button> -->
 					<div class="btn-group flex-column">
-						<!-- 선택시 is-selected 클래스 붙음 -->
+						<!-- 이전 선택된 주소 표시 is-selected 클래스 추가 :
+						  <button class="btn btn-popSolid between is-selected" type="button"> -->
 						<button class="btn btn-popSolid between is-selected" type="button">
-							<span class="txt">서울시 양천구 목동로 ***</span>
-							<!-- selected 되었을 때 나타나는 부분 -->
+							<span class="txt">서울시 양천구 목동동로 ***</span>
+							<!-- is-selected 되었을 때 나타나는 부분 -->
 							<span class="txt-wrap">
 								<span class="txt color-prim">이전 선택된 주소</span>
 								<span class="img-box">
@@ -54,6 +55,17 @@
 						</button>
 						<button class="btn btn-popSolid between" type="button">
 							<span class="txt">서울시 관악구 성현로 ****</span>
+							<!-- is-selected 되었을 때 나타나는 부분 -->
+							<span class="txt-wrap">
+								<span class="txt color-prim">이전 선택된 주소</span>
+								<span class="img-box">
+									<img src="../../../../static/images/icon/ic-btn-chck.svg">
+								</span>
+							</span>
+						</button>
+						<button class="btn btn-popSolid between" type="button">
+							<span class="txt">서울 강서구 화곡동 ****</span>
+							<!-- is-selected 되었을 때 나타나는 부분 -->
 							<span class="txt-wrap">
 								<span class="txt color-prim">이전 선택된 주소</span>
 								<span class="img-box">
