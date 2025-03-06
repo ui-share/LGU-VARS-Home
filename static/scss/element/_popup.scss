@@ -138,9 +138,7 @@
 			gap: 12px;
 		}
 	}
-
-	// 팝업 내 테이블_불릿_문장 등 
-	.notice-wrap {
+	.notice-wrap { // 팝업 내 테이블_불릿_문장 등 
 		@include flexColum;
 		row-gap:20px;
 		padding-top:20px;
@@ -154,9 +152,7 @@
 			}
 		}
 	}
-
-	// 팝업 내 탭UI
-	.tab-container {
+	.tab-container { // 팝업 내 탭UI
 		.tab-cont {padding-top:24px;}
 	}
 	
@@ -263,14 +259,13 @@
 			}
 		}
 	}
-
 	// 방법 선택 팝업 
 	.slctInfo-box {
+		width: 100%;
 		display: flex;
 		flex-direction: column;
 		gap: 20px;
 	}
-
 	// popup btn solid 
 	.btn {
 		/* popup-solid */
@@ -323,6 +318,7 @@
 				color: var(--dt-gray11);
 			}
 		}
+
 		// 자녀선택 버튼
 		&.btn-child {
 			display: flex;
@@ -348,9 +344,7 @@
 			}
 		}
 	}
-
-	//가입확인서발급
-	&.submitSignupInfo{
+	&.submitSignupInfo{ //가입확인서발급
 		padding-top:18px;
 		.con__tit-box {
 			.tit-head .txt-title {
@@ -378,9 +372,7 @@
 			}
 		}
 	}
-
-	//선택약정 프리미어
-	&.contract {
+	&.contract {//선택약정 프리미어
 		.cont__txt-box {
 			padding:10px 0 12px;
 			.txt {color:var(--dt-gray15); font-size:16px;font-weight:600;}
@@ -403,15 +395,12 @@
 		}
 	}
 
-	//로밍데이터 팝업
-	.list-wrap {
+	.list-wrap {//로밍데이터 팝업
 		&.chrgData {
 			margin-top: 0;
 		}
 	}
-
-	//로밍 이용내역 : rmInvoice 청구서 팝업
-	&:has(.invoice) {
+	&:has(.invoice) { //로밍 이용내역 : rmInvoice 청구서 팝업
 		padding-top: 20px;
 		.cont__wrap .con__tit-box .tit-head{flex-wrap:wrap;}
 	}
@@ -569,50 +558,7 @@
     &.show {
         display: block;
     }
-	//로밍 이용내역 : roamingUsed 풀팝업
-	.rmUsed {
-		.con__tit-box .tit-head .txt-title {
-			line-height:1.25;
-		}
-		.txt-day {
-			@include fw-6();
-			line-height: 120%;
-			color: var(--dt-primary);
-		}
-		// 로밍요금 라운드박스
-		.roamingPrice {
-			.info-price {
-				padding: 22px 20px;
-				.row {
-					align-items: center;
-				}
-				.txt-title {
-					font-size: 16px;
-					align-self: unset;
-				}
-				.txt-price {
-					display: flex;
-					align-items: center;
-					font-size: 18px;
-					color: var(--dt-black);
-					.flag {
-						margin-right: 6px;
-					}
-					.flag .txt {
-						font-size: 11px;
-					}
-				}
-				.btn.bg-withdraw {
-					margin-top: 20px;
-				}
-			}
-			.txt-caution { 
-				text-align: right;
-				line-height: 150%;
-				margin-top: 8px;
-			}
-		}
-	}
+
 	//설치변경신청(이전설치) : 주소검색 풀팝업
 	.movement {
 		.popup-body .section__cont {
@@ -687,40 +633,6 @@
 	} 
 }
 
-
-// 로밍 부가서비스 팝업 : 로밍멘트 수정
-.rmAnnounce {
-	.popup-body {
-		display: flex;
-		flex-direction: column;
-		gap: 36px;
-		.cont__wrap {
-			display: flex;
-			flex-direction: column;
-			gap: 12px;
-			padding: 0;
-			.con__tit-box {
-				margin-bottom: 0;
-			}
-			&:first-child {
-				padding-top: 12px;
-			}
-		}
-	}
-}
-// 로밍 부가서비스 팝업 : 해외도착알리미 핸드폰 입력
-.rmLandingAnnounce {
-	.popup-tit {
-		.txt {
-			span {
-				@include fw-7(20px);
-			}
-		}
-	}
-	.popup-body {
-		padding-top: 16px;
-	}
-}
 
 // 앱스토어 상세구매내역 확인방법 팝업 : 휴대폰결제 이용내역
 .appPaid-wrap {

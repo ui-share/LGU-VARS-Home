@@ -861,13 +861,14 @@ button {
   font-weight: 500;
   line-height: 21px;
 }
-.plan-wrap .list-plan .txt-desc.ico .img-box {
-  height: 100% !important;
-}
-.plan-wrap .list-plan .txt-desc.ico .img-box img {
-  margin-top: 2px;
+.plan-wrap .list-plan .txt-desc.ico {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 4px;
+       column-gap: 4px;
 }
 .plan-wrap .list-plan button.txt-desc .img-box {
+  margin-top: 2px;
   transform: rotate(-90deg);
 }
 .plan-wrap .list-plan .current {
@@ -1127,6 +1128,9 @@ button {
   color: var(--dt-black);
   text-align: right;
   word-break: break-all;
+}
+.list-wrap .list-box .tail.color-prim {
+  color: var(--dt-primary);
 }
 
 /* h7 txt 스타일*/
@@ -2138,6 +2142,10 @@ button {
 }
 .card.chngCode .item.text .tit {
   font-size: 16px;
+}
+.card.chngCode .item.text .sub {
+  font-size: 12px;
+  color: var(--dt-gray11);
 }
 .card.chngCode .card-footer .btn {
   min-width: -moz-max-content;
@@ -3890,6 +3898,7 @@ textarea::placeholder {
   pointer-events: none;
 }
 .popup-body .slctInfo-box {
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -4213,45 +4222,6 @@ textarea::placeholder {
 .full-popup.show {
   display: block;
 }
-.full-popup .rmUsed .con__tit-box .tit-head .txt-title {
-  line-height: 1.25;
-}
-.full-popup .rmUsed .txt-day {
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 120%;
-  color: var(--dt-primary);
-}
-.full-popup .rmUsed .roamingPrice .info-price {
-  padding: 22px 20px;
-}
-.full-popup .rmUsed .roamingPrice .info-price .row {
-  align-items: center;
-}
-.full-popup .rmUsed .roamingPrice .info-price .txt-title {
-  font-size: 16px;
-  align-self: unset;
-}
-.full-popup .rmUsed .roamingPrice .info-price .txt-price {
-  display: flex;
-  align-items: center;
-  font-size: 18px;
-  color: var(--dt-black);
-}
-.full-popup .rmUsed .roamingPrice .info-price .txt-price .flag {
-  margin-right: 6px;
-}
-.full-popup .rmUsed .roamingPrice .info-price .txt-price .flag .txt {
-  font-size: 11px;
-}
-.full-popup .rmUsed .roamingPrice .info-price .btn.bg-withdraw {
-  margin-top: 20px;
-}
-.full-popup .rmUsed .roamingPrice .txt-caution {
-  text-align: right;
-  line-height: 150%;
-  margin-top: 8px;
-}
 .full-popup .movement .popup-body .section__cont {
   gap: 24px;
   padding-bottom: 115px;
@@ -4325,32 +4295,6 @@ textarea::placeholder {
   background-color: transparent;
   border-bottom: unset;
   padding: 72px 0;
-}
-
-.rmAnnounce .popup-body {
-  display: flex;
-  flex-direction: column;
-  gap: 36px;
-}
-.rmAnnounce .popup-body .cont__wrap {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  padding: 0;
-}
-.rmAnnounce .popup-body .cont__wrap .con__tit-box {
-  margin-bottom: 0;
-}
-.rmAnnounce .popup-body .cont__wrap:first-child {
-  padding-top: 12px;
-}
-
-.rmLandingAnnounce .popup-tit .txt span {
-  font-size: 20px;
-  font-weight: 700;
-}
-.rmLandingAnnounce .popup-body {
-  padding-top: 16px;
 }
 
 .appPaid-wrap {
