@@ -4214,6 +4214,7 @@ textarea::placeholder {
 }
 .full-popup .movement .addr-wrap {
   max-height: calc(100vh - 550px);
+  min-height: 280px;
   overflow-y: auto;
 }
 .full-popup .movement .addr-wrap .addr-box {
