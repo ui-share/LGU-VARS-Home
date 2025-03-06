@@ -23,17 +23,32 @@
 .section__cont.summary .cont__wrap .info-price-wrap .info-price.total-last .row, .section__cont.summary .cont__wrap .info-price-wrap .info-price-detail.total-last .row {
   margin-top: 4px;
 }
-.section__cont.summary .cont__wrap-asTaskRegister {
-  background-image: url(../images/img/img-hm-default.png);
-}
-.section__cont.summary .cont__wrap-requestMoveInstall {
-  background-image: url(../images/img/img-hm-default.png);
-}
-.section__cont.summary .cont__wrap-moveHistory {
-  background-image: url(../images/img/img-hm-default.png);
-}
-.section__cont.summary .cont__wrap-networkErrorNotice {
+.section__cont.summary .cont__wrap-asTaskRegister { /* 고장접수, 홀맨 + 물음표(default) */
   background-image: url(../images/img/img-hm-information.png);
+}
+.section__cont.summary .cont__wrap-requestMoveInstall { /* 설치변경신청, 홀맨 + 물음표(default) */
+  background-image: url(../images/img/img-hm-information.png);
+}
+.section__cont.summary .cont__wrap-moveHistory { /* 설치변경내역, 홀맨 + 물음표(default) */
+  background-image: url(../images/img/img-hm-information.png);
+}
+.section__cont.summary .cont__wrap-networkErrorNotice { /* 장애작업공지, 홀맨 + 물음표(default) */
+  background-image: url(../images/img/img-hm-information.png);
+}
+.section__cont.summary .cont__wrap-MOPaymentUsed { /* 휴대폰결제 외 공통, 홀맨 + 휴대폰,카드 */
+  background-image: url(../images/img/img-hm-MOpayment.png);
+}
+.section__cont.summary .cont__wrap-bill { /* 청구요금 자녀요금 청구서받는방법 , 홀맨 + 편지지 */
+  background-image: url(../images/img/img-hm-bill.png);
+}
+.section__cont.summary .cont__wrap-realtime { /* 실시간요금, 홀맨 + 동전 */
+  background-image: url(../images/img/img-hm-realtime.png);
+}
+.section__cont.summary .cont__wrap-payment { /* 요금납부방법, 홀맨 + 카드2개,동전 */
+  background-image: url(../images/img/img-hm-automatic-withdrawal.png);
+}
+.section__cont.summary .cont__wrap-pauseTemp { /* 일시정지, 홀맨 + 휴대폰,일시정지아이콘 */
+  background-image: url(../images/img/img-hm-pauseTemp.png);
 }
 .section__cont.summary .txt-select-wrap {
   display: flex;
