@@ -43,6 +43,9 @@
 .section__cont.summary .cont__wrap-realtime { /* 실시간요금, 홀맨 + 동전 */
   background-image: url(../images/img/img-hm-realtime.png);
 }
+.section__cont.summary .cont__wrap-account { /* 입금전용계좌로 납부, 홀맨 + 지갑,동전 */
+  background-image: url(../images/img/img-hm-account.png);
+}
 .section__cont.summary .cont__wrap-payment { /* 요금납부방법, 홀맨 + 카드2개,동전 */
   background-image: url(../images/img/img-hm-automatic-withdrawal.png);
 }
@@ -224,16 +227,16 @@
 .cont__wrap.cont__wrap-vertical.wd-full .con__tit-box {
   padding-bottom: 16px;
 }
-.cont__wrap.cont__wrap-vertical.wd-full .con__tit-box .cont__txt-box .txt {
-  font-size: 20px;
-  font-weight: 700;
-}
 .cont__wrap.cont__wrap-vertical.wd-full .card-group.bank {
   margin-bottom: 16px;
 }
 .cont__wrap.cont__wrap-vertical.wd-full .accnt-cont-wrap {
   min-height: 120px;
   overflow-y: auto;
+}
+.cont__wrap.cont__wrap-vertical.wd-full .accnt-cont-wrap .btn-group {
+  padding-right: 0;
+  padding-left: 0;
 }
 
 .info-price-single {

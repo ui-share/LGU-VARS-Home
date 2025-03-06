@@ -88,21 +88,6 @@
 				}
 			}
 		}
-		&.cont__wrap-vertical {
-			&.wd-full {
-				&:has(.card-group.bank) {
-					height:100%;
-				}
-				row-gap:0;
-				> div {padding-right:20px;padding-left:20px;}
-				.con__tit-box {padding-bottom:16px;}
-				.card-group.bank {margin-bottom:16px;}
-				.accnt-cont-wrap {
-					min-height:120px;
-					overflow-y: auto;
-				}
-			}
-		}
 	}
 	.info-price-single { // 써머리bg영역 내 증감, 주의사항 공지 영역
 		margin:0 20px;
