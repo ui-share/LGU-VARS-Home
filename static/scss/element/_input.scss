@@ -4,13 +4,13 @@
 %hidden {display: none;}
 %block {display: block;}
 %flex {display: flex;}
-// 공지 텍스트 fw-7 gray11
-.notice-txt {
-	margin-top: 8px;
-	span {
-		color: var(--dt-gray11);
-		@include fw-7(14px);
-		line-height:21px;
+.flex-row {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	gap: 4px;
+	> * {
+		flex: 1;
 	}
 }
 .input-col-wrap {
@@ -57,9 +57,9 @@ textarea {
 	-webkit-appearance: none;
 	appearance: none;
 	background: transparent;
+	@include fw-6(18px);
 	font-family: "Pretendard", system-ui, sans-serif;
 	color: var(--dt-gray16);
-	@include fw-6(18px);
 	line-height: 1.2;
 }
 textarea {
@@ -227,6 +227,17 @@ textarea::placeholder {
 			background-position: 0 0;
 		}	
 	}
+	// 카드 납부 input 내 은행 chips-group
+	.chips-group {margin-top:8px;}
+	// 공지 텍스트 fw-7 gray11
+	.notice-txt {
+		margin-top: 8px;
+		span {
+			color: var(--dt-gray11);
+			@include fw-7(14px);
+			line-height:21px;
+		}	
+	}
 	// 상태별 스타일
 	&.success {
 		.input-row {
@@ -316,24 +327,29 @@ textarea::placeholder {
 		text-align: left;
 		&:active {box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);}
 		.value { // 바텀시트 내 옵션 선택 시 출력
+			display:flex;
+			align-items:center;
+			column-gap:4px;
 			width:max-content;
-			.ico {
-				display:inline-block;
+			color: var(--dt-gray16);
+			.ico-bank {
 				width:24px;
+				min-width:24px;
 				height:24px;
-				padding-top:1px;
-				padding-bottom:1px;
-				img {width:100%;transform:translateY(-2px);}
 			}
 			.txt { 
 				color: var(--dt-gray16);
 			}
+			
 		}
 		.txt { // 플레이스홀더 텍스트
 			display:inline-block;
 			color: var(--dt-gray11);
 			@include fw-6(18px);
-			line-height: 150%;
+			line-height: 1.2;
+			&.done {
+				color: var(--dt-gray16);
+			}
 		}
 	}
 }
@@ -379,6 +395,22 @@ textarea::placeholder {
 	flex-wrap: wrap;
 	row-gap: 6px;
 	width: 100%;
+	// 검색버튼이 있는 드롭다운
+	&.flex-row {
+		.hyphen { 
+			max-width: fit-content;
+			@include fw-6(20px);
+			text-align: center;
+			color: var(--dt-gray16);
+		}
+		.btn-group {
+			max-width: fit-content;
+			.search {
+				padding: 10px;
+				height: 48px;
+			}
+		}
+	}
 }
 .multi-box{ 
 	display: flex;
@@ -398,7 +430,6 @@ textarea::placeholder {
 		width: unset;
 	}
 }
-
 .slct-box {
 	display: inline-flex;
 	flex-wrap: nowrap;
@@ -408,7 +439,6 @@ textarea::placeholder {
 	padding: 9px 10px 9px 12px;
 	min-height: 48px;
 	// width: calc(50% - 10px);
-
 	.txt {
 		display: flex;
 		flex-wrap: nowrap;
@@ -459,7 +489,6 @@ textarea::placeholder {
 		}
 	}
 }	
-
 .slct-box-wrap {
 	&:has(.slct-box:first-child:last-child) {
 		.slct-box {
@@ -473,6 +502,8 @@ textarea::placeholder {
 		}
 	} 
 }
+
+
 // 컴포넌트별 스타일 - email
 .email-form {
 	.input-group {
@@ -610,6 +641,7 @@ textarea::placeholder {
 	padding: 14px 18px;
 	align-items: center;
 	justify-content: center;
+	margin: 20px 0;
 	.datePicker-box {
 		display: flex;
 		flex-wrap: nowrap;
@@ -623,6 +655,7 @@ textarea::placeholder {
 		line-height: 1.2;
 		color: var(--dt-gray16);
 		field-sizing: content;
+		pointer-events: none;
 	}
 	.datePicker-txt {
 		display: inline-block;
@@ -641,9 +674,9 @@ textarea::placeholder {
 }
 
 
-// 드롭다운 반응형
+
 @media screen and (max-width:359px) {
-	.slct-box-wrap {
+	.slct-box-wrap {// 드롭다운 반응형
 		&:has(.slct-box:first-child:last-child) {
 			.slct-box {
 				max-width: 150px;
@@ -659,7 +692,7 @@ textarea::placeholder {
 			}
 		} 
 	}
-	.datePicker-wrap {
+	.datePicker-wrap {// 데이트피커 반응형
 		flex-wrap: wrap;
 		.datePicker-box:first-child {
 			width: 100%;
