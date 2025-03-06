@@ -640,7 +640,7 @@
 			}
 			&.triple{
 				> * {
-					width:30%;
+					width:32.333%;
 				}
 			}
 		}
@@ -649,8 +649,8 @@
 		}
 		.addr-wrap {
 			max-height: calc(100vh - 550px);
+			min-height: 280px;
 			overflow-y: auto;
-			> ul {}
 			.addr-box {
 				&:first-child {padding-top:8px;}
 				padding: 16px 0 17px;
