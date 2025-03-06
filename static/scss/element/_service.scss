@@ -199,10 +199,12 @@
 		padding: 0;
 		background-color: transparent;
 		position: fixed;
-		left: 0;
+		left: 50%;
+		transform:translateX(-50%);
 		bottom: 0;
 		z-index:999; // 삭제 x
 		width: 100%;
+		max-width: var(--max-devicewidth) !important;
 		.btn-group {
 			position: relative;
 			background-color: var(--dt-white);

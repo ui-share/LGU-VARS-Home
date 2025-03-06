@@ -33,8 +33,7 @@
   color: var(--dt-black);
 }
 .requestMoveInstall .card.rmPeriod .item {
-  -moz-column-gap: 0;
-       column-gap: 0;
+  column-gap: 0;
 }
 .requestMoveInstall .card.rmPeriod .item .img-box {
   width: 18px;
@@ -62,17 +61,13 @@
 }
 .requestMoveInstall .slct-box-wrap {
   justify-content: flex-start;
-  -moz-column-gap: 4px;
-       column-gap: 4px;
+  column-gap: 4px;
 }
 .requestMoveInstall .slct-box-wrap:has(.slct-box:first-child:last-child) .slct-box {
-  width: -moz-max-content;
   width: max-content;
-  max-width: -moz-max-content;
   max-width: max-content;
 }
 .requestMoveInstall .slct-box-wrap:has(.slct-box:nth-child(2):last-child) .slct-box {
-  width: -moz-max-content;
   width: max-content;
 }
 .requestMoveInstall .chckbox-wrap {

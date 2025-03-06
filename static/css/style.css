@@ -12,7 +12,6 @@
   flex-direction: column;
   gap: 9px;
   position: relative;
-  height: -moz-max-content;
   height: max-content;
   min-height: 130px;
   padding: 0 20px;
@@ -206,7 +205,6 @@
   font-weight: 700;
 }
 .cont__wrap .con__tit-box .tit-tail {
-  min-width: -moz-max-content;
   min-width: max-content;
 }
 .cont__wrap .con__tit-box:not(:has(.tit-tail)):has(.bullet-list) {
@@ -344,10 +342,12 @@
   padding: 0;
   background-color: transparent;
   position: fixed;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   bottom: 0;
   z-index: 999;
   width: 100%;
+  max-width: var(--max-devicewidth) !important;
 }
 .cont__wrap.cont__wrap-btBtn .btn-group {
   position: relative;
@@ -410,8 +410,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  -moz-column-gap: 12px;
-       column-gap: 12px;
+  column-gap: 12px;
 }
 .cont__wrap.pauseTemp .info-wrap .txt-tit {
   font-size: 16px;

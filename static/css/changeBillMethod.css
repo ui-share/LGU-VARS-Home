@@ -33,7 +33,6 @@
   font-weight: 700;
 }
 .changeBillMethod .cont__wrap .con__tit-box .tit-tail {
-  min-width: -moz-max-content;
   min-width: max-content;
 }
 .changeBillMethod .cont__wrap .con__tit-box:not(:has(.tit-tail)):has(.bullet-list) {
@@ -157,8 +156,7 @@
   /* 화살표 아이콘 */
 }
 .changeBillMethod .btn-srch-childline .txt-title {
-  -moz-column-gap: 8px;
-       column-gap: 8px;
+  column-gap: 8px;
   flex-wrap: wrap;
   line-height: 150%;
 }
@@ -260,16 +258,11 @@
   padding-bottom: 0;
 }
 .changeBillMethod .cont__wrap.cont__wrap-btBtn {
-  padding: 0;
-  background-color: transparent;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  z-index: 999;
-  width: 100%;
-  pointer-events: auto;
-  opacity: 1;
-  transition: opacity 0.2s ease-in-out;
+  /* 히스토리 확인 후 추후 삭제예정
+  	pointer-events:auto;
+  	opacity:1;
+  	transition:opacity 0.2s ease-in-out;
+  */
 }
 .changeBillMethod .cont__wrap.cont__wrap-btBtn.is-scrolled {
   opacity: 0;
