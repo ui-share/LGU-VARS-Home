@@ -13,12 +13,12 @@
 	<!-- Css -->
 	<link rel="stylesheet" type="text/css" href="../../../../static/css/common.css">
 	<link rel="stylesheet" type="text/css" href="../../../../static/css/style.css">
-    <link rel="stylesheet" type="text/css" href="../../../../static/css/changeBillMethod.css">
-	
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/asTaskRegister.css">
+
 	<!-- Scripts -->
 </head>
 <body>
-	<div class="page-wrapper changeBillMethod">
+	<div class="page-wrapper additionalProduct">
 		<div class="container">
 			<div class="section__cont"></div>
 		</div>
@@ -32,34 +32,31 @@
 		<div class="back-drop"></div>
 		<div class="popup__wrap">
 			<div class="popup-header">
-				<div class="popup-tit">
-					<span class="txt"><span class="color-prim">이메일 도메인</span>을 선택해 주세요</span>
+				<div class="popup-tit hidden">
+					<span class="txt"></span>
 				</div>
-				<button class="btn btn-util close" type="button" alt="닫기"></button>
+				<button class="btn btn-util close hidden" type="button" alt="닫기"></button>
 			</div>
-			<div class="popup-body">				
-				<div class="slctInfo-box slctDomain">
-					<div class="btn-group flex-column">
-						<button class="btn btn-popSolid" type="button">
-							<span class="txt">@daum.com</span>
-						</button>
-						<button class="btn btn-popSolid" type="button">
-							<span class="txt">@naver.com</span>
-						</button>
-						<button class="btn btn-popSolid" type="button">
-							<span class="txt">@gmail.com</span>
-						</button>
-						<button class="btn btn-popSolid" type="button">
-							<span class="txt">@hotmail.com</span>
-						</button>
-						<button class="btn btn-popSolid" type="button">
-							<span class="txt">@nate.com</span>
-						</button>
+			<div class="popup-body">
+				<div class="inform-wrap">
+					<span class="inform-img csCenter"></span>
+					<div class="text-box">
+						<span class="tit">보이는 ARS 종료 후,<br><span class="color-prim">당신의 U+ 앱</span>으로 이동합니다</span>
+						<span class="txt">보이는 ARS는 종료 됩니다.</span>
 					</div>
 				</div>
 			</div>
 			
-			<div class="popup-footer hidden"></div>
+			<div class="popup-footer">
+				<div class="btn-group flex-row is-confirm">
+					<button class="btn line" type="button">
+						<span class="txt">취소</span>
+					</button>
+					<button class="btn" type="button">
+						<span class="txt">확인</span>
+					</button>
+				</div>
+			</div>
 		</div>
 	</div>
 </body>
