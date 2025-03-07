@@ -1,121 +1,500 @@
 @import '../base/mixin';
-.datepicker-UI, .range-datepicker {
 
-	.resetDate {
-		min-width: 256px;
-		max-width: 250px;
+// 선택 날짜 초기화 버튼
+.resetDate {
+	min-width: 256px;
+	max-width: 250px;
+	margin: auto;
+}
+// datepicker 정렬
+.vanillajs-datepicker {		
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	margin: auto;
+	gap: 4px;
+	.datepicker-picker {
+		// 켈린더 정렬
+		align-items: center;
+		min-width: 220px;
+		max-width: 320px;
 		margin: auto;
+		gap: 12px;
 	}
+}
+// range datepicker 강제 active
+.range-datepicker {
 	.vanillajs-datepicker {
-		
-		display: flex;
-		align-items: flex-start;
-		justify-content: center;
-		margin: auto;
-		gap: 4px;
-		.datepicker:not(.active) {
-			display: block !important;
+		position: relative;
+		min-height: 380px;
+		padding-top: 12px;
+	}
+	.datepicker:not(.active) {
+		display: block !important;
+	}
+	input[name="start"] + .datepicker-dropdown:not(.active) {
+		display: none !important;
+	}
+	input[name="end"] + .datepicker-dropdown:not(.active) {
+		display: block !important;
+	}
+	.datepicker-dropdown {
+		// 켈린더 고정 위치
+		left: 50% !important;
+		top: auto !important;
+		bottom: 50% !important;
+		transform: translate(-50%, calc(50% + 40px)) !important;
+		.datepicker-picker {
+			box-shadow: none;
 		}
-		input[name="start"] + .datepicker:not(.active) {
-			display: none !important;
-		}
-		input[name="end"] + .datepicker:not(.active) {
-			display: block !important;
-		}
+	}
 
-		// &.start_day {
-		// 	input[name="start"] + .datepicker:not(.active) {
-		// 		display: block !important;
-		// 	}
-		// 	input[name="end"] + .datepicker:not(.active) {
-		// 		display: none !important;
-		// 	}
-		// }
-		// &.end_day {
-		// 	input[name="start"] + .datepicker:not(.active) {
-		// 		display: none !important;
-		// 	}
-		// 	input[name="end"] + .datepicker:not(.active) {
-		// 		display: block !important;
-		// 	}
-		// }
-		
-		&.year-month-day {
-			min-height: 380px;
-			padding-top: 12px;
+	// 입력 박스
+	.datepicker__input-wrap {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		column-gap: 12px;
+		background-color: var(--dt-gray02);
+		border-radius: 8px;
+		padding: 14px 16px;
+		// @include fw-6(18px);
+		// line-height: 1.5;
+		// color: var(--dt-gray11);
+	}
+	// 입력 영역 + 유닛
+	.datePicker__input-box {
+		display: flex;
+		flex-wrap: nowrap;
+		align-items: center;
+		justify-content: center;
+		min-width: 86px;
+		max-width: 124px;
+		&:has(.hyphen) {
+			max-width: calc(124px + 24px);
+		}		
+		// 입력 영역
+		.input-field {
+			flex: 1;
+			@include fw-6(14px);
+			line-height: 1.2;
+			color: var(--dt-gray16);
+			text-align: center;
 		}
-		// 켈린더 인풋 회색 박스
-		.datepicker__input-wrap {
-			position: relative;
-			width: 100%;
-			display: flex;
-			flex-wrap: wrap;
-			align-items: center;
-			justify-content: center;
-			column-gap: 12px;
-			background-color: var(--dt-gray02);
-			border-radius: 8px;
-			padding: 14px 16px;
-			@include fw-6(18px);
+		// 유닛
+		.input-field-unit {
+			flex: 0 auto;
+			@include fw-5(14px);
 			line-height: 1.5;
 			color: var(--dt-gray11);
-			
-		}
-		// 인풋 입력 영역 + 인풋 유닛
-		.datePicker__input-box {
-			display: flex;
-			flex-wrap: nowrap;
-			align-items: center;
-			justify-content: center;
-			min-width: 86px;
-			max-width: 124px;
-			&:has(.hyphen) {
-				max-width: calc(124px + 24px);
-			}		
-			// 인풋 입력 영역
-			.input-field {
-				flex: 1;
-				@include fw-6(14px);
+			&.hyphen {
+				@include fw-6(18px);
 				line-height: 1.2;
-				color: var(--dt-gray16);
-				text-align: center;
-			}
-			// 인풋 유닛
-			.input-field-unit {
-				flex: 0 auto;
-				@include fw-5(14px);
-				line-height: 1.5;
-				color: var(--dt-gray11);
-				&.hyphen {
-					@include fw-6(18px);
-					line-height: 1.2;
-					padding-right: 12px;
-				}
-			}
-			// 켈린더 정렬
-			.datepicker-picker {
-				align-items: center;		
-				box-shadow: none;
-				min-width: 220px;
-				max-width: 320px;
-				margin: auto;
+				padding-right: 12px;
 			}
 		}
 	}
+}
 
-	// vanillajs-datepicker-1.3.4
+
+.vanillajs-datepicker {
 	.datepicker {
-		.datepicker-grid {
+		// width: min-content;
+		.datepicker-picker {
+			.datepicker-header {
+
+			}
+			.datepicker-main {
+				.datepicker-view {
+					.days {
+						.days-of-week {
+							.dow {
+
+							}
+						}
+						.datepicker-grid {
+							.datepicker-cell {
+								&.day {
+
+								}
+
+							}
+							.day {
+									
+							}
+							.prev {
+
+							}
+							.next {
+
+							}
+							.today {
+
+							}
+
+						}
+					}
+				}
+
+			}
+			.datepicker-footer {
+
+			}
+
+		}
+
+		&.datepicker-inline {
+			.datepicker-picker {
+				.datepicker-header {
+	
+				}
+				.datepicker-main {
+					.datepicker-view {
+						.day {
+							.days-of-week {
+	
+							}
+							.datepicker-grid {
+								
+							}
+						}
+					}
+				}
+				.datepicker-footer {
+					
+				}
+	
+			}
+		}
+		&.datepicker-dropdown {
+			.datepicker-picker {
+				.datepicker-header {
+	
+				}
+				.datepicker-main {
+					.datepicker-view {
+						.day {
+							.days-of-week {
+	
+							}
+							.datepicker-grid {
+								
+							}
+						}
+					}	
+				}
+				.datepicker-footer {
+					
+				}
+	
+			}
+		}
+		
+	}
+}
+
+// vanillajs-datepicker-1.3.4 커스텀
+.datepicker-title {
+	background-color: var(--dt-white);
+	box-shadow: none;
+	@include fw-6(16px);
+	line-height: 1.5;
+	text-align: center;
+}
+.datepicker-controls {
+	.button {
+		height: auto;
+		line-height: 1.2;
+		color: var(--dt-gray16);
+		vertical-align: middle;
+		box-shadow: none;
+		margin: 0;
+		padding: 0;
+		&:hover {
+			border-color: #b8b8b8;
+			color: #363636;
+		}
+		&:focus {
+			border-color: #3273dc;
+			color: #363636;
+			&:not(:active) {
+				box-shadow: 0 0 0 .125em rgba(50,115,220,.25);
+			}
+		}
+		&:active {
+			border-color: #474747;
+			color: #363636;
+		}
+		
+		
+	}
+	
+}
+.datepicker-main {
+	padding: 0;
+}
+.datepicker-view {
+	width: auto;
+}
+.datepicker-grid, .datepicker-view {
+	justify-content: center;
+}
+
+// 켈린더 푸터 
+.datepicker-footer {
+	background-color: var(--dt-white);
+	box-shadow: none;
+	.datepicker-controls {
+		width: 100%;
+		min-width: 256px;
+    	max-width: 250px;
+		.button {
 			align-items: center;
+			background-color: var(--dt-gray03);
+			border: 1px solid var(--dt-gray03);
+			border-radius: 4px;
+			@include fw-6(12px);
+			line-height: 1.2;
+			color: var(--dt-gray11);
 		}
-		&.datepicker-dropdown  {
-			// position: static;
-			// display: unset;
-			left: 50% !important;
-			transform:translateX(-50%);
-			top: 70px !important;
-			//bottom: -300px !important;
+	}
+}
+// 켈린더 헤더 
+.datepicker-header {
+	.datepicker-controls {
+		width: 203px;
+		justify-content: center;
+		align-items: center;
+		background-color: transparent;
+		padding: 0;
+		.button {
+			height: auto;
+			border-color: transparent;
+			@include fw-7(20px);
+			line-height: 1.2;
+			color:var(--dt-gray16);
+			&:hover {
+				background-color: #f9f9f9;
+			}
+			&:active {
+				background-color: #f2f2f2;
+			}
+			&.next-button, &.prev-button {
+				color: transparent;
+				font-size: 0;
+				flex: 0 0 24px;
+				width: 24px;
+				height: 24px;
+				background-image: url(../images/icon/ic-btn-arrow-right-lg.svg);
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: 100%;
+				&:hover, &:focus, &:active {
+					background-color: transparent;
+					box-shadow: none;
+					border-color: transparent;
+					color: transparent;
+				}
+				&[class~="disabled"] {
+					opacity: 0;
+				}
+			}
+			&.next-button {
+				transform: rotate(180deg);
+			}
 		}
+	}
+}
+
+
+
+
+
+
+
+
+
+.datepicker {
+	.days {
+		display: flex;
+		flex: auto;
+		flex-direction: column;
+		.dow, .datepicker-cell {
+			flex-basis: 14.2857142857%;
+		}
+	}
+	
+	.week-numbers {
+		display: flex;
+		flex: 0 0 9.6774193548%;
+		flex-direction: column;
+	}
+	.weeks {
+		align-items: stretch;
+		display: flex;
+		flex: auto;
+		flex-direction: column;
+	}
+	span {
+		-webkit-touch-callout: none;
+		align-items: center;
+		border-radius: 4px;
+		cursor: default;
+		display: flex;
+		justify-content: center;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		user-select: none;
+	}
+	.dow {
+		font-size: .875rem;
+		font-weight: 700;
+		height: 1.5rem;
+	}
+	.week {
+		color: #b8b8b8;
+		flex: auto;
+		font-size: .75rem;
+	}
+}
+.datepicker-cell {
+	height: 44px;
+	&:not(.day) {
+		flex-basis: 25%;
+		height: 4.5rem;
+	}
+	&:not(.disabled) {
+		&:hover {
+			background-color: #f9f9f9;
+			cursor: pointer;
+		}
+	}
+	&.focused:not(.selected) {
+		background-color: #e9e9e9;
+	}
+	&.selected, &.selected:hover {
+		background-color: #3273dc;
+		color: #fff;
+		font-weight: 600;
+	}
+	&.disabled {
+		color: #dcdcdc;
+	}
+	&.next, &.prev {
+		&:not(.disabled) {
+			color: #7a7a7a;
+		}
+	}
+	&.next, &.prev {
+		&.selected {
+			color: #e6e6e6;
+		}
+	}
+	&.highlighted {
+		&:not(.selected) {
+			&:not(.range) {
+				&:not(.today) {
+					background-color: #f5f5f5;
+					border-radius: 0;
+				}
+			}
+		}
+	}
+	&.highlighted {
+		&:not(.selected) {
+			&:not(.range) {
+				&:not(.today) {
+					&:not(.disabled):hover {
+						background-color: #efefef;
+					}
+					&.focused {
+						background-color: #e9e9e9;
+					}
+				}
+			}
+		}
+	}
+	&.today {
+		&:not(.selected) {
+			background-color: #00d1b2;
+			&:not(.disabled) {
+				color: #fff;
+			}
+		}
+		&.focused {
+			&:not(.selected) {
+				background-color: #00ccad;
+			}
+		}
+	}
+	&.range-end, &.range-start {
+		&:not(.selected) {
+			background-color: #b8b8b8;
+			color: #fff;
+		}
+		&.focused {
+			&:not(.selected) {
+				background-color: #b3b3b3;
+			}
+		}
+	}
+	
+	&.range-start {
+		&:not(.range-end) {
+			border-radius: 4px 0 0 4px;
+		}
+	}
+	&.range-end {
+		&:not(.range-start) {
+			border-radius: 0 4px 4px 0;
+		}
+	}
+	&.range {
+		background-color: #dcdcdc;
+		border-radius: 0;
+		&:not(.disabled) {
+			&:not(.focused) {
+				&:not(.today) {
+					&:hover {
+						background-color: #d7d7d7;
+					}
+				}
+			}
+		}
+		&.disabled {
+			color: #c6c6c6;
+		}
+		&.focused {
+			background-color: #d1d1d1;
+		}
+	}
+}
+
+.datepicker-input {
+	&.in-edit {
+		border-color: #276bda;
+		&:active, &:focus {
+			box-shadow: 0 0 .25em .25em rgba(39,107,218,.2);
+		}
+	}
+}
+
+
+
+
+
+
+
+
+.vanillajs-datepicker {		
+
+	
+	
+	
+	.datepicker-main {
+		
 		// span {
 		// 	border-radius: 40px;
 		// }
@@ -138,164 +517,11 @@
 		// 		color: var(--dt-gray14);
 				
 		// 	}
-		// 	&.day::nth-child(7n) {
-		// 		&.range {
-		// 			border-radius: 0 0 40px 40px;
-		// 		}
-		// 	}
-		// 	&.next, &.prev {
-		// 		opacity: 0.4;
-		// 	}
-		// 	&.disabled {
-		// 		opacity: 0.4;
-		// 	}
-		// 	&:hover {
-		// 		background-color: transparent;
-		// 	}
-		// 	&:not(.disabled):active {
-		// 		box-shadow: inset 0 0 0px 20em rgba(0, 0, 0, 0.06);
-		// 	}
-		// 	&.focused:not(.selected) {
-		// 		background-color: #F3F5F6;
-		// 		border: 1px solid #F3F5F6;
-		// 		color: var(--dt-gray14);			
-		// 	}
-		// 	&.selected, &.range-end, &.range-start {
-		// 		border-radius: 40px;
-		// 		background-color: var(--dt-white);
-		// 		border: 1px solid var(--dt-primary);
-		// 		color: var(--dt-primary);
-		// 	}
-		// 	&.range {
-		// 		&:not(.disabled) {
-		// 			height: 22px;
-		// 			background-color: rgb(227 0 132 / 20%);
-		// 			color: var(--dt-gray14);
-		// 		}
-		// 	}
-		// 	&.today {
-		// 		&:not(.range):not(.selected) {				
-		// 			background-color: #F3F5F6;
-		// 			border: 1px solid #F3F5F6;
-		// 			color: var(--dt-gray14);
-		// 		}
-		// 		&::before {
-		// 			display: inline-block;
-		// 			content: "오늘";
-		// 			padding: 0 6px;
-		// 			font-size: 8px;
-		// 			line-height: 14px;
-		// 			font-weight: 600;
-		// 			position: absolute;
-		// 			top: -8px;
-		// 			background-color: var(--dt-white);
-		// 			border: 1px solid var(--dt-primary);
-		// 			color: var(--dt-primary);
-		// 			border-radius: 20px;
-		// 		}
-		// 		&::after {
-		// 			display: inline-block;
-		// 			content: '';
-		// 			position: absolute;
-		// 			top: 7px;
-		// 			left: 50%;
-		// 			transform:translateX(-50%);
-		// 			width: 7px;
-		// 			height: 4px;
-		// 			background-image: url(../images/icon/triangle-border.svg);
-		// 			background-size: 100%;
-		// 			background-repeat: no-repeat;
-		// 			background-position: center;
-		// 		}
-		// 		&.range {
-		// 			background-color: rgb(227 0 132 / 20%);
-		// 			color: var(--dt-gray14);
-		// 			&::before {
-		// 				top: -14px;
-		// 			}
-		// 			&::after {
-		// 				top: 1px;
-						
-		// 			}
-		// 		}
-			
-				
-		// 	}
-			
-			
-		
-			
-		// 	// &.range-start:not(.range-end) + .range, 
-		// 	// &.range-end:not(.range-start) {
-		// 	// 	&::before {
-		// 	// 		display: inline-block;
-		// 	// 		content: "";
-		// 	// 		width: 4px;
-		// 	// 		height: 22px;
-		// 	// 		background-color: rgb(227 0 132 / 20%);
-		// 	// 		position: absolute;
-		// 	// 		top: 50%;
-		// 	// 		transform: translateY(-50%);
-		// 	// 	}
-		// 	// }
-		// 	// &.range-start:not(.range-end) {
-		// 	// 	&::before  {
-		// 	// 		right: -1px;
-		// 	// 	}
-		// 	// }
-		// 	// &.range-end:not(.range-start) {
-		// 	// 	&::before {
-		// 	// 		left: -1px;
-		// 	// 	}
-		// 	// }
-			
-			
-			
-			
-		// }
-		// .datepicker-header {
-		// 	.datepicker-controls {
-		// 		width: 203px;
-		// 		justify-content: center;
-		// 		align-items: center;
-		// 		padding: 0;
-		// 		.button {
-		// 			height: auto;
-		// 			background-color: transparent;
-		// 			@include fw-7(20px);
-		// 			line-height: 1.2;
-		// 			color:var(--dt-gray16);
-		// 			padding: 0;
-		// 			[disabled] {
-		// 				opacity: 0;
-		// 			}
-		// 			&.next-button, &.prev-button {
-		// 				color: transparent;
-		// 				font-size: 0;
-		// 				flex: 0 0 32px;
-		// 				width: 100%;
-		// 				height: 32px;
-		// 				background-image: url(../images/icon/ic-btn-arrow-right-lg.svg);
-		// 				background-position: center;
-		// 				background-repeat: no-repeat;
-		// 				background-size: 24px;
-		// 				padding: 8px;
-		// 				&:hover, &:focus, &:active {
-		// 					background-color: transparent;
-		// 					box-shadow: none;
-		// 					border-color: transparent;
-		// 					color: transparent;
-		// 				}
-						
-		// 			}
-		// 			&.next-button {
-		// 				transform: rotate(180deg);
-		// 			}
-		// 		}
-				
-		// 	}
 		// }
 	}
-
 }
+	
+	
+
+
 
