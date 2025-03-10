@@ -271,6 +271,19 @@ ul {list-style: none;perspective: 900;margin: 0;}
 				<input type="checkbox" checked><i></i>
 				<h2>⭐ 요금 및 납부_billInfo</h2>
 				<div class="accordion-con">
+					<ul class="menu">
+						<li class="tit">↳ 청구 요금_billingChange</li>
+						<li class="txt">
+							<h3>화면</h3>
+							<a href="./templates/contents/business/billingChange/search_billing.html" target="_blank"><span>청구 요금 조회</span>
+								<span class="flag success"><span class="txt">02.28</span></span>
+							</a>
+							<h3>바텀시트</h3>
+							<a href="./templates/contents/business/billingChange/pop_calendar.html" target="_blank"><span>청구 월 선택</span>
+								<span class="flag success"><span class="txt">02.28</span></span>
+							</a>
+						</li>
+					</ul>
 					<ul class="menu ">
 						<li class="tit">↳ 요금 바로 납부_immePayment</li>
 						<li class="txt">
@@ -346,6 +359,90 @@ ul {list-style: none;perspective: 900;margin: 0;}
 						</li>	
 					</ul>
 					<ul class="menu ">
+						<li class="tit">↳ 요금 납부방법 변경_changePaymentMethod</li>
+						<li class="txt">
+							<h3>화면</h3>
+							<a href="./templates/contents/business/changePaymentMethod/search_chngpayMthd_bankaccount.html" target="_blank"><span>요금 납부방법 _은행</span>
+								<span class="flag success"><span class="txt">02.28</span></span>
+							</a>
+							<a href="./templates/contents/business/changePaymentMethod/search_chngpayMthd_credit.html" target="_blank"><span>요금 납부방법 _신용카드</span>
+								<span class="flag success"><span class="txt">02.28</span></span>
+							</a>
+							<a href="./templates/contents/business/changePaymentMethod/search_chngpayMthd_jiro.html" target="_blank"><span>요금 납부방법 _지로</span>
+								<span class="flag success"><span class="txt">02.28</span></span>
+							</a>
+
+							<a href="./templates/contents/business/changePaymentMethod/bank_inputAccnt_default.html" target="_blank"><span>요금 납부방법 변경 _to은행_기본</span>
+								<span class="flag success"><span class="txt">02.28</span></span>
+							</a>
+							<a href="./templates/contents/business/changePaymentMethod/bank_inputAccnt_case_focused.html" target="_blank"><span>요금 납부방법 변경 _to은행_포커스</span>
+								<span class="flag success"><span class="txt">02.28</span></span>
+							</a>
+							<a href="./templates/contents/business/changePaymentMethod/bank_inputAccnt_case_error.html" target="_blank"><span>요금 납부방법 변경 _to은행_에러</span>
+								<span class="flag success"><span class="txt">02.28</span></span>
+							</a>
+							<a href="./templates/contents/business/changePaymentMethod/card_inputNumber_default.html" target="_blank"><span>요금 납부방법 변경 _to카드_기본</span>
+								<span class="flag success"><span class="txt">02.28</span></span>
+							</a>
+							<a href="./templates/contents/business/changePaymentMethod/card_inputNumber_case_focused.html" target="_blank"><span>요금 납부방법 변경 _to카드_포커스</span>
+								<span class="flag success"><span class="txt">02.28</span></span>
+							</a>
+							<a href="./templates/contents/business/changePaymentMethod/card_inputNumber_case_error.html" target="_blank"><span>요금 납부방법 변경 _to카드_에러</span>
+								<span class="flag success"><span class="txt">02.28</span></span>
+							</a>
+							<a href="./templates/contents/business/changePaymentMethod/finish_paymentMthdChngToBank.html" target="_blank"><span>요금 납부방법 변경_은행 완료</span>
+								<span class="flag success"><span class="txt">02.28</span></span>
+							</a>
+							<a href="./templates/contents/business/changePaymentMethod/finish_paymentMthdChngToCard.html" target="_blank"><span>요금 납부방법 변경_카드 완료</span>
+								<span class="flag success"><span class="txt">02.28</span></span>
+							</a>
+							<a href="./templates/contents/business/changePaymentMethod/list_myPayment.html" target="_blank"><span>이전 납부 내역</span>
+								<span class="flag success"><span class="txt">02.28</span></span>
+							</a>
+							
+							<h3>바텀시트</h3>
+							<a href="./templates/contents/business/changePaymentMethod/pop_chngPaymentMthd.html" target="_blank"><span>요금 납부방법 선택</span>
+								<span class="flag success"><span class="txt">02.28</span></span>
+							</a>
+							<a href="./templates/contents/business/changePaymentMethod/pop_slctBankCorp_bank.html" target="_blank"><span>은행/증권사 선택 _ 은행 탭</span>
+								<span class="flag success"><span class="txt">02.28</span></span>
+							</a>
+							<a href="./templates/contents/business/changePaymentMethod/pop_slctBankCorp_finance.html" target="_blank"><span>은행/증권사 선택 _ 증권사 탭</span>
+								<span class="flag success"><span class="txt">02.28</span></span>
+							</a>
+							<a href="./templates/contents/business/changePaymentMethod/pop_slctPayday_bank.html" target="_blank"><span>결제일 선택 _은행</span>
+								<span class="flag success"><span class="txt">02.28</span></span>
+							</a>
+							<a href="./templates/contents/business/changePaymentMethod/pop_slctPayday_card.html" target="_blank"><span>결제일 선택 _카드</span>
+								<span class="flag success"><span class="txt">02.28</span></span>
+							</a>
+							<a href="./templates/contents/business/changePaymentMethod/pop_impossible_cardNum.htmll" target="_blank"><span>카드 확인 불가_카드번호 불일치</span>
+								<span class="flag success"><span class="txt">02.28</span></span>
+							</a>
+							<a href="./templates/contents/business/changePaymentMethod/pop_impossible_expiry.html" target="_blank"><span>카드 확인 불가_유효기간 불일치</span>
+								<span class="flag success"><span class="txt">02.28</span></span>
+							</a>
+							<a href="./templates/contents/business/changePaymentMethod/pop_impossible_discord.html" target="_blank"><span>카드 확인 불가_카드번호&유효기간 불일치</span>
+								<span class="flag success"><span class="txt">02.28</span></span>
+							</a>
+							<a href="./templates/contents/business/changePaymentMethod/pop_impossible_fail.html" target="_blank"><span>카드 확인 불가_등록 불가 카드</span>
+								<span class="flag success"><span class="txt">02.28</span></span>
+							</a>
+							<a href="./templates/contents/business/changePaymentMethod/pop_impossible_others.html" target="_blank"><span>타인 명의카드 사용 불가</span>
+								<span class="flag success"><span class="txt">02.28</span></span>
+							</a>
+							<a href="./templates/contents/business/changePaymentMethod/pop_impossible_bankNum.html" target="_blank"><span>예금주 확인 불가</span>
+								<span class="flag success"><span class="txt">02.28</span></span>
+							</a>
+							<a href="./templates/contents/business/paymentMethodChange/pop_impossible_bankOthers.html" target="_blank"><span>타인명의 계좌 불가</span>
+								<span class="flag success"><span class="txt">02.28</span></span>
+							</a>
+							<a href="./templates/contents/business/changePaymentMethod/pop_svcCancel_chngPaymentMthd.html" target="_blank"><span>서비스 중단</span>
+								<span class="flag success"><span class="txt">02.28</span></span>
+							</a>
+						</li>
+					</ul>
+					<ul class="menu ">
 						<li class="tit">↳ 청구서 받는방법 변경_changeBillMethod</li>
 						<li class="txt">
 							<h3>화면</h3>
@@ -400,6 +497,41 @@ ul {list-style: none;perspective: 900;margin: 0;}
 								<span class="flag success"><span class="txt">02.28</span></span>
 							</a>
 							<a href="./templates/contents/business/changeBillMethod/pop_cnfmBillMthd.html" target="_blank"><span>휴대폰으로 변경 확인</span>
+								<span class="flag success"><span class="txt">02.28</span></span>
+							</a>
+						</li>
+					</ul>
+					<ul class="menu ">
+						<li class="tit">↳ 청구서 재발행_reissueBill</li>
+						<li class="txt">
+							<h3>화면</h3>
+							<a href="./templates/contents/business/reissueBill/submit_billReissueInfoEmail.html" target="_blank"><span>청구서 재발행 _ 이메일</span>
+								<span class="flag success"><span class="txt">02.28</span></span>
+							</a>
+							<a href="./templates/contents/business/reissueBill/submit_billReissueInfoTel.html" target="_blank"><span>청구서 재발행 _ 휴대폰 문자(MMS)</span>
+								<span class="flag success"><span class="txt">02.28</span></span>
+							</a>
+							<a href="./templates/contents/business/reissueBill/submit_billReissueInfoFax.html" target="_blank"><span>청구서 재발행 _ 팩스</span>
+								<span class="flag success"><span class="txt">02.28</span></span>
+							</a>
+							<a href="./templates/contents/business/reissueBill/finish_billReissue_email.html" target="_blank"><span>청구서 재발행 완료_이메일</span>
+								<span class="flag success"><span class="txt">02.28</span></span>
+							</a>
+							<a href="./templates/contents/business/reissueBill/finish_billReissue_phone.html" target="_blank"><span>청구서 재발행 완료_ 휴대폰 문자(MMS)</span>
+								<span class="flag success"><span class="txt">02.28</span></span>
+							</a>
+							<a href="./templates/contents/business/reissueBill/finish_billReissue_fax.html" target="_blank"><span>청구서 재발행 완료_ 팩스</span>
+								<span class="flag success"><span class="txt">02.28</span></span>
+							</a>
+							
+							<h3>바텀시트</h3>
+							<a href="./templates/contents/business/reissueBill/pop_slctDomain.html" target="_blank"><span>이메일 도메인 선택</span>
+								<span class="flag success"><span class="txt">02.28</span></span>
+							</a>
+							<a href="./templates/contents/business/reissueBill/pop_calendar.html" target="_blank"><span>신청 월 선택</span>
+								<span class="flag success"><span class="txt">02.28</span></span>
+							</a>
+							<a href="./templates/contents/business/reissueBill/pop_svcCancel.html" target="_blank"><span>청구서 재발행 서비스 중단</span>
 								<span class="flag success"><span class="txt">02.28</span></span>
 							</a>
 						</li>
