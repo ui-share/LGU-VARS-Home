@@ -340,8 +340,7 @@
 		&.today {
 			&:not(.selected) {
 				&:not(.disabled) {
-					&:not(.range) {color: var(--dt-primary); }
-					
+					&:not(.range) {color: var(--dt-primary); }					
 					// &::after {
 					// 	background-color: var(--dt-gray03);
 					// 	border-color: var(--dt-gray03);
@@ -531,108 +530,4 @@
 	}
 	
 }
-
-
-
-
-
-.vanillajs-datepicker {
-	.datepicker {
-		// width: min-content;
-		.datepicker-picker {
-			.datepicker-header {
-
-			}
-			.datepicker-main {
-				.datepicker-view {
-					.days {
-						.days-of-week {
-							.dow {
-
-							}
-						}
-						.datepicker-grid {
-							.datepicker-cell {
-								&.day {
-
-								}
-
-							}
-							.day {
-									
-							}
-							.prev {
-
-							}
-							.next {
-
-							}
-							.today {
-
-							}
-
-						}
-					}
-				}
-
-			}
-			.datepicker-footer {
-
-			}
-
-		}
-
-		&.datepicker-inline {
-			.datepicker-picker {
-				.datepicker-header {
-	
-				}
-				.datepicker-main {
-					.datepicker-view {
-						.day {
-							.days-of-week {
-	
-							}
-							.datepicker-grid {
-								
-							}
-						}
-					}
-				}
-				.datepicker-footer {
-					
-				}
-	
-			}
-		}
-		&.datepicker-dropdown {
-			.datepicker-picker {
-				.datepicker-header {
-	
-				}
-				.datepicker-main {
-					.datepicker-view {
-						.day {
-							.days-of-week {
-	
-							}
-							.datepicker-grid {
-								
-							}
-						}
-					}	
-				}
-				.datepicker-footer {
-					
-				}
-	
-			}
-		}
-		
-	}
-}
-	
-	
-
-
 
