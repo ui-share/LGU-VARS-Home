@@ -415,17 +415,20 @@
 .full-popup {
 	.container {
 		padding: 72px 0 95px;
+		&:has(.twoFactorAuth) {
+			padding-bottom: 175px;
+		}
+		&:has(.movement) {
+			padding-bottom: 155px;
+		}
 	}
 	.section__cont {
 		gap: 48px;
 	}
 }
 
-// 2차인증 : twoFactorAuth 팝업
+// 2차인증 : twoFactorAuth 풀팝업/팝업
 .twoFactorAuth {
-	.container {
-		padding-bottom: 175px;
-	}
 	.btn-group .btn-radio {
 		flex-direction: column;
 		justify-content: flex-start;
@@ -543,9 +546,6 @@
 
 //설치변경신청(이전설치) : 주소검색 풀팝업
 .movement {
-	.container {
-		padding-bottom: 155px;
-	}
 	.section__cont {
 		gap: 24px;
 	}
