@@ -2189,6 +2189,7 @@ button {
 }
 .chck-group input[type=checkbox] {
   /* input은 숨김 */
+  display: none;
   -webkit-appearance: none;
   -moz-appearance: none;
        appearance: none;
@@ -4112,240 +4113,85 @@ textarea::placeholder {
   padding-bottom: 20px;
 }
 
-.full-popup {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100vw;
-  max-width: var(--max-devicewidth);
-  height: 100%;
-  z-index: 9999;
+.full-popup .container {
+  padding: 72px 0 95px;
 }
-.full-popup .popup__wrap {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  max-height: unset;
-  display: flex;
+.full-popup .section__cont {
+  gap: 48px;
+}
+
+.twoFactorAuth .container {
+  padding-bottom: 175px;
+}
+.twoFactorAuth .btn-group .btn-radio {
   flex-direction: column;
-  background-color: var(--dt-white);
-  overflow-y: auto;
-}
-.full-popup .popup-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  width: 100%;
-  max-width: var(--max-devicewidth) !important;
-  min-height: 56px;
-  padding: 2px 20px 2px 12px;
-  z-index: 2;
-}
-.full-popup .popup-header .header__util {
-  display: flex;
-  align-items: center;
   justify-content: flex-start;
+  height: 100%;
 }
-.full-popup .popup-header .header__util .btn-util {
-  width: 32px;
-  height: 32px;
-  background-repeat: no-repeat;
-  background-size: 24px 24px;
-  background-position: center center;
-  padding: 4px;
-  font-size: 0px;
-  text-indent: -9999px;
+.twoFactorAuth .slctAuth {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  grid-auto-rows: 1fr;
 }
-.full-popup .popup-header .header__util .btn-util.prev {
-  background-image: url(../images/icon/ic_chevron_previous_line.svg);
+.twoFactorAuth .slctAuth .btn-radio {
+  background-color: var(--dt-white);
+  border: 1px solid var(--dt-gray17);
 }
-.full-popup .popup-header .header__util .btn-util.end {
-  background-image: url(../images/icon/ic-close24-gray15.svg);
-}
-.full-popup .popup-header .header__util .header-tit {
+.twoFactorAuth .slctAuth .btn-radio .txt:nth-of-type(1) {
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--dt-gray16);
-  margin-left: 4px;
 }
-.full-popup .popup-header .header__util .header-tit .header-txt {
-  font-size: 16px;
-  font-weight: 700;
-  color: var(--dt-gray10);
-}
-.full-popup .popup-header .header__btn {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  -moz-column-gap: 6px;
-       column-gap: 6px;
-  margin-left: auto;
-}
-.full-popup .popup-header .header__btn .btn {
-  display: flex;
-  border-radius: 4px;
-  padding: 9px 12px 8px;
-  gap: 2px;
-  min-width: -moz-max-content;
-  min-width: max-content;
-}
-.full-popup .popup-header .header__btn .btn .txt {
+.twoFactorAuth .slctAuth .btn-radio .txt:nth-of-type(2) {
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 500;
 }
-.full-popup .popup-header .header__btn .btn-callEnd {
-  background-color: var(--dt-primary);
-  border-color: var(--dt-primary);
+.twoFactorAuth .slctAuth .btn-radio.is-selected {
+  border: 1px solid var(--dt-primary);
+  box-shadow: 0 0 0 1px var(--dt-primary) inset;
 }
-.full-popup .popup-header .header__btn .btn-callEnd .icon {
-  display: inline-block;
-  content: "";
-  width: 16px;
-  min-width: 16px;
-  height: 16px;
-  background-image: url(../images/icon/call_end.svg);
-  background-repeat: no-repeat;
-  background-size: 16px 16px;
-}
-.full-popup .popup-header .header__btn .btn-callEnd .txt {
-  color: var(--dt-white);
-}
-.full-popup .popup-body {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  padding: 20px 20px 40px;
-  overflow-y: auto;
-  gap: 48px;
-}
-.full-popup .popup-body .section__cont {
-  gap: 48px;
-}
-.full-popup .popup-body .section__cont .cont__wrap {
-  padding: 0 20px;
-}
-.full-popup .popup-body .section__cont .cont__wrap.cont__wrap-vertical {
-  gap: 16px;
-}
-.full-popup .popup-body .section__cont .cont__wrap.cont__wrap-btBtn {
-  padding: 0;
-}
-.full-popup .popup-body:has(.section__cont) {
-  padding: 20px 0 40px;
-  gap: 0;
-}
-.full-popup .popup-footer {
-  padding: 0 20px 20px 20px;
-}
-.full-popup .popup-footer.full {
-  padding: 0;
-}
-.full-popup .popup-footer.full .btn-group .btn {
-  border-radius: 0 !important;
-}
-.full-popup .popup-footer .btn-group {
-  position: relative;
-}
-.full-popup .popup-footer .btn-group::before {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  top: -20px;
-  left: 0;
-  width: 100%;
-  height: 20px;
-  background: linear-gradient(0deg, #FFF 17.5%, rgba(255, 255, 255, 0) 100%);
-}
-.full-popup .back-drop {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--dt-black);
-  opacity: 0.6;
-}
-.full-popup.show {
-  display: block;
-}
-.full-popup .movement .popup-body .section__cont {
-  gap: 24px;
-  padding-bottom: 115px;
-}
-.full-popup .movement .input-col-wrap {
-  gap: 10px;
-}
-.full-popup .movement .input-col-wrap .slct-box-wrap:has(.slct-box:first-child:last-child) .slct-box {
-  max-width: 100%;
-  width: 100%;
-}
-.full-popup .movement .input-col-wrap .form-select {
-  width: 100%;
-}
-.full-popup .movement .input-row-wrap .input-control .input-group {
-  padding-top: 0;
-}
-.full-popup .movement .input-row-wrap.double .input-control:first-child {
-  width: 120px;
-  min-width: 100px;
-}
-.full-popup .movement .input-row-wrap.double .input-control:first-child > select {
-  width: 100%;
-}
-.full-popup .movement .input-row-wrap.triple > * {
-  width: 32.333%;
-}
-.full-popup .movement .bullet-list {
-  margin-bottom: 10px;
-}
-.full-popup .movement .addr-wrap {
-  max-height: calc(100vh - 550px);
-  min-height: 280px;
-  overflow-y: auto;
-}
-.full-popup .movement .addr-wrap .addr-box {
-  padding: 16px 0 17px;
-  border-bottom: 1px solid var(--dt-gray17);
-}
-.full-popup .movement .addr-wrap .addr-box:first-child {
-  padding-top: 8px;
-}
-.full-popup .movement .addr-wrap .addr-box[role=button]:active {
-  box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
-}
-.full-popup .movement .addr-wrap .addr-box .zip-code {
-  font-size: 14px;
-  font-weight: 600;
+.twoFactorAuth .slctAuth .btn-radio.is-selected .txt {
   color: var(--dt-primary);
-  display: inline-block;
-  margin-right: 6px;
 }
-.full-popup .movement .addr-wrap .addr-box .flag {
-  margin-bottom: 4px;
+.twoFactorAuth .accordion-header.chckbox-area + .accordion-content {
+  max-height: unset;
 }
-.full-popup .movement .addr-wrap .addr-box .addr-main {
-  flex-wrap: wrap;
+.twoFactorAuth .accordion-header.chckbox-area + .accordion-content .txt-caution {
+  text-align: left;
+}
+
+.auth-status {
+  width: 100%;
+  text-align: center;
+  margin-top: 36px;
+}
+.auth-status .txt {
   font-size: 14px;
-  font-weight: 500;
-  line-height: 21px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #563aff;
+}
+.auth-status .txt::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin: -2px 8px 0 0;
+  background-image: url(../../static/images/icon/ic-auth_blue.svg);
+  background-size: 20px 20px;
+  background-position: 50% 50%;
+}
+.auth-status.ready {
+  margin: 16px 0;
+}
+.auth-status.ready .txt {
+  font-weight: 400;
   color: var(--dt-gray16);
-  margin-bottom: 2px;
 }
-.full-popup .movement .addr-wrap .addr-box .addr-detail {
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 18px;
-  color: var(--dt-gray11);
-}
-.full-popup .movement .addr-wrap .addr-box.card.solid {
-  background-color: transparent;
-  border-bottom: unset;
-  padding: 72px 0;
+.auth-status.ready .txt::before {
+  display: none;
 }
 
 .appPaid-wrap {
@@ -4388,6 +4234,83 @@ textarea::placeholder {
 }
 .appPaid-wrap + .bullet-list {
   margin-top: 8px;
+}
+
+.movement .container {
+  padding-bottom: 155px;
+}
+.movement .section__cont {
+  gap: 24px;
+}
+.movement .input-col-wrap {
+  gap: 10px;
+}
+.movement .input-col-wrap .slct-box-wrap:has(.slct-box:first-child:last-child) .slct-box {
+  max-width: 100%;
+  width: 100%;
+}
+.movement .input-col-wrap .form-select {
+  width: 100%;
+}
+.movement .input-row-wrap .input-control .input-group {
+  padding-top: 0;
+}
+.movement .input-row-wrap.double .input-control:first-child {
+  width: 120px;
+  min-width: 100px;
+}
+.movement .input-row-wrap.double .input-control:first-child > select {
+  width: 100%;
+}
+.movement .input-row-wrap.triple > * {
+  width: 32.333%;
+}
+.movement .bullet-list {
+  margin-bottom: 10px;
+}
+.movement .addr-wrap {
+  max-height: calc(100vh - 550px);
+  min-height: 280px;
+  overflow-y: auto;
+}
+.movement .addr-wrap .addr-box {
+  padding: 16px 0 17px;
+  border-bottom: 1px solid var(--dt-gray17);
+}
+.movement .addr-wrap .addr-box:first-child {
+  padding-top: 8px;
+}
+.movement .addr-wrap .addr-box[role=button]:active {
+  box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
+}
+.movement .addr-wrap .addr-box .zip-code {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--dt-primary);
+  display: inline-block;
+  margin-right: 6px;
+}
+.movement .addr-wrap .addr-box .flag {
+  margin-bottom: 4px;
+}
+.movement .addr-wrap .addr-box .addr-main {
+  flex-wrap: wrap;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  color: var(--dt-gray16);
+  margin-bottom: 2px;
+}
+.movement .addr-wrap .addr-box .addr-detail {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  color: var(--dt-gray11);
+}
+.movement .addr-wrap .addr-box.card.solid {
+  background-color: transparent;
+  border-bottom: unset;
+  padding: 72px 0;
 }
 
 .reset .inform-wrap .img-box {
@@ -4436,76 +4359,6 @@ textarea::placeholder {
 }
 .asSymptomsPop .btn-popSolid .txt {
   font-size: 14px;
-}
-
-.twoFactorAuth .btn-group .btn-radio {
-  flex-direction: column;
-  justify-content: flex-start;
-  height: 100%;
-}
-.twoFactorAuth .accordion-header.chckbox-area + .accordion-content {
-  max-height: unset;
-}
-.twoFactorAuth .accordion-header.chckbox-area + .accordion-content .txt-caution {
-  text-align: left;
-}
-.twoFactorAuth .slctAuth {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 8px;
-  grid-auto-rows: 1fr;
-}
-.twoFactorAuth .slctAuth .btn-radio {
-  background-color: var(--dt-white);
-  border: 1px solid var(--dt-gray17);
-}
-.twoFactorAuth .slctAuth .btn-radio .txt:nth-of-type(1) {
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--dt-gray16);
-}
-.twoFactorAuth .slctAuth .btn-radio .txt:nth-of-type(2) {
-  font-size: 14px;
-  font-weight: 500;
-}
-.twoFactorAuth .slctAuth .btn-radio.is-selected {
-  border: 1px solid var(--dt-primary);
-  box-shadow: 0 0 0 1px var(--dt-primary) inset;
-}
-.twoFactorAuth .slctAuth .btn-radio.is-selected .txt {
-  color: var(--dt-primary);
-}
-.twoFactorAuth .auth-status {
-  width: 100%;
-  text-align: center;
-  margin-top: 36px;
-}
-.twoFactorAuth .auth-status .txt {
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1.4;
-  color: #563aff;
-}
-.twoFactorAuth .auth-status .txt::before {
-  content: "";
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  vertical-align: middle;
-  margin: -2px 8px 0 0;
-  background-image: url(../../static/images/icon/ic-auth_blue.svg);
-  background-size: 20px 20px;
-  background-position: 50% 50%;
-}
-.twoFactorAuth .auth-status.ready {
-  margin: 16px 0;
-}
-.twoFactorAuth .auth-status.ready .txt {
-  font-weight: 400;
-  color: var(--dt-gray16);
-}
-.twoFactorAuth .auth-status.ready .txt::before {
-  display: none;
 }
 
 .switch-group .switch-input {
