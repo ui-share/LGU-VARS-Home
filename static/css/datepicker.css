@@ -1,4 +1,6 @@
+@charset "UTF-8";
 .resetDate {
+  margin: auto;
   margin: auto;
 }
 
@@ -8,6 +10,14 @@
   justify-content: center;
   margin: auto;
   gap: 4px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin: auto;
+  gap: 4px;
+}
+.vanillajs-datepicker .datepicker {
+  width: 100%;
 }
 .vanillajs-datepicker .datepicker {
   width: 100%;
@@ -43,11 +53,14 @@
 }
 .range-datepicker .datepicker:not(.active) {
   display: flex !important;
+  display: flex !important;
 }
 .range-datepicker input[name=start] + .datepicker-dropdown:not(.active) {
   display: none !important;
+  display: none !important;
 }
 .range-datepicker input[name=end] + .datepicker-dropdown:not(.active) {
+  display: flex !important;
   display: flex !important;
 }
 .range-datepicker .datepicker-dropdown {
@@ -56,6 +69,7 @@
   transform: translate(-50%, calc(-50% + 40px)) !important;
 }
 .range-datepicker .datepicker-dropdown .datepicker-picker {
+  box-shadow: none;
   box-shadow: none;
 }
 .range-datepicker .datepicker__input-wrap {
@@ -76,11 +90,24 @@
   justify-content: center;
   min-width: 86px;
   max-width: 124px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  min-width: 86px;
+  max-width: 124px;
 }
 .range-datepicker .datePicker__input-box:has(.hyphen) {
   max-width: 148px;
+  max-width: 148px;
 }
 .range-datepicker .datePicker__input-box .input-field {
+  flex: 1;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--dt-gray16);
+  text-align: center;
   flex: 1;
   font-size: 14px;
   font-weight: 600;
@@ -94,12 +121,32 @@
   font-weight: 500;
   line-height: 1.5;
   color: var(--dt-gray11);
+  flex: 0 auto;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--dt-gray11);
 }
 .range-datepicker .datePicker__input-box .input-field-unit.hyphen {
   font-size: 18px;
   font-weight: 600;
   line-height: 1.2;
   padding-right: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.2;
+  padding-right: 12px;
+}
+
+.datepicker .datepicker-main {
+  padding: 0;
+}
+.datepicker .datepicker-view {
+  width: auto;
+  justify-content: center;
+}
+.datepicker .days-of-week, .datepicker .datepicker-grid {
+  justify-content: center;
 }
 
 .datepicker .datepicker-main {
@@ -120,9 +167,22 @@
   font-weight: 600;
   line-height: 1.5;
   text-align: center;
+  background-color: var(--dt-white);
+  box-shadow: none;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
 }
 
 .datepicker-controls .button {
+  height: auto;
+  line-height: 1.2;
+  color: var(--dt-gray16);
+  vertical-align: middle;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
   height: auto;
   line-height: 1.2;
   color: var(--dt-gray16);
@@ -134,15 +194,22 @@
 .datepicker-controls .button:hover {
   border-color: #b8b8b8;
   color: #363636;
+  border-color: #b8b8b8;
+  color: #363636;
 }
 .datepicker-controls .button:focus {
+  border-color: #3273dc;
+  color: #363636;
   border-color: #3273dc;
   color: #363636;
 }
 .datepicker-controls .button:focus:not(:active) {
   box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
+  box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
 }
 .datepicker-controls .button:active {
+  border-color: #474747;
+  color: #363636;
   border-color: #474747;
   color: #363636;
 }
@@ -155,8 +222,19 @@
   width: 100%;
   min-width: 256px;
   max-width: 250px;
+  width: 100%;
+  min-width: 256px;
+  max-width: 250px;
 }
 .datepicker-footer .datepicker-controls .button {
+  align-items: center;
+  background-color: var(--dt-gray03);
+  border: 1px solid var(--dt-gray03);
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--dt-gray11);
   align-items: center;
   background-color: var(--dt-gray03);
   border: 1px solid var(--dt-gray03);
@@ -173,8 +251,19 @@
   align-items: center;
   background-color: transparent;
   padding: 0;
+  width: 203px;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  padding: 0;
 }
 .datepicker-header .datepicker-controls .button {
+  height: auto;
+  border-color: transparent;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--dt-gray16);
   height: auto;
   border-color: transparent;
   font-size: 20px;
@@ -184,11 +273,22 @@
 }
 .datepicker-header .datepicker-controls .button:hover {
   background-color: var(--dt-white);
+  background-color: var(--dt-white);
 }
 .datepicker-header .datepicker-controls .button:active {
   background-color: #f2f2f2;
+  background-color: #f2f2f2;
 }
 .datepicker-header .datepicker-controls .button.next-button, .datepicker-header .datepicker-controls .button.prev-button {
+  color: transparent;
+  font-size: 0;
+  flex: 0 0 24px;
+  width: 24px;
+  height: 24px;
+  background-image: url(../images/icon/ic-btn-arrow-right-lg.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
   color: transparent;
   font-size: 0;
   flex: 0 0 24px;
@@ -204,11 +304,17 @@
   box-shadow: none;
   border-color: transparent;
   color: transparent;
+  background-color: transparent;
+  box-shadow: none;
+  border-color: transparent;
+  color: transparent;
 }
 .datepicker-header .datepicker-controls .button.next-button[class~=disabled], .datepicker-header .datepicker-controls .button.prev-button[class~=disabled] {
   opacity: 0;
+  opacity: 0;
 }
 .datepicker-header .datepicker-controls .button.next-button {
+  transform: rotate(180deg);
   transform: rotate(180deg);
 }
 
@@ -320,7 +426,49 @@
 }
 .datepicker-input.in-edit {
   border-color: #276bda;
+  border-color: #276bda;
 }
 .datepicker-input.in-edit:active, .datepicker-input.in-edit:focus {
   box-shadow: 0 0 0.25em 0.25em rgba(39, 107, 218, 0.2);
+  box-shadow: 0 0 0.25em 0.25em rgba(39, 107, 218, 0.2);
+}
+
+@media screen and (min-width: 360px) {
+  .vanillajs-datepicker .datepicker-picker {
+    max-width: 320px;
+  }
+  .resetDate {
+    max-width: 320px;
+  }
+}
+@media screen and (max-width: 359px) {
+  .vanillajs-datepicker .datepicker-picker {
+    max-width: 220px;
+  }
+  .resetDate {
+    max-width: 220px;
+  }
+  .range-datepicker .datepicker-dropdown {
+    transform: translate(-50%, 108px) !important;
+  }
+}
+@media screen and (min-width: 360px) {
+  .datepicker {
+    --dp-size: 16px;
+  }
+}
+@media screen and (max-width: 359px) {
+  .datepicker {
+    --dp-size: 12px;
+  }
+  .datepicker .days .dow, .datepicker .days .datepicker-cell {
+    flex-basis: 2.834em;
+    height: 2.834em;
+  }
+  .datepicker .datepicker-cell:not(.day) {
+    --dp-size: 16px;
+    line-height: 1.2;
+    flex-basis: 4.5em;
+    height: 4.5em;
+  }
 }

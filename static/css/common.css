@@ -4077,13 +4077,16 @@ textarea::placeholder {
 .full-popup .container {
   padding: 72px 0 95px;
 }
+.full-popup .container:has(.twoFactorAuth) {
+  padding-bottom: 175px;
+}
+.full-popup .container:has(.movement) {
+  padding-bottom: 155px;
+}
 .full-popup .section__cont {
   gap: 48px;
 }
 
-.twoFactorAuth .container {
-  padding-bottom: 175px;
-}
 .twoFactorAuth .btn-group .btn-radio {
   flex-direction: column;
   justify-content: flex-start;
@@ -4197,9 +4200,6 @@ textarea::placeholder {
   margin-top: 8px;
 }
 
-.movement .container {
-  padding-bottom: 155px;
-}
 .movement .section__cont {
   gap: 24px;
 }
