@@ -561,13 +561,13 @@
 		.input-control {
 			.input-group {padding-top:0;}
 		}
-		&.double {
-			.input-control:first-child {
-				width:120px;
-				min-width:100px;
-				> select {width:100%;}
-			}
-		}
+		// &.double {
+		// 	.input-control:first-child {
+		// 		width:120px;
+		// 		min-width:100px;
+		// 		> select {width:100%;}
+		// 	}
+		// }
 		&.triple{
 			> * {
 				width:32.333%;
