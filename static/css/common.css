@@ -3645,6 +3645,60 @@ textarea::placeholder {
   padding: 0 12px;
 }
 
+/* Select box 스타일 초기화 */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-size: 0.65rem auto;
+  background-image: url(../images/icon/chevron_down_line_24.svg);
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+  background-position: right 12px top 50%;
+}
+
+/* IE 에서 Select box 화살표 제거 */
+select::-ms-expand {
+  display: none;
+}
+
+.form-select {
+  border-radius: 10px;
+  border: 2px solid var(--dt-gray08);
+  padding: 10px 12px;
+  min-height: 48px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--dt-gray11);
+  width: 100%;
+}
+.form-select:focus {
+  border: 2px solid var(--dt-primary);
+  outline: none;
+  color: var(--dt-gray16);
+}
+
+.input-control.focused .form-select {
+  border: 2px solid var(--dt-primary);
+  color: var(--dt-gray16);
+}
+.input-control.success .form-select {
+  border: 2px solid var(--dt-gray08);
+  color: var(--dt-gray11);
+}
+.input-control.done .form-select {
+  border: 2px solid var(--dt-gray08);
+  color: var(--dt-gray16);
+}
+.input-control.error .form-select {
+  border: 2px solid var(--dt-error);
+  color: var(--dt-gray16);
+}
+.input-control.disabled .form-select {
+  opacity: 0.4;
+}
+
 @media screen and (max-width: 359px) {
   .slct-box-wrap:has(.slct-box:first-child:last-child) .slct-box {
     max-width: 150px;
