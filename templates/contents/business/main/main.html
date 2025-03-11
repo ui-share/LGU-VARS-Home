@@ -37,6 +37,59 @@
 				<button type="button" class="btn-ico btn-search"><span>검색</span></button>
 				<button type="button" class="btn btn-callEnd"><span class="icon"></span><span class="txt">종료</span></button>
 			</div>
+			<div class="search__wrap hidden">
+				<!-- 검색결과 영역 -->
+				<div class="search-area">
+					<!-- 
+						[[ 입력 상태 별 class ]] : input-control에 클래스를 추가하여 모든 상태를 제어
+							** 포커스 : focused 
+							** 유효성 검사 성공 : success
+							** 유효성 검사 에러 : error
+							** 읽기 전용 : disabled
+							** 비활성 : disabled
+							기본 : <div class="input-control">
+							포커스 : <div class="input-control focused">
+							비활성, 읽기 전용 : <div class="input-control disabled">
+							유효성 검사 성공 : <div class="input-control success">
+							유효성 검사 에러 : <div class="input-control error">
+					-->
+					<!-- 검색어 입력 -->
+					<div class="input-control">				
+						<div class="input-group">
+							<div class="input-row">
+								<input type="text" class="input-field" placeholder="검색어를 입력해주세요." autocomplete='off' />
+								<div class="util-box">
+									<button type="button" class="clear-btn hidden"></button>
+									<!-- 
+									<button type="button" class="clear-btn"> : 1글자 이상 입력 시, 전체 삭제 [X]버튼 노출 : hidden 삭제 
+									-->
+								</div>
+							</div>
+							<button type="button" class="btn btn-util end"><span>닫기</span></button>
+						</div>
+					</div>
+
+					<!-- 검색결과 없을 경우 -->
+					<div class="card solid center no-result hidden">
+						<div class="card-body">
+							<div class="item util">
+								<span class="img-box">
+									<img src="../../../../static/images/icon/ic-card-list_x.svg" alt="">
+								</span>
+							</div>
+							<div class="item text">
+								<span class="txt">검색 결과가 없습니다.</span>
+							</div>
+						</div>
+					</div>
+					
+					<!-- 검색결과 있을 경우 -->
+					<ul class="searchResult hidden">
+						<li class="list-item" role="button"><span class="color-prim">청구</span>요금</li>
+						<li class="list-item" role="button"><span class="color-prim">청구</span>서 받는 방법 변경</li>
+					</ul>
+				</div> 
+			</div>
 		</header>
 		<!-- //header -->
 		
@@ -305,7 +358,7 @@
 									</div>
 								</div>
 								<div class="item text">
-									<span class="tit">청구 요금</span>
+									<span class="tit">청구요금</span>
 									<span class="txt">이번달과 지난달<br>요금 조회</span>
 								</div>
 							</div>
@@ -353,7 +406,7 @@
 									</div>
 								</div>
 								<div class="item text">
-									<span class="tit">설치장소 변경</넴>
+									<span class="tit">설치장소 변경</span>
 								</div>
 							</div>
 						</div>
@@ -368,7 +421,7 @@
 									</div>
 								</div>
 								<div class="item text">
-									<span class="tit">간편 조치ㆍA/S신청</span>
+									<span class="tit">간편 조치ㆍA/S 신청</span>
 									<span class="txt">인터넷ㆍ와이파이ㆍIPTV</span>
 								</div>
 							</div>
@@ -384,7 +437,7 @@
 									</div>
 								</div>
 								<div class="item text">
-									<span class="tit">요금 바로 납부</span>
+									<span class="tit">요금 바로납부</span>
 									<span class="txt">청구요금<br>카드ㆍ계좌 미리납부</span>
 								</div>
 							</div>
@@ -410,7 +463,7 @@
 									</div>
 								</div>
 								<div class="item text">
-									<span class="tit">청구 요금</span>
+									<span class="tit">청구요금</span>
 									<span class="txt">이번달과 지난달<br>요금 조회</span>
 								</div>
 							</div>
@@ -426,7 +479,7 @@
 									</div>
 								</div>
 								<div class="item text">
-									<span class="tit">요금 바로 납부</span>
+									<span class="tit">요금 바로납부</span>
 									<span class="txt">청구요금<br>카드ㆍ계좌 미리납부</span>
 								</div>
 							</div>
@@ -621,7 +674,7 @@
 									</div>
 								</div>
 								<div class="item text">
-									<span class="tit">설치장소 변경<br/>내역</span>
+									<span class="tit">설치장소 변경<br/>신청 내역</span>
 									<span class="txt">확인ㆍ수정ㆍ취소</span>
 								</div>
 							</div>
@@ -679,7 +732,7 @@
 								</div>
 								<div class="item text">
 									<span class="tit">A/S 신청 내역</span>
-									<span class="txt">확인ㆍ변경ㆍ취소</span>
+									<span class="txt">확인ㆍ수정ㆍ취소</span>
 								</div>
 							</div>
 						</div>
@@ -716,25 +769,6 @@
 						</button>
 					</div>
 				</div>
-				<div class="cont__wrap cont__wrap-counsel">
-					<div class="btn-group conversion">
-						<button class="btn" type="button">
-							<span class="txt">음성 ARS 이동</span>
-						</button>
-						<span class="divider"></span>
-						<button class="btn" type="button">
-							<span class="txt">모바일 고객센터 이동</span>
-						</button>
-					</div>
-
-					<div class="btn-group conversion">
-						<button class="btn" type="button">
-							<span class="txt">기업 고객센터 이동</span>
-						</button>
-					</div>
-				</div>
-
-				
 			</div>
 
 			<!-- top button -->

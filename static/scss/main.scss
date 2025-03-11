@@ -15,6 +15,58 @@
 			background-size: cover;
 		}
 	}
+	.search__wrap {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		max-height: calc(100vh - 56px);
+		display: flex;
+		flex-direction: column;
+		background-color: var(--dt-white);
+		padding-bottom: 20px;
+		box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+		overflow: auto;
+		.search-area {
+			.input-group {
+				display: flex;
+				align-items: center;
+				padding: 8px 12px 4px 20px;
+				gap: 6px;
+			}
+			.btn-util {
+				width: 32px;
+				min-width: 32px;
+				height: 32px;
+				background-repeat: no-repeat;
+				background-size: 24px 24px;
+				background-position: center center;
+				padding: 4px;
+				font-size:0px;
+				text-indent: -9999px;
+				&.end {
+					background-image: url(../images/icon/ic-close24-gray15.svg);
+				}
+			}
+		}
+		.no-result {
+			background: transparent;
+			padding: 0;
+		}
+		.searchResult {
+			margin-top: 16px;
+			padding: 0 20px;
+			.list-item {
+				@include fw-5();
+				color: var(--dt-gray16);
+				line-height: 1.4;
+				padding: 4px 0;
+				&:first-child {
+					padding-top: 0;
+				}
+			}
+		}
+	}
 }
 
 .section__cont:first-child {
