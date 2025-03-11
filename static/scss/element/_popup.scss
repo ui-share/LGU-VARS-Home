@@ -581,10 +581,12 @@
 		max-height: calc(100vh - 550px);
 		min-height: 280px;
 		overflow-y: auto;
+		border-top: 1px solid var(--dt-gray06);
+		border-bottom: 1px solid var(--dt-gray06);
 		.addr-box {
-			&:first-child {padding-top:8px;}
 			padding: 16px 0 17px;
 			border-bottom: 1px solid var(--dt-gray17);
+			&:last-child {border: none}
 			&[role="button"]:active {
 				box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
 			}
