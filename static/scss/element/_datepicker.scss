@@ -433,7 +433,7 @@
 	}
 	
 	.days {		
-		.dow, .datepicker-cell {		
+		.dow, .datepicker-cell {
 			@include fw-6(var(--dp-size));
 			line-height: 1.5;
 			// color: var(--dt-gray14);
