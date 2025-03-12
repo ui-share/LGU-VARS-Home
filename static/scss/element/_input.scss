@@ -444,7 +444,7 @@ textarea::placeholder {
 	align-items: center;
 	border: 2px solid var(--dt-gray08);
 	border-radius: 10px;
-	padding: 9px 10px 9px 12px;
+	padding: 9px 8px 9px 10px;
 	min-height: 48px;
 	// width: calc(50% - 10px);
 	.txt {
@@ -461,7 +461,7 @@ textarea::placeholder {
 			text-align: right;
 			@include fw-6(16px);
 			line-height: 1.2;
-		
+			word-break: keep-all;
 		}
 		&:has(span:nth-child(1):last-child) * {
 			flex: 1;
@@ -475,13 +475,15 @@ textarea::placeholder {
 		}
 		// span이 3개일 때
 		&:has(span:nth-child(3):last-child) * {
-			flex: 1 33.333333%;
+			flex: 1 auto;
 			&:last-child {
-				min-width: 34px;
+				min-width: 31px;
+				max-width: 31px;
 			}
 		}
 	}
-	.arrow { 
+	.arrow {
+		flex: 0 auto;
 		display: inline-block;
 		width: 24px;
 		height: 24px;
@@ -642,44 +644,44 @@ textarea::placeholder {
 }
 
 // 캘린더 input
-.datePicker-wrap {
-	display: flex;
-	background-color: var(--dt-gray02);
-	border-radius: 8px;
-	padding: 14px 18px;
-	align-items: center;
-	justify-content: center;
-	margin: 20px 0;
-	.datePicker-box {
-		display: flex;
-		flex-wrap: nowrap;
-		justify-content: center;
-		max-width: 124px;
-		gap: 2px;
-	}
-	.datePicker-field {
-		width: auto;
-		@include fw-6(14px);
-		line-height: 1.2;
-		color: var(--dt-gray16);
-		field-sizing: content;
-		pointer-events: none;
-	}
-	.datePicker-txt {
-		display: inline-block;
-		@include fw-5(14px);
-		line-height: 1.5;
-		color: var(--dt-gray11);
-		white-space: nowrap; /* 줄바꿈 방지 */
-	}
-	.hyphen {
-		@include fw-6(18px);
-		line-height: 1.2;
-		color: var(--dt-gray10);
-		width: 36px;
-		padding: 0 12px;
-	}
-}
+// .datePicker-wrap {
+// 	display: flex;
+// 	background-color: var(--dt-gray02);
+// 	border-radius: 8px;
+// 	padding: 14px 18px;
+// 	align-items: center;
+// 	justify-content: center;
+// 	margin: 20px 0;
+// 	.datePicker-box {
+// 		display: flex;
+// 		flex-wrap: nowrap;
+// 		justify-content: center;
+// 		max-width: 124px;
+// 		gap: 2px;
+// 	}
+// 	.datePicker-field {
+// 		width: auto;
+// 		@include fw-6(14px);
+// 		line-height: 1.2;
+// 		color: var(--dt-gray16);
+// 		field-sizing: content;
+// 		pointer-events: none;
+// 	}
+// 	.datePicker-txt {
+// 		display: inline-block;
+// 		@include fw-5(14px);
+// 		line-height: 1.5;
+// 		color: var(--dt-gray11);
+// 		white-space: nowrap; 
+// 	}
+// 	.hyphen {
+// 		@include fw-6(18px);
+// 		line-height: 1.2;
+// 		color: var(--dt-gray10);
+// 		width: 36px;
+// 		padding: 0 12px;
+// 	}
+// }
 
 /* Select box 스타일 초기화 */ 
 select {
