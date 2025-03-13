@@ -792,6 +792,7 @@ button {
 	padding:20px;
 	border-radius:8px;
 	background-color:var(--dt-gray02);
+	&:has(.progress-area) {padding-bottom:22px;}
 	.row {
 		justify-content: space-between;
 		align-items:center;

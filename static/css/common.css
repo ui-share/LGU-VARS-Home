@@ -946,6 +946,9 @@ button {
   border-radius: 8px;
   background-color: var(--dt-gray02);
 }
+.info-col-wrap:has(.progress-area) {
+  padding-bottom: 22px;
+}
 .info-col-wrap .row {
   justify-content: space-between;
   align-items: center;
@@ -2585,7 +2588,7 @@ button {
   background-color: var(--dt-gray07);
 }
 .chips.neutral {
-  padding: 10px 12px;
+  padding: 9px 12px;
   font-size: 12px;
   font-weight: 600;
   color: var(--dt-gray12);
