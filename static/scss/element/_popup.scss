@@ -579,9 +579,16 @@
 	.addr-wrap {
 		max-height: calc(100vh - 550px);
 		min-height: 280px;
-		overflow-y: auto;
 		border-top: 1px solid var(--dt-gray06);
 		border-bottom: 1px solid var(--dt-gray06);
+
+		overflow-y: scroll;
+		&::-webkit-scrollbar {
+			width: 6px;
+		}
+		&::-webkit-scrollbar-thumb {
+			background: var(--dt-gray09);
+		}
 		.addr-box {
 			padding: 16px 0 17px;
 			border-bottom: 1px solid var(--dt-gray17);
