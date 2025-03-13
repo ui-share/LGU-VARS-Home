@@ -584,7 +584,9 @@
 
 		overflow-y: scroll;
 		&::-webkit-scrollbar {
+			display:block;
 			width: 6px;
+			-webkit-appearance: auto;
 		}
 		&::-webkit-scrollbar-thumb {
 			background: var(--dt-gray09);

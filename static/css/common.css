@@ -4277,7 +4277,9 @@ select::-ms-expand {
   overflow-y: scroll;
 }
 .movement .addr-wrap::-webkit-scrollbar {
+  display: block;
   width: 6px;
+  -webkit-appearance: auto;
 }
 .movement .addr-wrap::-webkit-scrollbar-thumb {
   background: var(--dt-gray09);
