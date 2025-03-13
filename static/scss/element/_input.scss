@@ -724,16 +724,12 @@ select::-ms-expand { display: none; }
 		opacity: .4;
 		pointer-events: none;
 	}
-}
-// select box에서 validation check
-.input-control {
 	&.error {
-		.form-select {
-			border: 2px solid var(--dt-error);
-			color: var(--dt-gray16);
-		}
+		border: 2px solid var(--dt-error);
+		color: var(--dt-gray16);
 	}
 }
+
 
 @media screen and (max-width:359px) {
 	.slct-box-wrap {// 드롭다운 반응형
