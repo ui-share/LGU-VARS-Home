@@ -4276,7 +4276,12 @@ select::-ms-expand {
   border-bottom: 1px solid var(--dt-gray06);
   overflow-y: scroll;
   /* 스크롤바를 강제로 표시하기 위한 트릭 */
-  padding-bottom: 1px;
+  position: relative;
+}
+.movement .addr-wrap::after {
+  content: "";
+  display: block;
+  height: 1px; /* 스크롤 영역 강제 생성 */
 }
 .movement .addr-wrap::-webkit-scrollbar {
   display: block;

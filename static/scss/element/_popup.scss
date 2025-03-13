@@ -584,7 +584,13 @@
 
 		overflow-y: scroll;
 		/* 스크롤바를 강제로 표시하기 위한 트릭 */
-		padding-bottom: 1px; 
+		// padding-bottom: 1px; 
+		position: relative;
+		&::after {
+			content: "";
+			display: block;
+			height: 1px; /* 스크롤 영역 강제 생성 */
+		}
 		&::-webkit-scrollbar {
 			display:block;
 			width: 6px;
