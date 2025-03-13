@@ -581,24 +581,7 @@
 		min-height: 280px;
 		border-top: 1px solid var(--dt-gray06);
 		border-bottom: 1px solid var(--dt-gray06);
-
 		overflow-y: scroll;
-		/* 스크롤바를 강제로 표시하기 위한 트릭 */
-		// padding-bottom: 1px; 
-		position: relative;
-		&::after {
-			content: "";
-			display: block;
-			height: 1px; /* 스크롤 영역 강제 생성 */
-		}
-		&::-webkit-scrollbar {
-			display:block;
-			width: 6px;
-			-webkit-appearance: auto;
-		}
-		&::-webkit-scrollbar-thumb {
-			background: var(--dt-gray09);
-		}
 		.addr-box {
 			padding: 16px 0 17px;
 			border-bottom: 1px solid var(--dt-gray17);
