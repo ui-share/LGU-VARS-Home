@@ -583,6 +583,8 @@
 		border-bottom: 1px solid var(--dt-gray06);
 
 		overflow-y: scroll;
+		/* 스크롤바를 강제로 표시하기 위한 트릭 */
+		padding-bottom: 1px; 
 		&::-webkit-scrollbar {
 			display:block;
 			width: 6px;
