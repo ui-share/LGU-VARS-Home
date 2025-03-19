@@ -1,4 +1,9 @@
 .section__cont {
+	&:has(.inform-wrap) {
+		.inform-wrap + table {
+			margin-top: 24px;
+		}
+	}
 	&:has(.cont__wrap-service) {
 		padding: 72px 0 95px;
 		&:has(.cont__wrap-service > .inform-wrap) {
