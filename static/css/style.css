@@ -12,7 +12,6 @@
   flex-direction: column;
   gap: 6px;
   position: relative;
-  height: -moz-max-content;
   height: max-content;
   min-height: 130px;
   padding: 0 20px;
@@ -212,7 +211,6 @@
   font-weight: 700;
 }
 .cont__wrap .con__tit-box .tit-tail {
-  min-width: -moz-max-content;
   min-width: max-content;
 }
 .cont__wrap .con__tit-box:not(:has(.tit-tail)):has(.bullet-list) {
@@ -257,6 +255,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: row;
   flex-wrap: wrap;
   color: var(--dt-gray11);
   gap: 4px;
@@ -265,6 +264,12 @@
 }
 .info-price-single .txt-info.decrease .img-box {
   transform: rotate(180deg);
+}
+.info-price-single .txt-info:has(> span:nth-child(2)) {
+  flex-direction: column;
+}
+.info-price-single .txt-info > span {
+  letter-spacing: -0.06em;
 }
 .info-price-single .txt-info > span:first-child:not(:has(.color-prim)) {
   color: var(--dt-primary);
@@ -418,8 +423,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  -moz-column-gap: 12px;
-       column-gap: 12px;
+  column-gap: 12px;
 }
 .cont__wrap.pauseTemp .info-wrap .txt-tit {
   font-size: 16px;
