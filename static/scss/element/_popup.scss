@@ -744,8 +744,7 @@
 		.detail {
 			@include flexColum();
 			gap: 4px;
-			width:100%;		
-			
+			width:100%;
 			.txt-sub {
 				margin-top:0;
 				margin-left:auto;
@@ -755,6 +754,7 @@
 			}
 		}
 		.row {
+			flex-wrap: wrap;
 			align-items: center;
 			justify-content:space-between;
 		}
