@@ -22,6 +22,9 @@
   background-color: var(--dt-white);
   z-index: 999;
 }
+.page-wrapper.changePaymentMethod .input-col-wrap + .input-col-wrap {
+  margin-top: 12px;
+}
 
 .list-payment {
   row-gap: 0;
