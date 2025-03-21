@@ -78,8 +78,6 @@
 		&.btn-md { // 중간높이
 			width:100%;
 			padding:9px 12px 8px;
-			@include flexBox();
-			align-items:center;
 			.txt {
 				line-height: normal;
 				letter-spacing:normal;
@@ -91,7 +89,8 @@
 	// multi
 	&.flex-row {
 		@include flexRow();
-		justify-content: space-between;align-items:center;
+		justify-content: space-between;
+		align-items:center;
 		width: 100%;
 		&:not(.accordion-header) {
 			gap: 8px;
@@ -329,8 +328,6 @@
 		background-image: url(../../static/images/icon/m_ic_arrow_pink.png);
 	}
 }
-
-
 
 @media screen and (max-width: 359px) {
 	.btn-group.flex-row {
