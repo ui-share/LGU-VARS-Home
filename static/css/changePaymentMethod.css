@@ -26,84 +26,8 @@
   margin-top: 12px;
 }
 
-.list-payment {
-  row-gap: 0;
-}
-.list-payment .mypay-list {
-  width: 100%;
-  border-top: 1px solid var(--dt-gray17);
-}
-.list-payment .mypay-list:last-of-type {
-  border-bottom: 1px solid var(--dt-gray17);
-}
-.list-payment .mypay-list .btn {
-  display: flex;
-  flex-direction: row;
-  gap: 4px;
-  width: 100%;
-  padding: 20px 12px 20px 20px;
-}
-.list-payment .mypay-list .btn::after {
-  flex: none;
-  content: "";
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-  background-image: url(../images/icon/ic-24-arrow-right-gray10.svg);
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.list-payment .mypay-list .detail {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  width: 100%;
-}
-.list-payment .mypay-list .detail .txt-sub {
-  margin-top: 0;
-  margin-left: auto;
-  text-align: right;
-  font-size: 14px;
-  line-height: 150%;
-}
-.list-payment .mypay-list .row {
-  justify-content: space-between;
-}
-
 .accnt-username {
   color: var(--dt-gray16);
   font-size: 18px;
   font-weight: 600;
-}
-
-.wd-full {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-.wd-full .cont__txt-box, .wd-full .btn-group {
-  padding: 0 20px;
-}
-
-.txt-title {
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.5;
-  text-align: left;
-}
-
-.txt-price {
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 1.5;
-  text-align: right;
-}
-
-.txt-sub-date {
-  font-size: 12px;
-  font-weight: 500;
-  color: var(--dt-gray10);
-  line-height: 1.5;
-  text-align: left;
 }
