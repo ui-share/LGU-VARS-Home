@@ -12,6 +12,7 @@
 
 	<!-- Css -->
 	<link rel="stylesheet" type="text/css" href="../../../../static/css/common.css">
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/style.css">
 
 	<!-- Scripts -->
 </head>
@@ -36,9 +37,9 @@
 				<button class="btn btn-util close" type="button" alt="닫기"></button>
 			</div>
 			<div class="popup-body">
-<table>
+				<!-- <table>
 					<thead>
-						<tr>
+						<tr>							
 							<th scope="col">구분</th>
 							<th scope="col">상담 가능 시간</th>
 							<th scope="col">상담 가능 업무</th>
@@ -66,7 +67,42 @@
 							<td>분실, 통화품질, 해외로밍, 일시정지</td>
 						</tr>
 					</tbody>
-				</table>				
+				</table> -->
+				<table>
+					<thead>
+						<tr>							
+							<th scope="col">상담 유형</th>
+							<th scope="col">구분</th>							
+							<th scope="col">상담 가능 시간</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>일반 상담</td>
+							<td>평일</td>
+							<td>09시 ~ 18시<br />단, 점심시간(12시 ~ 13시)제외</td>
+						</tr>
+						<tr>
+							<td>고장 문의</td>
+							<td>평일/주말/공휴일</td>
+							<td>24시간</td>
+						</tr>
+						<tr>
+							<td rowspan="2">가입 문의</td>
+							<td>평일</td>
+							<td>09시 ~ 18시<br />단, 점심시간(12시 ~ 13시)제외</td>
+						</tr>
+						<tr>
+							<td>토요일</td>
+							<td>09시 ~ 12시</td>
+						</tr>
+						<tr>
+							<td>해지 및 재약정 문의</td>
+							<td>평일</td>
+							<td>09시 ~ 18시<br />단, 점심시간(12시 ~ 13시)제외</td>
+						</tr>
+					</tbody>
+				</table>
 			</div>
 		</div>
 	</div>
