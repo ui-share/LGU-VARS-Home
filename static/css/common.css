@@ -1282,6 +1282,7 @@ button {
   padding: 10px 12px 10px 20px;
   border-radius: 0;
   background-color: var(--dt-gray15);
+  min-height: 60px;
 }
 .switch__wrap > button .txt-title {
   -moz-column-gap: 8px;
