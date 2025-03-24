@@ -1762,7 +1762,7 @@ button {
   min-width: 20px;
   height: 20px;
   background: no-repeat center/cover;
-  background-image: url(../images/icon/ic-card-headphone.png);
+  background-image: url(../images/icon/ic-card-headphone.svg);
   margin-left: 4px;
   margin-bottom: -4px;
 }
@@ -2560,7 +2560,7 @@ button {
 .chips.chips-menu.chips-more .arrow {
   width: 16px;
   height: 16px;
-  background-image: url(../images/icon/ic-chips-arrow-sm.png);
+  background-image: url(../images/icon/ic-chips-arrow-sm.svg);
   background-size: 16px 16px;
 }
 .chips.chips-menu.chips-more.is-selected {
@@ -2633,7 +2633,7 @@ button {
 .chips.chips-refresh .text-box .icon {
   width: 18px;
   height: 18px;
-  background-image: url(../images/icon/ic-chips-refresh.png);
+  background-image: url(../images/icon/ic-chips-refresh.svg);
   background-size: 18px 18px;
   background-repeat: no-repeat;
   background-position: center center;
@@ -2799,7 +2799,7 @@ button {
   color: var(--dt-primary);
 }
 .badge.badge-time .icon {
-  background-image: url(../images/icon/ic-badge-clock.png);
+  background-image: url(../images/icon/ic-badge-clock.svg);
   background-size: 18px 18px;
   background-repeat: no-repeat;
   background-position: center center;
@@ -2811,7 +2811,7 @@ button {
   color: var(--dt-error);
 }
 .badge.badge-time.error .icon {
-  background-image: url(../images/icon/ic-badge-clock-error.png);
+  background-image: url(../images/icon/ic-badge-clock-error.svg);
 }
 
 .card-group {
