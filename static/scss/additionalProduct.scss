@@ -7,7 +7,10 @@
 			.txt-sub{line-height:1.0;}
 			.txt-title {
 				.flag:first-child {margin-right:3px;}
-				.txt-sub {margin-top:5px;}
+				.flag + span {
+					display: inline-block;
+					transform: translateY(1px);
+				}
 			}
 			.txt-desc {
 				> span:not(.txt-sub) {
@@ -22,5 +25,4 @@
 			}
 		}
 	}
-
 }
