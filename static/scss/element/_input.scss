@@ -621,6 +621,19 @@ textarea::placeholder {
 		text-align: left;
 	}
 }
+@media screen and (max-width: 359px) {
+	.code {
+		.code-group {
+			.code-box {
+				display: inline-block;
+				width: 35px;
+				min-height: 40px;
+				padding: 6px 4px;
+				@include fw-7(20px);
+			}
+		}
+	}
+}
 
 
 
