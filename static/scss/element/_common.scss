@@ -224,7 +224,7 @@ button {
 .wd-full {padding-right:0 !important; padding-left:0 !important;}
 .row {@include flexRow;}
 .col {@include flexColum;}
-.tit, .txt, .txt-title, .txt-sub, .txt-desc {word-break: keep-all;}
+.tit, .txt, .txt-title, .txt-sub, .txt-desc {word-break: keep-all;overflow-wrap: break-word;}
 /* animation */
 @keyframes fadeInDown {
 	0% {
@@ -1136,22 +1136,22 @@ button {
 
 /* 스크롤바 커스텀 */
 .cust-scrollbar::-webkit-scrollbar {
-    width: 4px;
-    height: 4px;
+	width: 4px;
+	height: 4px;
 }
 // 배경조작
 .cust-scrollbar::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,0.0);
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 4px rgba(0,0,0,0.0);
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
 }
 // 스크롤바 배경조작
 .cust-scrollbar::-webkit-scrollbar-thumb {
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    background: rgba(179, 179, 179, 0.5);
-    -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,0.5);
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	background: rgba(179, 179, 179, 0.5);
+	-webkit-box-shadow: inset 0 0 4px rgba(0,0,0,0.5);
 }
 .cust-scrollbar::-webkit-scrollbar-thumb:window-inactive {
-    background: rgba(179, 179, 179, 0.8);
+	background: rgba(179, 179, 179, 0.8);
 }
