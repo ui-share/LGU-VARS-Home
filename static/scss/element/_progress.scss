@@ -3,18 +3,26 @@
 
 $brand-default: var(--dt-gray18);
 $brand-primary: var(--dt-primary);
-$bg-light-gray: var(--dt-gray02);
-
+$bg-light-gray: var(--dt-gray05);
+.progress-wrap {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 4px;
+}
 .progress {
-	height: 18px;
+	width: 80%;
+	height: 20px;
     overflow: hidden;
     background-color: $bg-light-gray;
-	border-radius: 4px;
+	border-radius: 5px;
     -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
     box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
 	box-shadow: none;
 	&.progress-xs {
-		height: 5px;
+		height: 3px;
 		margin-top: 5px;
 	}
 	&.progress-sm {
@@ -25,6 +33,11 @@ $bg-light-gray: var(--dt-gray02);
 		height: 25px;
 	}
 }
+.progress-text {
+	@include fw-5(12px);
+	line-height: 1.2;
+	color: var(--dt-black);
+}
 .progressBar {
 	display: flex;
     justify-content: center;
@@ -32,13 +45,12 @@ $bg-light-gray: var(--dt-gray02);
 	float: left;
     width: 0;
     height: 100%;
-    color: var(--dt-white);
     text-align: center;
     background-color: $brand-primary;
     transition: width .6s ease;
-	> * {
-		@include fw-6(12px);
-		line-height: 1.2;
+	.progress-text {
+		@include fw-4(12px);
+		color: var(--dt-white);
 	}
 }
 @mixin gradient-striped($color: rgba(255,255,255,.2), $angle: 45deg) {
