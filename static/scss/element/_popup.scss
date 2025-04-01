@@ -632,7 +632,8 @@
 .reset {
 	.inform-wrap {
 		.img-box {
-			width: 196px;
+			min-width: 90px;
+			max-width: 196px;
 		}
 	}
 }
