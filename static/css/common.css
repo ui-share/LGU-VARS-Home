@@ -4584,6 +4584,7 @@ select::-ms-expand {
 }
 
 .reset .inform-wrap .img-box {
+  min-width: 90px;
   max-width: 196px;
 }
 

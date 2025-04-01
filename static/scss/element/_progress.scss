@@ -1,5 +1,3 @@
-@import '../base/mixin';
-
 
 $brand-default: var(--dt-gray18);
 $brand-primary: var(--dt-primary);
@@ -15,11 +13,11 @@ $bg-light-gray: var(--dt-gray05);
 .progress {
 	width: 80%;
 	height: 20px;
-    overflow: hidden;
-    background-color: $bg-light-gray;
+	overflow: hidden;
+	background-color: $bg-light-gray;
 	border-radius: 5px;
-    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+	-webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
 	box-shadow: none;
 	&.progress-xs {
 		height: 3px;
@@ -41,14 +39,14 @@ $bg-light-gray: var(--dt-gray05);
 }
 .progressBar {
 	display: flex;
-    justify-content: center;
+	justify-content: center;
 	align-items: center;
 	float: left;
-    width: 0;
-    height: 100%;
-    text-align: center;
-    background-color: $brand-primary;
-    transition: width .6s ease;
+	width: 0;
+	height: 100%;
+	text-align: center;
+	background-color: $brand-primary;
+	transition: width .6s ease;
 	.progress-text {
 		@include fw-4(12px);
 		line-height: 1;
@@ -83,7 +81,7 @@ $bg-light-gray: var(--dt-gray05);
 .progress-striped .progressBar,
 .progress-bar-striped {
 	@include gradient-striped;
-    background-size: 40px 40px;
+	background-size: 40px 40px;
 }
 @mixin progress-bar-variant($color) {
 	background-color: $color;
