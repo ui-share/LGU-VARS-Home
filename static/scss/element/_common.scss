@@ -795,7 +795,7 @@ button {
 		justify-content: space-between;
 		align-items:center;
 		flex-wrap:wrap;
-		gap: 2px;
+		gap: 4px;
 		&.title-wrap {align-items: center;}
 	}
 	.title-wrap {
@@ -821,12 +821,16 @@ button {
 			column-gap:6px;
 			align-self: flex-start;
 			.img-box {
-				width:28px;height:28px;
+				flex: 0;
+				min-width:28px;
+				min-height:28px;
 				img {width:100%}
 			}
 			&:has(.btn-tooltip) {
 				column-gap:1px;
-				.img-box {width:22px;height:22px;
+				.img-box {
+					width:22px;
+					height:22px;
 					img {
 						width:18px;
 						transform:translateY(1px);
@@ -949,6 +953,7 @@ button {
 			@include fw-7(20px);
 			line-height:normal;
 			text-align: right;
+			margin-left: auto;
 		}
 		.txt-sub {
 			margin-left:auto;
@@ -977,7 +982,7 @@ button {
 		}
 		@include flexBox(between, center);
 		flex-wrap: wrap;
-		column-gap:3px;
+		gap: 4px;
 		.head {
 			@include fw-5(14px);
 			line-height:150%;
