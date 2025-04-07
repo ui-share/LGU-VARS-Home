@@ -613,6 +613,7 @@ textarea::placeholder {
 			border-radius: 4px;
 			background: var(--dt-gray02);
 			@include fw-7(24px);
+			line-height: 1.2;
 			text-align: center;
 			color: var(--dt-gray16);
 		}
@@ -692,6 +693,7 @@ textarea::placeholder {
 
 /* Select box 스타일 초기화 */ 
 select {
+	font-family: "Pretendard", system-ui, sans-serif;
 	-webkit-appearance: none;
 		-moz-appearance: none;
 			appearance: none;
