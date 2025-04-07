@@ -89,8 +89,9 @@
 	// multi
 	&.flex-row {
 		@include flexRow();
+		flex-wrap: wrap;
 		justify-content: space-between;
-		align-items:center;
+		align-items: stretch;
 		width: 100%;
 		&:not(.accordion-header) {
 			gap: 8px;
@@ -116,8 +117,7 @@
 	}
 	&.flex-column {
 		@include flexColum();
-		justify-content: center;align-items:flex-start;
-		row-gap: 8px;
+		gap: 8px;
 		.btn {
 			width: 100%;
 		}
@@ -329,8 +329,9 @@
 	}
 }
 
-@media screen and (max-width: 359px) {
+@media screen and (max-width: 281px) {
 	.btn-group.flex-row {
 		flex-direction: column;
+		flex-wrap: wrap-reverse;
 	}
 }

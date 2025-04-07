@@ -10,9 +10,9 @@
 			padding-top: 92px;
 		}
 	}
-	@media screen and (max-width: 280px) {
+	@media screen and (max-width: 281px) {
 			&:has(.cont__wrap-service) {
-			padding-bottom: 155px;
+				padding-bottom: 165px;
 			}
 		}
 	&:has(.switch__wrap) { // summary, service 공통

@@ -148,9 +148,9 @@
 .section__cont:has(.cont__wrap-service):has(.cont__wrap-service > .inform-wrap) {
   padding-top: 92px;
 }
-@media screen and (max-width: 280px) {
+@media screen and (max-width: 281px) {
   .section__cont:has(.cont__wrap-service) {
-    padding-bottom: 155px;
+    padding-bottom: 165px;
   }
 }
 .section__cont:has(.switch__wrap) {
