@@ -332,6 +332,9 @@
 @media screen and (max-width: 281px) {
 	.btn-group.flex-row {
 		flex-direction: column;
-		flex-wrap: wrap-reverse;
+		.btn {
+			width: 100%;
+		}
 	}
+	
 }

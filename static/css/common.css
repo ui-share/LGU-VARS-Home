@@ -1717,7 +1717,9 @@ button {
 @media screen and (max-width: 281px) {
   .btn-group.flex-row {
     flex-direction: column;
-    flex-wrap: wrap-reverse;
+  }
+  .btn-group.flex-row .btn {
+    width: 100%;
   }
 }
 .card-group {
