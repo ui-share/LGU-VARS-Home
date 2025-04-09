@@ -482,9 +482,9 @@ button {
 	&:has(.singleCont) {
 		height: 100%;
 	}
-	&:has(.middleAlign) {
-		justify-content: center;
-	}
+	// &:has(.middleAlign) {
+	// 	justify-content: center;
+	// }
 }
 .section__divider {
 	width: 100%;
@@ -507,7 +507,10 @@ button {
 	}
 	&:has(.switch__wrap) { // summary, service 
 		// padding-top: 56px;
-	}	
+	}
+	&:has(.middleAlign) {
+		margin: auto 0;
+	}
 }
 .cont__wrap-layout {
 	display: flex;
