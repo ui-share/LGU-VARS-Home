@@ -676,6 +676,10 @@ button {
 .cont__wrap-layout.singleCont {
   height: 100%;
 }
+.cont__wrap-layout.middleAlign {
+  margin: auto 0;
+  padding: 20px;
+}
 
 .cont__wrap {
   padding: 0 20px;

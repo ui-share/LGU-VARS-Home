@@ -519,6 +519,10 @@ button {
 	&.singleCont {
 		height: 100%;
 	}
+	&.middleAlign {
+		margin: auto 0;
+		padding: 20px;
+	}
 }
 .cont__wrap {
 	padding: 0 20px;
