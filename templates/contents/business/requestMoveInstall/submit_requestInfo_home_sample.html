@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<!-- Set the viewport. -->
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1.0">
+	<!-- Disable automatic phone number detection. -->
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	<title>LGU+ 보이는 ARS</title>
+
+	<!-- Css -->
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/common.css">
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/style.css">
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/requestMoveInstall.css">
+
+	<!-- Scripts -->
+</head>
+<body>
+	<div class="page-wrapper requestMoveInstall">
+		<!-- header -->
+		<header class="header">
+			<div class="header__util">
+				<button type="button" class="btn btn-util end"><span>처음</span></button>
+			</div>
+			<div class="header__btn btn-group">
+				<button type="button" class="btn btn-callEnd"><span class="icon"></span><span class="txt">종료</span></button>
+			</div>
+		</header>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			<div class="section__cont">
+				<div class="cont__wrap cont__wrap-service">
+					<div class="cont__txt-box">
+						<h4 class="txt">
+							<span class="color-prim">집안 내 이동 설치</span>를 위해<br>
+							상세 내용을 입력해 주세요
+						</h4>
+					</div>
+
+					<!-- 가입정보 테이블// -->
+					<div class="con__tit-box">
+						<h6 class="tit-head">
+							<span class="txt-title">가입 정보</span>
+						</h6>
+					</div>
+					<table>
+						<thead>
+							<tr>
+								<th scope="col">가입서비스</th>
+								<th scope="col" class="color-prim">현재 설치 장소</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>U+인터넷 / U+TV</td>
+								<td>서울시 관악구 성현로 ***</td>
+							</tr>
+						</tbody>
+					</table>
+					<!-- //가입정보 테이블 -->
+
+					<!-- 서비스선택// -->
+					<div class="con__tit-box">
+						<h6 class="tit-head">
+							<span class="txt-title">집안 내 이동을 원하시는 서비스 선택</span>
+						</h6>
+					</div>
+					<div class="chckbox-wrap row">
+						<div class="chck-group">
+							<input type="checkbox" id="chck01" class="chck-input">
+							<label for="chck01" class="chck-label">
+								<span class="chck-box"></span>
+								인터넷
+							</label>
+						</div>
+						<div class="chck-group">
+							<input type="checkbox" id="chck02" class="chck-input">
+							<label for="chck02" class="chck-label">
+								<span class="chck-box"></span>
+								IPTV
+							</label>
+						</div>
+						<div class="chck-group">
+							<input type="checkbox" id="chck03" class="chck-input" checked>
+							<label for="chck03" class="chck-label">
+								<span class="chck-box"></span>
+								스마트 홈
+							</label>
+						</div>
+						<div class="chck-group">
+							<input type="checkbox" id="chck04" class="chck-input" checked>
+							<label for="chck04" class="chck-label">
+								<span class="chck-box"></span>
+								전화
+							</label>
+						</div>
+					</div>
+					<!-- 서비스선택// -->
+
+					<!-- 변경 신청 정보 // -->
+					<div class="con__tit-box">
+						<h6 class="tit-head">
+							<span class="txt-title">변경 신청 정보 입력</span>
+						</h6>
+					</div>
+					<div class="input-col-wrap">
+						<!-- 
+						[[ 입력 상태 별 class ]] : input-control에 클래스를 추가하여 모든 상태를 제어
+							** 포커스 : focused 
+							** 유효성 검사 성공 : success
+							** 유효성 검사 에러 : error
+							** 읽기 전용 : disabled
+							** 비활성 : disabled
+							기본 : <div class="input-control">
+							포커스 : <div class="input-control focused">
+							비활성, 읽기 전용 : <div class="input-control disabled">
+							유효성 검사 성공 : <div class="input-control success">
+							유효성 검사 에러 : <div class="input-control error">
+						-->
+
+						<!-- 이름 -->
+						<div class="input-control">
+							<div class="input-group">
+								<label class="input-label">연락 받을 분</label>
+								<div class="input-row">
+									<input type="text" class="input-field" placeholder="이름을 입력해 주세요" value="" autocomplete='off'/>
+									<div class="util-box">									
+										<!-- 1글자 이상 입력 시 [X]버튼 노출 : hidden 삭제 <button type="button" class="clear-btn"> -->
+										<button type="button" class="clear-btn hidden"></button>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- 연락처 -->
+						<div class="input-control">
+							<div class="input-group">
+								<label class="input-label">연락처</label>
+								<div class="input-row">
+									<input type="text" class="input-field" placeholder="‘-’없이 숫자만 입력" value="" autocomplete='off'/>
+									<div class="util-box">
+										<!-- 1글자 이상 입력 시 [X]버튼 노출 : hidden 삭제 <button type="button" class="clear-btn"> -->
+										<button type="button" class="clear-btn hidden"></button>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- 요청사항 입력 -->
+						<div class="input-control">
+							<div class="textarea-group">
+								<label class="input-label">요청사항</label>
+								<div class="textarea-box">
+									<textarea class="c-textarea" placeholder="요청사항을 입력해 주세요" title="요청사항을 입력해 주세요" rows="4" maxlength="201" ></textarea> 
+									<div class="textarea-info">
+										<p class="textarea-limit" tabindex="-1" >
+											<span><span class="limit-point">0</span>/200자</span>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- 설치희망일 + 시간 -->
+						<div class="slct-control">
+							<div class="slct-label-box">
+								<span class="label-tit">설치 희망일</span>
+							</div>
+							<div class="slct-box-wrap">
+								<!-- 드롭다운 선택 후 선택 값 : done 클래스 추가 및 텍스트 변경-->
+								<!-- <button type="button" class="slct-box">
+									<span class="txt"><span>설치 희망일 선택</span></span>
+									<span class="arrow"></span>
+								</button> -->
+								<button type="button" class="slct-box done">
+									<span class="txt"><span>24년</span><span>11월</span><span>29일</span></span>
+									<span class="arrow"></span>
+								</button>
+								<button type="button" class="slct-box">
+									<span class="txt"><span>시간 선택</span></span>
+									<span class="arrow"></span>
+								</button>
+								<!-- <button type="button" class="slct-box done">
+									<span class="txt"><span>13:00</span></span>
+									<span class="arrow"></span>
+								</button> -->
+							</div>
+						</div>
+					</div>
+					<!-- //변경 신청 정보 -->
+
+				</div>
+
+				<div class="cont__wrap cont__wrap-btBtn">
+					<div class="btn-group flex-row is-confirm">
+						<!-- 기본 disabled 상태 | 모든 필드 입력 및 선택 완료 후 활성화 is-disabled 삭제 -->
+						<button class="btn" type="button">
+							<span class="txt">취소</span>
+						</button>
+						<button class="btn is-disabled" type="button">
+							<span class="txt">신청</span>
+						</button>
+					</div>
+				</div>
+			</div>
+			<!-- 디바이더 영역 -->
+			<div class="section__divider"></div>
+			<!-- 상담 영역 -->
+			<div class="section__cont counsel">
+				<div class="cont__wrap">
+					<div class="con__tit-box">
+						<h6 class="tit-head">
+							<span class="txt-title">아래 메뉴도 추천해요</span>
+						</h6>
+						<div class="tit-tail hidden"></div>
+					</div>
+					<div class="card-group">
+						<div class="card" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="item util">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-menu/ic-changeMoveInstall.svg" alt="설치장소 변경 신청 내역" />
+									</span>
+								</div>
+								<div class="item text">
+									<span class="tit">설치장소 변경 신청 내역</span>
+									<span class="txt">확인ㆍ수정ㆍ취소</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 
+					아코디언 닫힘 상태(기본) > 오픈시 : open 클래스 추가 
+					<div class="cont__wrap cont__wrap-counsel accordion-container open">
+				-->
+				<div class="cont__wrap cont__wrap-counsel accordion-container">
+					<div class="con__tit-box accordion-header" role="button" tabindex="0">
+						<span class="txt-sub">문의사항을 찾기 어려우신가요?</span>
+						<h6 class="tit-head">
+							<span class="txt-title">다른 상담채널을 이용해 보세요</span>
+						</h6>
+						<div class="tit-tail">
+							<span class="img-box ico-toggle">
+								<img src="../../../../static/images/icon/ic-councel-down.svg" alt="">
+							</span>
+						</div>
+					</div>
+					<div class="card-group threeby accordion-content">
+						<div class="card detail" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="item util">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-card-chatbot2.svg" alt="챗봇 상담">
+									</span>
+								</div>
+								<div class="item text">
+									<span class="tit">챗봇 상담</span>
+									<span class="txt">대기없이 바로</span>
+								</div>
+							</div>
+						</div>
+						<div class="card detail" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="item util">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-card-ars-ai.svg" alt="AI 상담">
+									</span>
+								</div>
+								<div class="item text">
+									<span class="tit">AI 상담</span>
+									<span class="txt">언제든지 빠른</span>
+								</div>
+							</div>
+						</div>
+						<div class="card detail" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="item util">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-card-calls.svg" alt="전화 상담">
+									</span>
+								</div>
+								<div class="item text">
+									<span class="tit">전화 상담</span>
+									<span class="txt">상세하고 친절한</span>
+								</div>
+							</div>
+							<div class="card-footer">
+								<div class="chips chips-tag hidden">
+									<span class="txt">점심시간</span>
+								</div>
+							</div> 
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //container -->
+	</div>
+</body>
+</html>
